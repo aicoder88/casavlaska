@@ -1,0 +1,122 @@
+{
+  "city_avg": [
+    {"month": "2023-01", "pricePerM2": 2850},
+    {"month": "2023-02", "pricePerM2": 2870},
+    {"month": "2023-03", "pricePerM2": 2890},
+    {"month": "2023-04", "pricePerM2": 2920},
+    {"month": "2023-05", "pricePerM2": 2950},
+    {"month": "2023-06", "pricePerM2": 2980},
+    {"month": "2023-07", "pricePerM2": 3010},
+    {"month": "2023-08", "pricePerM2": 3040},
+    {"month": "2023-09", "pricePerM2": 3070},
+    {"month": "2023-10", "pricePerM2": 3100},
+    {"month": "2023-11", "pricePerM2": 3130},
+    {"month": "2023-12", "pricePerM2": 3160},
+    {"month": "2024-01", "pricePerM2": 3190},
+    {"month": "2024-02", "pricePerM2": 3220},
+    {"month": "2024-03", "pricePerM2": 3250},
+    {"month": "2024-04", "pricePerM2": 3280},
+    {"month": "2024-05", "pricePerM2": 3310},
+    {"month": "2024-06", "pricePerM2": 3340},
+    {"month": "2024-07", "pricePerM2": 3370},
+    {"month": "2024-08", "pricePerM2": 3400},
+    {"month": "2024-09", "pricePerM2": 3430},
+    {"month": "2024-10", "pricePerM2": 3460},
+    {"month": "2024-11", "pricePerM2": 3490},
+    {"month": "2024-12", "pricePerM2": 3520}
+  ],
+  "kvaternik_vlaska": [
+    {"month": "2023-01", "pricePerM2": 3100},
+    {"month": "2023-02", "pricePerM2": 3130},
+    {"month": "2023-03", "pricePerM2": 3160},
+    {"month": "2023-04", "pricePerM2": 3200},
+    {"month": "2023-05", "pricePerM2": 3240},
+    {"month": "2023-06", "pricePerM2": 3280},
+    {"month": "2023-07", "pricePerM2": 3320},
+    {"month": "2023-08", "pricePerM2": 3360},
+    {"month": "2023-09", "pricePerM2": 3400},
+    {"month": "2023-10", "pricePerM2": 3440},
+    {"month": "2023-11", "pricePerM2": 3480},
+    {"month": "2023-12", "pricePerM2": 3520},
+    {"month": "2024-01", "pricePerM2": 3560},
+    {"month": "2024-02", "pricePerM2": 3600},
+    {"month": "2024-03", "pricePerM2": 3640},
+    {"month": "2024-04", "pricePerM2": 3680},
+    {"month": "2024-05", "pricePerM2": 3720},
+    {"month": "2024-06", "pricePerM2": 3760},
+    {"month": "2024-07", "pricePerM2": 3800},
+    {"month": "2024-08", "pricePerM2": 3840},
+    {"month": "2024-09", "pricePerM2": 3880},
+    {"month": "2024-10", "pricePerM2": 3920},
+    {"month": "2024-11", "pricePerM2": 3960},
+    {"month": "2024-12", "pricePerM2": 4000}
+  ],
+  "comps": [
+    {
+      "address": "Vlaška 115",
+      "size": 48,
+      "renovated": false,
+      "price": 175000,
+      "pricePerM2": 3646,
+      "yearBuilt": 1925
+    },
+    {
+      "address": "Vlaška 125",
+      "size": 42,
+      "renovated": true,
+      "price": 168000,
+      "pricePerM2": 4000,
+      "yearBuilt": 1930
+    },
+    {
+      "address": "Kvaternikov trg 4",
+      "size": 50,
+      "renovated": false,
+      "price": 185000,
+      "pricePerM2": 3700,
+      "yearBuilt": 1920
+    },
+    {
+      "address": "Martićeva 25",
+      "size": 45,
+      "renovated": true,
+      "price": 172000,
+      "pricePerM2": 3822,
+      "yearBuilt": 1928
+    },
+    {
+      "address": "Vlaška 105",
+      "size": 44,
+      "renovated": false,
+      "price": 158000,
+      "pricePerM2": 3591,
+      "yearBuilt": 1922
+    },
+    {
+      "address": "Gundulićeva 18",
+      "size": 47,
+      "renovated": true,
+      "price": 179000,
+      "pricePerM2": 3809,
+      "yearBuilt": 1925
+    }
+  ],
+  "currentListing": {
+    "address": "Vlaška 117",
+    "size": 46,
+    "renovated": true,
+    "price": 159900,
+    "pricePerM2": 3476,
+    "yearBuilt": 1924,
+    "rooms": "2+1",
+    "floor": 2,
+    "features": [
+      "High ceilings",
+      "Original hardwood floors",
+      "Courtyard facing",
+      "Renovated kitchen",
+      "Renovated bathroom",
+      "Clean title 1/1"
+    ]
+  }
+}
