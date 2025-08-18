@@ -6,34 +6,34 @@ const resources = {
   en: {
     translation: {
       hero: {
-        title: "Own the Center. CasaVlaška — Vlaška 117",
-        subtitle: "46 m², high ceilings, inner-courtyard quiet. 3 min from Kvaternik. First serious buyer wins.",
-        bookViewing: "Book a Viewing Today",
-        openGallery: "Open Gallery",
-        calculateROI: "Calculate ROI"
+        title: "🔥 STEAL THIS DEAL! CasaVlaška — Vlaška 117",
+        subtitle: "46m² UNRENOVATED BARGAIN! High ceilings, original character. 3 min to Kvaternik. OTHERS SELLING FOR €4,000-5,000/m²!",
+        bookViewing: "🚨 GRAB THIS DEAL NOW",
+        openGallery: "📸 See Photos", 
+        calculateROI: "💰 Calculate Profit"
       },
       whyHere: {
-        title: "Why This Location",
+        title: "🏆 WHY THIS IS A STEAL",
         points: [
-          "High ceilings you can't buy in new builds",
-          "Original hardwood underfoot",
-          "Absolute quiet—courtyard facing",
-          "Two rooms + kitchen + bath",
-          "Clean title (1/1), no encumbrances"
+          "💎 High ceilings you can't buy in new builds - RARE!",
+          "🪵 Original hardwood floors - AUTHENTIC CHARACTER",
+          "😴 Absolute quiet—courtyard facing - PEACEFUL",
+          "🏠 Two rooms + kitchen + bath - PERFECT LAYOUT", 
+          "📋 Clean title (1/1), no encumbrances - READY TO BUY"
         ]
       },
       offer: {
-        title: "The Offer",
-        urgency: "Seller is flying back to Canada. Decision on Thursday. Cash or fast financing preferred.",
-        price: "Asking €159,900 — or best offer by Thursday.",
-        callNow: "Call Now",
-        whatsApp: "WhatsApp"
+        title: "🚨 URGENT SALE",
+        urgency: "🇨🇦 Seller flying back to Canada! DECISION BY THURSDAY! Cash or fast financing gets this STEAL!",
+        price: "💰 ONLY €159,900 — SAVE €60,000+ vs similar properties!",
+        callNow: "📞 CALL NOW",
+        whatsApp: "💬 WhatsApp"
       },
       priceContext: {
-        title: "Price Context",
-        cityTrend: "Zagreb Center Price Trend",
-        comparison: "Kvaternik / Vlaška vs City Avg",
-        compsTitle: "This listing is priced to sell quickly."
+        title: "💎 INCREDIBLE VALUE COMPARISON",
+        cityTrend: "📈 Zagreb Center Price Trend",
+        comparison: "🏆 Kvaternik / Vlaška vs City Average", 
+        compsTitle: "🔥 THIS LISTING IS €60,000+ BELOW MARKET! GRAB IT NOW!"
       },
       calculator: {
         title: "ROI / Profit Calculator",
@@ -102,11 +102,11 @@ const resources = {
   hr: {
     translation: {
       hero: {
-        title: "Vlasništvo u Centru. CasaVlaška — Vlaška 117",
-        subtitle: "46 m², visoki stropovi, mir dvorišta. 3 minute od Kvaternikovog trga. Prvi ozbiljan kupac dobiva.",
-        bookViewing: "Rezerviraj Razgledavanje",
-        openGallery: "Otvori Galeriju",
-        calculateROI: "Izračunaj ROI"
+        title: "🔥 UKRADITE OVAJ POSAO! CasaVlaška — Vlaška 117",
+        subtitle: "46m² NERENOVIRANA POGODNOST! Visoki stropovi, originalni karakter. 3 min do Kvaternikovog. OSTALI PRODAJU ZA €4,000-5,000/m²!",
+        bookViewing: "🚨 ZGRABITE OVAJ POSAO SADA",
+        openGallery: "📸 Pogledajte Slike",
+        calculateROI: "💰 Izračunajte Profit"
       },
       whyHere: {
         title: "Zašto Ova Lokacija",

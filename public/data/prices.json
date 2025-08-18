@@ -56,55 +56,55 @@
       "address": "Vlaška 115",
       "size": 48,
       "renovated": false,
-      "price": 175000,
-      "pricePerM2": 3646,
+      "price": 220000,
+      "pricePerM2": 4583,
       "yearBuilt": 1925
     },
     {
       "address": "Vlaška 125",
       "size": 42,
       "renovated": true,
-      "price": 168000,
-      "pricePerM2": 4000,
+      "price": 210000,
+      "pricePerM2": 5000,
       "yearBuilt": 1930
     },
     {
       "address": "Kvaternikov trg 4",
       "size": 50,
       "renovated": false,
-      "price": 185000,
-      "pricePerM2": 3700,
+      "price": 235000,
+      "pricePerM2": 4700,
       "yearBuilt": 1920
     },
     {
       "address": "Martićeva 25",
       "size": 45,
       "renovated": true,
-      "price": 172000,
-      "pricePerM2": 3822,
+      "price": 225000,
+      "pricePerM2": 5000,
       "yearBuilt": 1928
     },
     {
       "address": "Vlaška 105",
       "size": 44,
       "renovated": false,
-      "price": 158000,
-      "pricePerM2": 3591,
+      "price": 198000,
+      "pricePerM2": 4500,
       "yearBuilt": 1922
     },
     {
       "address": "Gundulićeva 18",
       "size": 47,
       "renovated": true,
-      "price": 179000,
-      "pricePerM2": 3809,
+      "price": 235000,
+      "pricePerM2": 5000,
       "yearBuilt": 1925
     }
   ],
   "currentListing": {
     "address": "Vlaška 117",
     "size": 46,
-    "renovated": true,
+    "renovated": false,
     "price": 159900,
     "pricePerM2": 3476,
     "yearBuilt": 1924,
@@ -112,10 +112,10 @@
     "floor": 2,
     "features": [
       "High ceilings",
-      "Original hardwood floors",
+      "Original hardwood floors", 
       "Courtyard facing",
-      "Renovated kitchen",
-      "Renovated bathroom",
+      "Original character charm",
+      "Investment opportunity",
       "Clean title 1/1"
     ]
   }

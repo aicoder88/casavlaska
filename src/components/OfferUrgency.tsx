@@ -25,8 +25,8 @@ export default function OfferUrgency() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <GlassCard className="p-8 md:p-12 bg-gradient-to-br from-red-500/10 via-orange-500/10 to-yellow-500/10 border-2 border-yellow-400/30">
-            <div className="text-center">
+          <GlassCard className="p-8 md:p-12 bg-gradient-to-br from-red-500/20 via-orange-500/20 to-yellow-500/20 border-4 border-yellow-400/50 center-content">
+            <div className="center-content">
               {/* Alert icon */}
               <motion.div
                 className="text-6xl mb-6"
@@ -43,13 +43,13 @@ export default function OfferUrgency() {
                 🚨
               </motion.div>
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              <h2 className="text-4xl md:text-5xl font-black mb-6 urgency-text">
                 {t('offer.title')}
               </h2>
 
-              <div className="space-y-6 mb-8">
+              <div className="space-y-6 mb-8 center-content">
                 <motion.p 
-                  className="text-lg md:text-xl text-white/90 leading-relaxed"
+                  className="text-xl md:text-2xl high-contrast-text leading-relaxed font-bold"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
@@ -59,16 +59,16 @@ export default function OfferUrgency() {
                 </motion.p>
 
                 <motion.div
-                  className="bg-white/10 p-6 rounded-2xl backdrop-blur-sm border border-white/20"
+                  className="bg-gradient-to-r from-gold-500/30 to-yellow-500/30 p-8 rounded-2xl backdrop-blur-sm border-4 border-yellow-400/50"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  <div className="text-2xl md:text-3xl font-bold text-yellow-300 mb-2">
+                  <div className="text-3xl md:text-4xl font-black price-text mb-4">
                     💰 {t('offer.price')}
                   </div>
-                  <div className="text-white/80 text-sm">
+                  <div className="high-contrast-text text-lg font-bold">
                     Below market rate • Clean title • Ready to close
                   </div>
                 </motion.div>
@@ -76,7 +76,7 @@ export default function OfferUrgency() {
 
               {/* Action buttons */}
               <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                className="flex flex-col sm:flex-row gap-6 justify-center items-center center-content"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
@@ -84,7 +84,7 @@ export default function OfferUrgency() {
               >
                 <motion.button
                   onClick={handleCall}
-                  className="glass-button text-white font-bold px-8 py-4 text-lg min-w-[200px] bg-gradient-to-r from-green-500/30 to-emerald-500/30 hover:from-green-500/40 hover:to-emerald-500/40 border-green-400/50"
+                  className="urgency-button glass-button px-10 py-5 text-xl font-black min-w-[250px]"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -93,7 +93,7 @@ export default function OfferUrgency() {
 
                 <motion.button
                   onClick={handleWhatsApp}
-                  className="glass-button text-white font-bold px-8 py-4 text-lg min-w-[200px] bg-gradient-to-r from-blue-500/30 to-cyan-500/30 hover:from-blue-500/40 hover:to-cyan-500/40 border-blue-400/50"
+                  className="trust-button glass-button px-10 py-5 text-xl font-black min-w-[250px]"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -103,20 +103,20 @@ export default function OfferUrgency() {
 
               {/* Countdown or urgency indicator */}
               <motion.div
-                className="mt-8 text-center"
+                className="mt-8 center-content"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
                 viewport={{ once: true }}
               >
-                <div className="inline-flex items-center space-x-2 bg-red-500/20 px-4 py-2 rounded-full border border-red-400/30">
+                <div className="inline-flex items-center space-x-3 bg-red-500/40 px-6 py-4 rounded-full border-4 border-red-400/60">
                   <motion.span 
-                    className="w-3 h-3 bg-red-400 rounded-full"
+                    className="w-4 h-4 bg-red-300 rounded-full"
                     animate={{ opacity: [1, 0.3, 1] }}
                     transition={{ duration: 1, repeat: Infinity }}
                   />
-                  <span className="text-white font-medium text-sm">
-                    Decision Deadline: Thursday
+                  <span className="high-contrast-text font-black text-lg">
+                    ⏰ Decision Deadline: THURSDAY ⏰
                   </span>
                 </div>
               </motion.div>

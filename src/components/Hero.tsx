@@ -43,19 +43,20 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
 
       {/* Main content */}
       <div className="container mx-auto px-4 z-10">
-        <div className="max-w-4xl mx-auto text-center">
-          <GlassCard className="p-8 md:p-12 backdrop-blur-2xl">
+        <div className="max-w-6xl mx-auto">
+          <GlassCard className="center-content backdrop-blur-2xl">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              className="center-content"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 gradient-text leading-tight">
+              <h1 className="text-4xl md:text-7xl font-black mb-8 gradient-text leading-tight text-center">
                 {t('hero.title')}
               </h1>
               
               <motion.p 
-                className="text-lg md:text-xl text-white/80 mb-8 leading-relaxed"
+                className="text-xl md:text-2xl high-contrast-text mb-10 leading-relaxed text-center max-w-4xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -63,61 +64,78 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
                 {t('hero.subtitle')}
               </motion.p>
 
+              {/* Price highlight banner */}
+              <motion.div
+                className="bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 p-6 rounded-2xl mb-8 border-4 border-yellow-300"
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <div className="text-center">
+                  <div className="text-4xl md:text-5xl font-black text-white mb-2">
+                    💰 ONLY €159,900 💰
+                  </div>
+                  <div className="text-lg md:text-xl font-bold text-white">
+                    🔥 SAVE €60,000+ vs MARKET PRICE! 🔥
+                  </div>
+                </div>
+              </motion.div>
+
               <motion.div 
-                className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+                className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <motion.button
                   onClick={handleCall}
-                  className="glass-button text-white font-semibold px-8 py-4 text-lg min-w-[200px] bg-gradient-to-r from-blue-500/20 to-purple-500/20 hover:from-blue-500/30 hover:to-purple-500/30"
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="urgency-button glass-button px-10 py-5 text-xl font-black min-w-[280px]"
+                  whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  📞 {t('hero.bookViewing')}
+                  {t('hero.bookViewing')}
                 </motion.button>
 
                 <motion.button
                   onClick={onOpenGallery}
-                  className="glass-button text-white font-semibold px-8 py-4 text-lg min-w-[200px] hover:bg-white/10"
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="trust-button glass-button px-10 py-5 text-xl font-black min-w-[280px]"
+                  whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  🏠 {t('hero.openGallery')}
+                  {t('hero.openGallery')}
                 </motion.button>
 
                 <motion.button
                   onClick={onOpenCalculator}
-                  className="glass-button text-white font-semibold px-8 py-4 text-lg min-w-[200px] hover:bg-white/10"
-                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="value-button glass-button px-10 py-5 text-xl font-black min-w-[280px]"
+                  whileHover={{ scale: 1.1, y: -3 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  📊 {t('hero.calculateROI')}
+                  {t('hero.calculateROI')}
                 </motion.button>
               </motion.div>
 
               {/* Quick actions */}
               <motion.div 
-                className="mt-8 flex flex-col sm:flex-row gap-3 justify-center items-center"
+                className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center center-content"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <motion.button
                   onClick={handleWhatsApp}
-                  className="glass-button text-white px-6 py-2 text-sm bg-green-500/20 hover:bg-green-500/30"
+                  className="trust-button glass-button px-8 py-3 text-lg font-bold"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  💬 WhatsApp
+                  💬 WhatsApp Now
                 </motion.button>
                 
-                <span className="text-white/60 text-sm">|</span>
+                <span className="high-contrast-text text-lg font-bold">|</span>
                 
                 <a 
                   href="tel:+385993433344"
-                  className="text-white/80 hover:text-white transition-colors text-sm"
+                  className="high-contrast-text hover:text-yellow-300 transition-colors text-lg font-bold"
                 >
                   📱 +385 99 343 3344
                 </a>
