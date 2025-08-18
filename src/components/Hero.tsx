@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import GlassCard from './GlassCard';
-import LanguageToggle from './LanguageToggle';
 
 interface HeroProps {
   onOpenGallery: () => void;
@@ -36,10 +35,6 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
         }}
       ></div>
 
-      {/* Language toggle - positioned absolutely */}
-      <div className="absolute top-6 right-6 z-20">
-        <LanguageToggle />
-      </div>
 
       {/* Main content */}
       <div className="container mx-auto px-4 z-10">
@@ -51,18 +46,32 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
               transition={{ duration: 0.8 }}
               className="center-content"
             >
-              <h1 className="text-4xl md:text-7xl font-black mb-8 gradient-text leading-tight text-center">
+              <h1 className="text-3xl md:text-5xl font-black mb-6 gradient-text leading-tight text-center">
                 {t('hero.title')}
               </h1>
               
               <motion.p 
-                className="text-xl md:text-2xl high-contrast-text mb-10 leading-relaxed text-center max-w-4xl"
+                className="text-xl md:text-2xl high-contrast-text mb-8 leading-relaxed text-center max-w-4xl font-bold"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 {t('hero.subtitle')}
               </motion.p>
+
+              {/* Main sales content */}
+              <motion.div 
+                className="high-contrast-text mb-10 leading-relaxed text-left max-w-5xl text-lg"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                {t('hero.mainContent').split('\n').map((paragraph, index) => (
+                  <p key={index} className="mb-4">
+                    {paragraph}
+                  </p>
+                ))}
+              </motion.div>
 
               {/* Price highlight banner */}
               <motion.div
