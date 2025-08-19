@@ -7,7 +7,7 @@ const resources = {
     translation: {
       hero: {
         title: "🚨 URGENT: Vlaška Apartment at Kvaternik Across from Zagreb Bank Selling Day After Tomorrow",
-        subtitle: "Sister Flying Back to Canada - Crazy Low Price Due to Rush Sale",
+        subtitle: "Sister Flying Back to Canada - Crazy Low Price Due to Rush Sale • Ground Floor Behind Hair Salon • Across from Zagrebačka Banka",
         mainContent: `# **URGENT**
 
 ## **Vlaška apartment at Kvaternik across from Zagreb Bank selling day after tomorrow**
@@ -78,8 +78,9 @@ And naturally, everything through public notary, contracts, etc.
         points: [
           "💎 High ceilings you can't buy in new builds - RARE!",
           "🪵 Original hardwood floors - AUTHENTIC CHARACTER",
-          "😴 Absolute quiet—courtyard facing - PEACEFUL",
-          "🏠 Two rooms + kitchen + bath - PERFECT LAYOUT", 
+          "😴 Absolute quiet—ground floor, courtyard facing, can't hear tram - PEACEFUL",
+          "🏠 Two rooms + kitchen + bath - ground floor behind hair salon - PERFECT LAYOUT",
+          "🔧 All utilities work: gas, water, sink & shower, heating - READY TO MOVE IN",
           "📋 Clean title (1/1), no encumbrances - READY TO BUY"
         ]
       },
@@ -157,6 +158,9 @@ And naturally, everything through public notary, contracts, etc.
         contact: "Contact",
         name: "Drago",
         disclaimer: "Information deemed reliable; buyer to verify."
+      },
+      liveViewers: {
+        text: "people viewing now"
       }
     }
   },
@@ -164,7 +168,7 @@ And naturally, everything through public notary, contracts, etc.
     translation: {
       hero: {
         title: "🚨 HITNO: Vlaška na Kvaternik preko puta Zagrebačke banke baš se prodaje prekosutra",
-        subtitle: "Sestra leti nazad u Kanadu - Luda cijena zbog brzine prodaje",
+        subtitle: "Sestra leti nazad u Kanadu - Luda cijena zbog brzine prodaje • Prizemlje iza frizerskog salona • Preko puta Zagrebačke banke",
         mainContent: `# **HITNO**
 
 ## **Vlaška na Kvaternik preko puta Zagrebačke banke baš se prodaje prekosutra**
@@ -235,8 +239,9 @@ I naravno, sve s javnim bilježnikom, ugovori, itd.
         points: [
           "Visoki stropovi kakvih nema u novogradnji",
           "Originalni tvrdi drveni parket",
-          "Potpuna tišina — orijentacija na dvorište",
-          "Dvije sobe + kuhinja + kupaonica",
+          "Potpuna tišina — prizemlje, orijentacija na dvorište, ne čuje se tramvaj",
+          "Dvije sobe + kuhinja + kupaonica — prizemlje iza frizerskog salona",
+          "Sve instalacije rade: plin, voda, sudoper i tuš, grijanje - SPREMAN ZA USELJENJE",
           "Čisto vlasništvo 1/1, bez tereta"
         ]
       },
@@ -314,6 +319,9 @@ I naravno, sve s javnim bilježnikom, ugovori, itd.
         contact: "Kontakt",
         name: "Drago",
         disclaimer: "Informacije smatrane pouzdanima; kupac treba provjeriti."
+      },
+      liveViewers: {
+        text: "ljudi trenutno gleda"
       }
     }
   }

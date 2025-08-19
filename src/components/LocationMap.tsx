@@ -23,7 +23,7 @@ export default function LocationMap() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="center-content mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
             {t('location.title')}
@@ -179,7 +179,7 @@ export default function LocationMap() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           viewport={{ once: true }}
-          className="text-center mt-12"
+          className="center-content mt-12"
         >
           <a
             href="https://maps.google.com/?q=Vlaška+117,+Zagreb,+Croatia"

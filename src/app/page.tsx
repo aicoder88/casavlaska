@@ -15,6 +15,7 @@ import LocationMap from '../components/LocationMap';
 import Faq from '../components/Faq';
 import UrgencyStrip from '../components/UrgencyStrip';
 import Footer from '../components/Footer';
+import LiveViewers from '../components/LiveViewers';
 
 export default function Home() {
   const [galleryOpen, setGalleryOpen] = useState(false);
@@ -78,6 +79,9 @@ export default function Home() {
 
         {/* Gallery Modal */}
         <Gallery isOpen={galleryOpen} onClose={closeGallery} />
+        
+        {/* Live Viewers Counter */}
+        <LiveViewers />
       </main>
     </I18nextProvider>
   );

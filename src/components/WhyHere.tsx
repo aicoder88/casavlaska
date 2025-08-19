@@ -59,7 +59,7 @@ export default function WhyHere() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
-          className="mt-16 text-center"
+          className="mt-16 center-content"
         >
           <GlassCard className="p-8 max-w-2xl mx-auto bg-gradient-to-r from-green-500/20 to-gold-500/20 center-content">
             <motion.div

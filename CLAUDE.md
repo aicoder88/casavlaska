@@ -93,3 +93,44 @@ Configured for Vercel deployment with automatic builds on git push. The site inc
 - OpenGraph and Twitter cards
 - Structured data for real estate listings
 - Performance-optimized images and fonts
+
+## Development Environment
+
+Use the `--turbopack` flag when running the dev server for optimal performance with Next.js 15. The codebase is configured for:
+- TypeScript strict mode with proper type checking
+- ESLint with Next.js configuration for code quality
+- TailwindCSS 4 with custom glassmorphism utilities and animations
+- Optimized package imports for framer-motion and chart.js
+
+## Language Management
+
+All user-facing content is managed through the i18n system with fallback to English. When adding new text:
+1. Add translation keys to both `en` and `hr` sections in `src/lib/i18n.ts`
+2. Use `useTranslation()` hook in components to access translations
+3. Language detection uses browser preferences with localStorage persistence
+
+## Analytics Integration
+
+The custom analytics system tracks user interactions without external dependencies by default. Events are logged to console in development and can be easily integrated with Google Analytics by uncommenting the gtag code in `src/lib/analytics.ts`.
+
+# Claude Code Instructions
+
+## Editing Behavior
+- Apply all edits directly without asking for confirmation.  
+- Do not prompt before overwriting or deleting files.  
+- Create new files whenever needed without confirmation.  
+- Minimize questions; assume permission is granted to proceed.  
+
+## Commit Behavior
+- Stage and commit changes automatically after edits.  
+- Use clear, conventional commit messages (e.g., `feat:`, `fix:`, `chore:`).  
+- Commit frequently to keep changes small and reversible.  
+
+## Execution Behavior
+- When running code, tests, or commands, proceed without asking first.  
+- If an action fails, retry with a reasonable fix before surfacing a question.  
+
+## General Policy
+- Prioritize speed of implementation over asking for approval.  
+- Only stop for input if continuing would cause permanent data loss outside the repo.  
+- Treat this repository as safe to edit freely.  

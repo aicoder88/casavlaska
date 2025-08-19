@@ -42,7 +42,7 @@ export default function Faq() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="center-content mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
             {t('faq.title')}
@@ -145,7 +145,7 @@ export default function Faq() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mt-16"
+          className="center-content mt-16"
         >
           <GlassCard className="p-8 max-w-2xl mx-auto bg-gradient-to-r from-blue-500/10 to-purple-500/10">
             <h3 className="text-xl font-semibold text-white mb-4">
