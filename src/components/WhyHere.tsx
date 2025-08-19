@@ -76,7 +76,6 @@ export default function WhyHere() {
             </p>
           </GlassCard>
         </motion.div>
-      </div>
     </section>
   );
 }

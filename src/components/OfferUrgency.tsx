@@ -122,7 +122,6 @@ export default function OfferUrgency() {
             </div>
           </GlassCard>
         </motion.div>
-      </div>
     </section>
   );
 }

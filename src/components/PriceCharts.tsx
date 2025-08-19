@@ -350,7 +350,6 @@ export default function PriceCharts() {
             </div>
           </GlassCard>
         </motion.div>
-      </div>
     </section>
   );
 }
