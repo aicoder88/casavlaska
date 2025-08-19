@@ -45,37 +45,39 @@ export default function Home() {
         {/* Language Selection - Sticky Header */}
         <LanguageToggle />
         
-        {/* Hero Section */}
+        {/* Hero Section - Full height, no additional spacing */}
         <Hero 
           onOpenGallery={openGallery}
           onOpenCalculator={scrollToCalculator}
         />
 
-        {/* Why Here Section */}
-        <WhyHere />
+        {/* Main Sections Container with consistent spacing */}
+        <div className="sections-container">
+          {/* Why Here Section */}
+          <WhyHere />
 
-        {/* Offer & Urgency */}
-        <OfferUrgency />
+          {/* Offer & Urgency */}
+          <OfferUrgency />
 
-        {/* Price Context Charts */}
-        <PriceCharts />
+          {/* Price Context Charts */}
+          <PriceCharts />
 
-        {/* ROI Calculator */}
-        <div id="roi-calculator">
-          <RoiCalculator />
-        </div>
+          {/* ROI Calculator */}
+          <div id="roi-calculator">
+            <RoiCalculator />
+          </div>
 
-        {/* Location Map */}
-        <LocationMap />
+          {/* Location Map */}
+          <LocationMap />
 
-        {/* FAQ Section */}
-        <Faq />
+          {/* FAQ Section */}
+          <Faq />
 
-        {/* Urgency Strip */}
-        <UrgencyStrip />
+          {/* Urgency Strip */}
+          <UrgencyStrip />
 
-        {/* Footer */}
-        <Footer />
+          {/* Footer */}
+          <Footer />
 
         {/* Gallery Modal */}
         <Gallery isOpen={galleryOpen} onClose={closeGallery} />

@@ -11,7 +11,7 @@ export default function WhyHere() {
   const points = t('whyHere.points', { returnObjects: true }) as string[];
 
   return (
-    <section className="py-20 relative">
+    <section className="section-spacing relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

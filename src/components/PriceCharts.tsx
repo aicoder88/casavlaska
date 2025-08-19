@@ -56,7 +56,7 @@ export default function PriceCharts() {
 
   if (loading) {
     return (
-      <section className="py-20">
+      <section className="section-spacing">
         <div className="container mx-auto px-4">
           <GlassCard className="p-8 text-center">
             <div className="animate-spin w-8 h-8 border-2 border-blue-500 border-t-transparent rounded-full mx-auto mb-4"></div>
@@ -69,7 +69,7 @@ export default function PriceCharts() {
 
   if (error || !priceData) {
     return (
-      <section className="py-20">
+      <section className="section-spacing">
         <div className="container mx-auto px-4">
           <GlassCard className="p-8 text-center">
             <p className="text-red-400">Error loading price data</p>
@@ -188,7 +188,7 @@ export default function PriceCharts() {
   const listingComparison = compareToMarket(priceData.currentListing.pricePerM2, currentMarketPrice);
 
   return (
-    <section className="py-20 relative">
+    <section className="section-spacing relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

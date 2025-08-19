@@ -16,7 +16,7 @@ export default function OfferUrgency() {
   };
 
   return (
-    <section className="py-20 relative">
+    <section className="section-spacing relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}

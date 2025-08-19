@@ -544,3 +544,24 @@ body {
   justify-content: center;
   box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
 }
+
+/* Section Spacing Utilities */
+.section-spacing {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.section-spacing-sm {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.section-spacing-lg {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+/* Consistent section gap */
+.sections-container > section:not(:first-child) {
+  margin-top: 2rem;
+}

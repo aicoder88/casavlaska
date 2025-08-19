@@ -16,7 +16,7 @@ export default function UrgencyStrip() {
   };
 
   return (
-    <section className="py-16 relative">
+    <section className="section-spacing-sm relative">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
