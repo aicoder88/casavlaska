@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 interface HeroProps {
   onOpenGallery: () => void;
@@ -25,7 +26,18 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
   return (
     <section className="w-full space-y-6 md:space-y-8">
       <div className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-2xl border p-6 md:p-8 lg:p-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/80 to-slate-800/80 backdrop-blur-md"></div>
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/front door.JPG"
+            alt="Front entrance of Vlaška 117 apartment building"
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-purple-900/80 to-slate-800/85 backdrop-blur-sm"></div>
+        </div>
         <div className="relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

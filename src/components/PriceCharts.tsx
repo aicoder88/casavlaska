@@ -264,26 +264,26 @@ export default function PriceCharts() {
         <GlassCard className="border-green-400/30 bg-gradient-to-r from-green-500/10 to-emerald-500/10 p-8">
           <div className="text-center">
             <h3 className="mb-4 text-2xl font-bold text-white">
-              Excellent Value Proposition
+              {t("priceContext.excellentValue")}
             </h3>
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
               <div className="text-center">
                 <div className="mb-2 text-3xl font-bold text-green-400">
                   {formatPricePerM2(priceData.currentListing.pricePerM2)}
                 </div>
-                <div className="text-white/80">Our Listing</div>
+                <div className="text-white/80">{t("priceContext.ourListing")}</div>
               </div>
               <div className="text-center">
                 <div className="mb-2 text-3xl font-bold text-white">
                   {formatPricePerM2(currentMarketPrice)}
                 </div>
-                <div className="text-white/80">Market Average</div>
+                <div className="text-white/80">{t("priceContext.marketAverage")}</div>
               </div>
               <div className="text-center">
                 <div className="mb-2 text-3xl font-bold text-red-400">
                   -{listingComparison.percentage.toFixed(1)}%
                 </div>
-                <div className="text-white/80">Below Market</div>
+                <div className="text-white/80">{t("priceContext.belowMarket")}</div>
               </div>
             </div>
           </div>
@@ -300,13 +300,13 @@ export default function PriceCharts() {
         <GlassCard className="p-6">
           <div className="mb-6 flex items-center justify-between">
             <h3 className="text-xl font-semibold text-white">
-              🏘️ {t("comparableProperties")}
+              🏘️ {t("common.comparableProperties")}
             </h3>
             <button
               onClick={() => setShowComparisons(!showComparisons)}
               className="glass-button px-4 py-2 text-sm"
             >
-              {showComparisons ? t("hide") : t("show")} Details
+              {showComparisons ? t("common.hide") : t("common.show")} Details
             </button>
           </div>
 
@@ -320,12 +320,12 @@ export default function PriceCharts() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/20">
-                    <th className="py-3 text-left text-white/80">{t("tableAddress")}</th>
-                    <th className="py-3 text-right text-white/80">{t("tableSize")}</th>
-                    <th className="py-3 text-right text-white/80">{t("tablePrice")}</th>
-                    <th className="py-3 text-right text-white/80">{t("tablePricePerM2")}</th>
+                    <th className="py-3 text-left text-white/80">{t("common.address")}</th>
+                    <th className="py-3 text-right text-white/80">{t("common.size")}</th>
+                    <th className="py-3 text-right text-white/80">{t("common.price")}</th>
+                    <th className="py-3 text-right text-white/80">{t("common.pricePerM2")}</th>
                     <th className="py-3 text-center text-white/80">
-                      {t("tableRenovated")}
+                      {t("common.renovated")}
                     </th>
                   </tr>
                 </thead>

@@ -149,7 +149,7 @@ export default function Footer() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-white/70">{t("common.rooms")}</span>
-                    <span className="text-white">2 + Kitchen + Bath</span>
+                    <span className="text-white">{t("common.roomLayout")}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-white/70">{t("common.price")}</span>

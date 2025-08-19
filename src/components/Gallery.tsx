@@ -17,52 +17,100 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    src: "/gallery/placeholder-1.svg",
+    src: "/front door.JPG",
     caption: {
-      en: "Living Room - High ceilings and original hardwood floors",
-      hr: "Dnevni boravak - Visoki stropovi i originalni drveni podovi",
+      en: "Front Entrance - Historic building entrance on Vlaška Street",
+      hr: "Glavni ulaz - Povijesni ulaz zgrade na Vlaškoj ulici",
     },
-    alt: "Living room with high ceilings",
+    alt: "Front entrance of historic building",
   },
   {
-    src: "/gallery/placeholder-2.svg",
+    src: "/IMG_2345.JPG",
     caption: {
-      en: "Kitchen - Fully renovated with modern appliances",
-      hr: "Kuhinja - Potpuno renovirana s modernim uređajima",
+      en: "Interior View - Spacious apartment with high ceilings",
+      hr: "Unutrašnji pogled - Prostran stan s visokim stropovima",
     },
-    alt: "Modern renovated kitchen",
+    alt: "Interior apartment view",
   },
   {
-    src: "/gallery/placeholder-3.svg",
+    src: "/IMG_2347.JPG",
     caption: {
-      en: "Bedroom - Peaceful courtyard views",
-      hr: "Spavaća soba - Miran pogled na dvorište",
+      en: "Living Space - Open floor plan with original features",
+      hr: "Dnevni prostor - Otvoreni tlocrt s originalnim elementima",
     },
-    alt: "Bedroom with courtyard view",
+    alt: "Living space interior",
   },
   {
-    src: "/gallery/placeholder-4.svg",
+    src: "/IMG_2397.JPG",
     caption: {
-      en: "Bathroom - Recently renovated with modern fixtures",
-      hr: "Kupaonica - Nedavno renovirana s modernim instalacijama",
+      en: "Room Details - Classic architectural elements",
+      hr: "Detalji prostorije - Klasični arhitektonski elementi",
     },
-    alt: "Modern renovated bathroom",
+    alt: "Room architectural details",
   },
   {
-    src: "/gallery/placeholder-5.svg",
+    src: "/IMG_2399.JPG",
     caption: {
-      en: "Building Exterior - Historic charm in Zagreb's center",
-      hr: "Vanjština zgrade - Povijesni šarm u centru Zagreba",
+      en: "Another Perspective - Bright and airy spaces",
+      hr: "Druga perspektiva - Svijetli i prozračni prostori",
     },
-    alt: "Historic building exterior",
+    alt: "Bright apartment interior",
   },
   {
-    src: "/gallery/placeholder-6.svg",
+    src: "/IMG_2404.JPG",
     caption: {
-      en: "Courtyard View - Quiet inner courtyard setting",
-      hr: "Pogled na dvorište - Mirno unutrašnje dvorište",
+      en: "Room Layout - Functional living arrangement",
+      hr: "Raspored prostorije - Funkcionalni stambeni raspored",
     },
-    alt: "Peaceful inner courtyard",
+    alt: "Room layout view",
+  },
+  {
+    src: "/IMG_2405.JPG",
+    caption: {
+      en: "Interior Features - Quality finishes and details",
+      hr: "Unutrašnji elementi - Kvalitetne završnice i detalji",
+    },
+    alt: "Interior features and finishes",
+  },
+  {
+    src: "/IMG_2441.JPG",
+    caption: {
+      en: "Living Area - Comfortable and well-lit space",
+      hr: "Dnevna zona - Udoban i dobro osvijetljen prostor",
+    },
+    alt: "Well-lit living area",
+  },
+  {
+    src: "/IMG_2442.JPG",
+    caption: {
+      en: "Room Configuration - Versatile layout options",
+      hr: "Konfiguracija prostorije - Svestrane mogućnosti rasporeda",
+    },
+    alt: "Versatile room configuration",
+  },
+  {
+    src: "/IMG_2443.JPG",
+    caption: {
+      en: "Space Overview - Complete apartment perspective",
+      hr: "Pregled prostora - Potpuna perspektiva stana",
+    },
+    alt: "Complete apartment overview",
+  },
+  {
+    src: "/IMG_2445 2.JPG",
+    caption: {
+      en: "Detailed View - Quality construction and materials",
+      hr: "Detaljan pogled - Kvalitetna konstrukcija i materijali",
+    },
+    alt: "Detailed construction view",
+  },
+  {
+    src: "/IMG_2446.JPG",
+    caption: {
+      en: "Final Perspective - Ready to move in",
+      hr: "Završna perspektiva - Spreman za useljenje",
+    },
+    alt: "Move-in ready apartment view",
   },
 ];
 

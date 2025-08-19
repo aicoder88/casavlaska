@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 import GlassCard from "./GlassCard";
 
 export default function OfferUrgency() {
@@ -59,6 +60,33 @@ export default function OfferUrgency() {
               >
                 {t("offer.urgency")}
               </motion.p>
+
+              {/* Property image to break up urgency text */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="my-8"
+              >
+                <GlassCard className="overflow-hidden p-0">
+                  <div className="relative h-64 md:h-80">
+                    <Image
+                      src="/IMG_2397.JPG"
+                      alt="Interior apartment details"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
+                    <div className="absolute bottom-4 left-4 right-4 text-center">
+                      <p className="text-lg font-bold text-white md:text-xl">
+                        {t("common.spaciousInterior")} • {t("common.readyToMove")}
+                      </p>
+                    </div>
+                  </div>
+                </GlassCard>
+              </motion.div>
 
               <motion.div
                 className="from-gold-500/30 rounded-2xl border-4 border-yellow-400/50 bg-gradient-to-r to-yellow-500/30 p-8 backdrop-blur-sm"
