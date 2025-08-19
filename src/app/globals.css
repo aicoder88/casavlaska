@@ -19,11 +19,20 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #f8fafc;
-    --foreground: #334155;
-    --glass-bg: rgba(255, 255, 255, 0.85);
-    --glass-border: rgba(148, 163, 184, 0.3);
-    --glass-shadow: rgba(0, 0, 0, 0.1);
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+    --glass-bg: rgba(15, 23, 42, 0.9);
+    --glass-border: rgba(148, 163, 184, 0.4);
+    --glass-shadow: rgba(0, 0, 0, 0.5);
+    
+    /* High contrast colors for dark mode */
+    --elegant-blue: #60a5fa;
+    --elegant-green: #34d399;
+    --elegant-gold: #fbbf24;
+    --elegant-purple: #a78bfa;
+    --elegant-slate: #e2e8f0;
+    --warm-text: #f8fafc;
+    --shadow-text: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -43,46 +52,55 @@ body {
   font-family: var(--font-inter), Georgia, 'Times New Roman', serif;
   line-height: 1.8;
   overflow-x: hidden;
-  font-size: 18px;
+  font-size: 20px;
   background-image: 
-    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(245, 158, 11, 0.15) 0%, transparent 50%);
   background-attachment: fixed;
   text-shadow: none;
+  font-weight: 500;
 }
 
 .glass-morphism {
-  background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-border);
-  box-shadow: 
-    0 8px 32px var(--glass-shadow),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.glass-card {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 2px solid var(--glass-border);
   box-shadow: 
-    0 12px 40px var(--glass-shadow),
-    inset 0 2px 0 rgba(255, 255, 255, 0.2);
-  @apply rounded-2xl p-6 mx-auto;
+    0 10px 35px var(--glass-shadow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  border: 2px solid var(--glass-border);
+  box-shadow: 
+    0 15px 45px var(--glass-shadow),
+    inset 0 2px 0 rgba(255, 255, 255, 0.25);
+  @apply rounded-2xl p-8 mx-auto;
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 
+    0 20px 55px var(--glass-shadow),
+    inset 0 2px 0 rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .glass-button {
   background: var(--glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 2px solid var(--glass-border);
+  border: 3px solid var(--glass-border);
   box-shadow: 
     0 12px 40px var(--glass-shadow),
-    inset 0 2px 0 rgba(255, 255, 255, 0.2);
-  @apply px-8 py-4 rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-2xl font-bold text-lg;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    inset 0 2px 0 rgba(255, 255, 255, 0.25);
+  @apply px-10 py-5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl font-bold text-xl;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .elegant-button {
@@ -247,4 +265,37 @@ body {
 .warm-text {
   color: var(--warm-text);
   text-shadow: none;
+}
+
+/* High contrast text for better visibility */
+.high-contrast-text {
+  color: var(--foreground);
+  font-weight: 600;
+  text-shadow: 0 1px 2px var(--shadow-text);
+}
+
+/* Gradient text for headings */
+.gradient-text {
+  background: linear-gradient(135deg, var(--elegant-gold), var(--elegant-blue), var(--elegant-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+  text-align: center;
+  filter: drop-shadow(0 2px 4px var(--shadow-text));
+}
+
+/* Enhanced button styles for better visibility */
+.urgency-button {
+  background: linear-gradient(135deg, #dc2626, #ef4444);
+  border: 3px solid #dc2626;
+  color: white;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 25px rgba(220, 38, 38, 0.4);
+}
+
+.urgency-button:hover {
+  background: linear-gradient(135deg, #b91c1c, #dc2626);
+  box-shadow: 0 12px 35px rgba(220, 38, 38, 0.6);
 }

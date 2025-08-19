@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <I18nextProvider i18n={i18n}>
-      <main className="min-h-screen">
+      <main className="min-h-screen w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Language Selection - Sticky Header */}
         <LanguageToggle />
         
