@@ -40,7 +40,7 @@ export default function Footer() {
                   CasaVlaška
                 </motion.h3>
                 <p className="text-white/80 leading-relaxed">
-                  Premium real estate in Zagreb&apos;s historic center. Your gateway to owning a piece of Croatian heritage.
+                  {t('common.premiumRealEstate')}
                 </p>
                 <div className="flex space-x-4">
                   <motion.a
@@ -49,7 +49,7 @@ export default function Footer() {
                     rel="noopener noreferrer"
                     className="text-white/60 hover:text-white transition-colors"
                     whileHover={{ scale: 1.1 }}
-                    aria-label="View on Google Maps"
+                    aria-label={t('common.viewOnGoogleMaps')}
                   >
                     📍
                   </motion.a>
@@ -57,7 +57,7 @@ export default function Footer() {
                     onClick={handleEmail}
                     className="text-white/60 hover:text-white transition-colors"
                     whileHover={{ scale: 1.1 }}
-                    aria-label="Send email"
+                    aria-label={t('common.sendEmail')}
                   >
                     ✉️
                   </motion.button>
@@ -75,7 +75,7 @@ export default function Footer() {
                     <span className="text-blue-400">👤</span>
                     <div>
                       <div className="text-white font-medium">{t('footer.name')}</div>
-                      <div className="text-white/70 text-sm">Property Specialist</div>
+                      <div className="text-white/70 text-sm">{t('common.propertySpecialist')}</div>
                     </div>
                   </div>
                   
@@ -87,8 +87,8 @@ export default function Footer() {
                     <span className="text-green-400">📞</span>
                     <div className="text-left">
                       <div className="text-white">+1 204 620-4491 (Lorie)</div>
-                      <div className="text-white/60 text-xs">If you MUST use Croatian phone: 099 343 3344 (Drago)</div>
-                      <div className="text-white/70 text-sm">Call anytime</div>
+                      <div className="text-white/60 text-xs">{t('common.ifMustUseCroatian')}</div>
+                      <div className="text-white/70 text-sm">{t('common.callAnytime')}</div>
                     </div>
                   </motion.button>
                   
@@ -99,8 +99,8 @@ export default function Footer() {
                   >
                     <span className="text-blue-400">💬</span>
                     <div className="text-left">
-                      <div className="text-white">WhatsApp</div>
-                      <div className="text-white/70 text-sm">Instant messaging</div>
+                      <div className="text-white">{t('common.whatsapp')}</div>
+                      <div className="text-white/70 text-sm">{t('common.instantMessaging')}</div>
                     </div>
                   </motion.button>
 
@@ -112,7 +112,7 @@ export default function Footer() {
                     <span className="text-purple-400">✉️</span>
                     <div className="text-left">
                       <div className="text-white">drago@casavlaska.com</div>
-                      <div className="text-white/70 text-sm">Email inquiry</div>
+                      <div className="text-white/70 text-sm">{t('common.emailInquiry')}</div>
                     </div>
                   </motion.button>
                 </div>
@@ -121,29 +121,29 @@ export default function Footer() {
               {/* Property Details */}
               <div className="space-y-4">
                 <h4 className="text-lg font-semibold text-white mb-4">
-                  🏠 Property Details
+                  🏠 {t('common.propertyDetails')}
                 </h4>
                 
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
-                    <span className="text-white/70">Address:</span>
+                    <span className="text-white/70">{t('common.address')}</span>
                     <span className="text-white">Vlaška 117, Zagreb</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-white/70">Size:</span>
+                    <span className="text-white/70">{t('common.size')}</span>
                     <span className="text-white">46 m²</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-white/70">Rooms:</span>
+                    <span className="text-white/70">{t('common.rooms')}</span>
                     <span className="text-white">2 + Kitchen + Bath</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-white/70">Price:</span>
+                    <span className="text-white/70">{t('common.price')}</span>
                     <span className="text-green-400 font-semibold">€159,900</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-white/70">Status:</span>
-                    <span className="text-yellow-400">Available</span>
+                    <span className="text-white/70">{t('common.status')}</span>
+                    <span className="text-yellow-400">{t('common.available')}</span>
                   </div>
                 </div>
 
@@ -156,7 +156,7 @@ export default function Footer() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      📞 Call
+                      📞 {t('common.call')}
                     </motion.button>
                     <motion.button
                       onClick={handleWhatsApp}
@@ -164,7 +164,7 @@ export default function Footer() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      💬 Chat
+                      💬 {t('common.chat')}
                     </motion.button>
                   </div>
                 </div>
@@ -179,7 +179,7 @@ export default function Footer() {
                 </div>
                 
                 <div className="flex items-center space-x-4 text-sm text-white/60">
-                  <span>🇭🇷 Zagreb, Croatia</span>
+                  <span>🇭🇷 {t('common.zagrebCroatia')}</span>
                   <span>•</span>
                   <span>© 2024 CasaVlaška</span>
                 </div>
@@ -191,7 +191,7 @@ export default function Footer() {
                   className="text-white/40 text-xs"
                   whileHover={{ color: 'rgba(255,255,255,0.7)' }}
                 >
-                  Built with ❤️ for quick sales • Powered by Next.js & Glassmorphism
+                  {t('common.builtWith')}
                 </motion.p>
               </div>
             </div>

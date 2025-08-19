@@ -167,7 +167,7 @@ export default function Gallery({ isOpen, onClose }: GalleryProps) {
               <button
                 onClick={onClose}
                 className="glass-button text-white p-3 hover:bg-white/20"
-                aria-label="Close gallery"
+                aria-label={t('common.closeGallery')}
               >
                 ✕
               </button>
@@ -233,14 +233,14 @@ export default function Gallery({ isOpen, onClose }: GalleryProps) {
                 <button
                   onClick={() => navigateImage('prev')}
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 glass-button text-white p-3 z-10"
-                  aria-label="Previous image"
+                  aria-label={t('common.previousImage')}
                 >
                   ❮
                 </button>
                 <button
                   onClick={() => navigateImage('next')}
                   className="absolute right-4 top-1/2 transform -translate-y-1/2 glass-button text-white p-3 z-10"
-                  aria-label="Next image"
+                  aria-label={t('common.nextImage')}
                 >
                   ❯
                 </button>
@@ -249,7 +249,7 @@ export default function Gallery({ isOpen, onClose }: GalleryProps) {
                 <button
                   onClick={closeLightbox}
                   className="absolute top-4 right-4 glass-button text-white p-3 z-10"
-                  aria-label="Close lightbox"
+                  aria-label={t('common.closeLightbox')}
                 >
                   ✕
                 </button>

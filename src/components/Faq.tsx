@@ -54,13 +54,13 @@ export default function Faq() {
               onClick={expandAll}
               className="glass-button text-white px-4 py-2 text-sm hover:bg-white/10"
             >
-              Expand All
+              {t('common.expandAll')}
             </button>
             <button
               onClick={collapseAll}
               className="glass-button text-white px-4 py-2 text-sm hover:bg-white/10"
             >
-              Collapse All
+              {t('common.collapseAll')}
             </button>
           </div>
         </motion.div>
@@ -149,10 +149,10 @@ export default function Faq() {
         >
           <GlassCard className="p-8 max-w-2xl mx-auto bg-gradient-to-r from-blue-500/10 to-purple-500/10">
             <h3 className="text-xl font-semibold text-white mb-4">
-              💬 Still Have Questions?
+              💬 {t('common.stillHaveQuestions')}
             </h3>
             <p className="text-white/80 mb-6">
-              Get instant answers about CasaVlaška. Call or message us directly.
+              {t('common.getInstantAnswers')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
@@ -162,7 +162,7 @@ export default function Faq() {
                 whileTap={{ scale: 0.95 }}
               >
                 <span>📞</span>
-                <span>Call Now</span>
+                <span>{t('common.callNow')}</span>
               </motion.a>
               <motion.a
                 href="https://wa.me/12046204491?text=I%20have%20questions%20about%20Vlaška%20117"
@@ -173,7 +173,7 @@ export default function Faq() {
                 whileTap={{ scale: 0.95 }}
               >
                 <span>💬</span>
-                <span>WhatsApp</span>
+                <span>{t('common.whatsapp')}</span>
               </motion.a>
             </div>
           </GlassCard>

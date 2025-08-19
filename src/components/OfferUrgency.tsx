@@ -68,8 +68,8 @@ export default function OfferUrgency() {
                   <div className="text-3xl md:text-4xl font-black price-text mb-4">
                     💰 {t('offer.price')}
                   </div>
-                  <div className="high-contrast-text text-lg font-bold">
-                    Below market rate • Clean title • Ready to close
+                  <div className="high-contrast-text text-lg font-bold center-content">
+                    {t('common.belowMarketRate')} • {t('common.cleanTitle')} • {t('common.readyToClose')}
                   </div>
                 </motion.div>
               </div>
@@ -116,7 +116,7 @@ export default function OfferUrgency() {
                     transition={{ duration: 1, repeat: Infinity }}
                   />
                   <span className="high-contrast-text font-black text-lg">
-                    ⏰ Decision Deadline: THURSDAY ⏰
+                    ⏰ {t('common.decisionDeadline')} ⏰
                   </span>
                 </div>
               </motion.div>

@@ -69,7 +69,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
 
               {/* Main sales content */}
               <motion.div 
-                className="high-contrast-text mb-10 leading-relaxed text-left max-w-5xl"
+                className="high-contrast-text mb-10 leading-relaxed text-center max-w-5xl center-content"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -186,7 +186,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
                   whileHover={{ scale: 1.1, rotateY: 5 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  💬 WhatsApp Now
+                  💬 {t('common.whatsappNow')}
                 </motion.button>
                 
                 <div className="hidden sm:block w-1 h-8 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
@@ -223,7 +223,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
           />
         </motion.div>
         <div className="text-center mt-3">
-          <span className="text-white/70 text-sm font-medium tracking-wider">SCROLL TO EXPLORE</span>
+          <span className="text-white/70 text-sm font-medium tracking-wider">{t('common.scrollToExplore')}</span>
         </div>
       </motion.div>
     </section>

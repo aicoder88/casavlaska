@@ -80,7 +80,7 @@ export default function UrgencyStrip() {
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  📞 Call +1 204 620-4491
+                  📞 {t('common.call')} +1 204 620-4491
                 </motion.button>
 
                 <motion.button
@@ -89,7 +89,7 @@ export default function UrgencyStrip() {
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  💬 WhatsApp Message
+                  💬 {t('common.whatsappMessage')}
                 </motion.button>
               </motion.div>
 
@@ -107,7 +107,7 @@ export default function UrgencyStrip() {
                   </div>
                   <div className="text-left">
                     <div className="text-white font-medium">Lorie</div>
-                    <div className="text-white/70 text-sm">Primary Contact (Canada)</div>
+                    <div className="text-white/70 text-sm">{t('common.primaryContact')}</div>
                   </div>
                 </div>
               </motion.div>

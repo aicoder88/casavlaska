@@ -44,7 +44,7 @@ export default function PriceCharts() {
         const data = await fetchPriceData();
         setPriceData(data);
       } catch (err) {
-        setError('Failed to load price data');
+        setError(t('common.failedToLoadPriceData'));
         console.error(err);
       } finally {
         setLoading(false);
@@ -52,7 +52,7 @@ export default function PriceCharts() {
     };
 
     loadData();
-  }, []);
+  }, [t]);
 
   if (loading) {
     return (
@@ -144,7 +144,7 @@ export default function PriceCharts() {
     }),
     datasets: [
       {
-        label: 'Zagreb Center Average',
+        label: t('common.zagrebCenterAverage'),
         data: priceData.city_avg.slice(-12).map(item => item.pricePerM2),
         borderColor: 'rgb(59, 130, 246)',
         backgroundColor: 'rgba(59, 130, 246, 0.1)',
@@ -168,7 +168,7 @@ export default function PriceCharts() {
     labels: ['Jan 2024', 'Mar 2024', 'Jun 2024', 'Sep 2024', 'Dec 2024'],
     datasets: [
       {
-        label: 'Zagreb Center Avg',
+        label: t('common.zagrebCenterAvg'),
         data: [3190, 3250, 3340, 3430, 3520],
         backgroundColor: 'rgba(59, 130, 246, 0.7)',
         borderColor: 'rgb(59, 130, 246)',
