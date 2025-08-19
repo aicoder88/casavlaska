@@ -10,7 +10,7 @@ const resources = {
           "Prefinjen stan na Vlaškoj — Kvaternik — preko puta Zagrebačke banke",
         subtitle:
           "Jedinstvena prilika za stjecanje nekretnine u srcu Zagreba • Prizemlje • Preko puta Zagrebačke banke",
-        mainContent: `# **Elegantan stan u srcu Zagreba**
+        mainContent: `# **Stan u srcu Zagreba**
 
 ## **Vlaška ulica, Kvaternik — preko puta Zagrebačke banke**
 
@@ -245,7 +245,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
           "Prefinjen stan na Vlaškoj — Kvaternik — preko puta Zagrebačke banke",
         subtitle:
           "Jedinstvena prilika za stjecanje nekretnine u srcu Zagreba • Prizemlje • Preko puta Zagrebačke banke",
-        mainContent: `# **Elegantan stan u srcu Zagreba**
+        mainContent: `# **Stan u srcu Zagreba**
 
 ## **Vlaška ulica, Kvaternik — preko puta Zagrebačke banke**
 
