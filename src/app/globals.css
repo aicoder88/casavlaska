@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0a0f1c;
-  --foreground: #ffffff;
-  --glass-bg: rgba(255, 255, 255, 0.15);
-  --glass-border: rgba(255, 255, 255, 0.3);
-  --glass-shadow: rgba(0, 0, 0, 0.4);
+  --background: #f8fafc;
+  --foreground: #334155;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(148, 163, 184, 0.3);
+  --glass-shadow: rgba(0, 0, 0, 0.1);
   
-  /* Sales-proven colors */
-  --urgency-red: #ff3333;
-  --trust-green: #00cc44;
-  --value-gold: #ffd700;
-  --scarcity-orange: #ff6600;
-  --premium-purple: #8b5cf6;
-  --high-contrast-text: #ffffff;
-  --shadow-text: rgba(0, 0, 0, 0.8);
+  /* Elegant colors for sophisticated audience */
+  --elegant-blue: #3b82f6;
+  --elegant-green: #10b981;
+  --elegant-gold: #f59e0b;
+  --elegant-purple: #8b5cf6;
+  --elegant-slate: #475569;
+  --warm-text: #1e293b;
+  --shadow-text: rgba(0, 0, 0, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0f1c;
-    --foreground: #ffffff;
-    --glass-bg: rgba(255, 255, 255, 0.12);
-    --glass-border: rgba(255, 255, 255, 0.25);
-    --glass-shadow: rgba(0, 0, 0, 0.6);
+    --background: #f8fafc;
+    --foreground: #334155;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --glass-border: rgba(148, 163, 184, 0.3);
+    --glass-shadow: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -40,15 +40,16 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  line-height: 1.7;
+  font-family: var(--font-inter), Georgia, 'Times New Roman', serif;
+  line-height: 1.8;
   overflow-x: hidden;
+  font-size: 18px;
   background-image: 
-    radial-gradient(circle at 20% 50%, rgba(255, 51, 51, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 215, 0, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(0, 204, 68, 0.15) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(245, 158, 11, 0.08) 0%, transparent 50%);
   background-attachment: fixed;
-  text-shadow: 1px 1px 2px var(--shadow-text);
+  text-shadow: none;
 }
 
 .glass-morphism {
@@ -84,71 +85,68 @@ body {
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
 }
 
-.urgency-button {
-  background: linear-gradient(135deg, var(--urgency-red), #ff6666);
-  border: 2px solid #ff0000;
+.elegant-button {
+  background: linear-gradient(135deg, var(--elegant-blue), #60a5fa);
+  border: 2px solid var(--elegant-blue);
   color: white;
-  animation: pulse-glow 2s infinite;
+  animation: gentle-pulse 4s ease-in-out infinite;
 }
 
 .trust-button {
-  background: linear-gradient(135deg, var(--trust-green), #33dd66);
-  border: 2px solid #00aa33;
+  background: linear-gradient(135deg, var(--elegant-green), #34d399);
+  border: 2px solid var(--elegant-green);
   color: white;
 }
 
 .value-button {
-  background: linear-gradient(135deg, var(--value-gold), #ffed4a);
-  border: 2px solid #e6c200;
-  color: #000;
-  font-weight: 900;
+  background: linear-gradient(135deg, var(--elegant-gold), #fbbf24);
+  border: 2px solid var(--elegant-gold);
+  color: white;
+  font-weight: 600;
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(255, 51, 51, 0.5); }
-  50% { box-shadow: 0 0 30px rgba(255, 51, 51, 0.8), 0 0 40px rgba(255, 51, 51, 0.6); }
+@keyframes gentle-pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 30px rgba(59, 130, 246, 0.3); }
 }
 
-.gradient-text {
-  background: linear-gradient(135deg, var(--value-gold), #fff);
+.elegant-gradient-text {
+  background: linear-gradient(135deg, var(--elegant-gold), var(--elegant-blue));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: none;
-  font-weight: 900;
+  font-weight: 700;
   text-align: center;
 }
 
-.high-contrast-text {
-  color: var(--high-contrast-text);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  font-weight: 600;
+.elegant-text {
+  color: var(--elegant-slate);
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 .price-text {
-  color: var(--value-gold);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  font-weight: 900;
-  font-size: 1.5em;
+  color: var(--elegant-gold);
+  font-weight: 700;
+  font-size: 1.4em;
+  letter-spacing: 0.5px;
 }
 
-.urgency-text {
-  color: var(--urgency-red);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  font-weight: 800;
-  animation: urgent-pulse 1.5s infinite;
+.highlight-text {
+  color: var(--elegant-blue);
+  font-weight: 600;
+  animation: gentle-highlight 3s ease-in-out infinite;
 }
 
 .trust-text {
-  color: var(--trust-green);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  font-weight: 700;
+  color: var(--elegant-green);
+  font-weight: 600;
 }
 
-.scarcity-text {
-  color: var(--scarcity-orange);
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
-  font-weight: 700;
+.emphasis-text {
+  color: var(--elegant-purple);
+  font-weight: 600;
 }
 
 .center-content {
@@ -163,9 +161,9 @@ body {
   padding: 1.5rem;
 }
 
-@keyframes urgent-pulse {
+@keyframes gentle-highlight {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  50% { opacity: 0.8; }
 }
 
 .floating-blob {
@@ -216,4 +214,37 @@ body {
   75% {
     transform: translateY(-25px) translateX(5px) rotate(3deg);
   }
+}
+
+/* Elegant flashing outline for Croatian button */
+.elegant-flashing-outline {
+  position: relative;
+  animation: elegant-glow 3s ease-in-out infinite;
+}
+
+@keyframes elegant-glow {
+  0%, 100% { 
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3), 0 0 10px rgba(59, 130, 246, 0.2); 
+  }
+  50% { 
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6), 0 0 25px rgba(59, 130, 246, 0.4), 0 0 35px rgba(59, 130, 246, 0.2); 
+  }
+}
+
+/* Senior-friendly text styles */
+.senior-friendly {
+  font-size: 20px;
+  line-height: 1.9;
+  letter-spacing: 0.5px;
+}
+
+.elegant-heading {
+  color: var(--elegant-slate);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.warm-text {
+  color: var(--warm-text);
+  text-shadow: none;
 }

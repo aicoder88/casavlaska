@@ -6,90 +6,88 @@ const resources = {
   en: {
     translation: {
       hero: {
-        title: "🚨 URGENT: Vlaška Apartment at Kvaternik Across from Zagreb Bank Selling Day After Tomorrow",
-        subtitle: "Sister Flying Back to Canada - Crazy Low Price Due to Rush Sale • Ground Floor Behind Hair Salon • Across from Zagrebačka Banka",
-        mainContent: `# **URGENT**
+        title: "Prefinjen stan na Vlaškoj — Kvaternik — preko puta Zagrebačke banke",
+        subtitle: "Jedinstvena prilika za stjecanje nekretnine u srcu Zagreba • Prizemlje • Preko puta Zagrebačke banke",
+        mainContent: `# **Elegantan stan u srcu Zagreba**
 
-## **Vlaška apartment at Kvaternik across from Zagreb Bank selling day after tomorrow**
-
----
-
-### **Building permit OK - Earthquake didn't affect the building**
-
-### **100% clean papers - of course, you're welcome to verify everything**
-
-### **Best offer gets the most beautiful part of the city with high ceilings**
+## **Vlaška ulica, Kvaternik — preko puta Zagrebačke banke**
 
 ---
 
-**Small investment needed for adaptation for premium living**
+### **Zgrada u odličnom stanju — potres nije utjecao na konstrukciju**
 
-**Or just live in it as is, and fix little by little**
+### **Svi papiri uredni — dobrodošli ste provjeriti sve dokumenti**
 
----
-
-# **46.9 square meters**
+### **Prilika za stjecanje nekretnine u najljepšem dijelu grada**
 
 ---
 
-**Energy certificate will be ready day after tomorrow**
+**Mogućnost lagane adaptacije za luksuzan život**
 
-**Crazy price because sister came from Canada to claim the apartment**
-
-**After 40 years of protected tenant exit**
-
-Sister is Croatian, but doesn't want to be in Croatia at all.
-
-Going home soon.
+**Ili se uselite odmah i renovirajte postupno**
 
 ---
 
-# **VERY FAST SALE**
-
-That's why low price (and because of adaptation needed).
-
-Look, that's it.
-
-Like I said, papers are 100% clean.
-
-You can verify everything yourself, naturally.
+# **46,9 kvadratnih metara**
 
 ---
 
-# **CASH PREFERRED**
+**Energetski certifikat u pripremi**
 
-And naturally, everything through public notary, contracts, etc.
+**Atraktivna cijena zbog brzine prodaje**
+
+**Stan je slobodan nakon dugoročnog najma**
+
+Vlasnica živi u Kanadi i želi završiti prodaju.
+
+Traži pouzdanog kupca za ovaj poseban stan.
 
 ---
 
-## **Make your best offer for your piece of Zagreb's most beautiful neighborhood**
+# **Brza prodaja**
+
+Zbog toga je cijena pristupačna.
+
+Svi dokumenti su pripremljeni.
+
+Možete provjeriti sve detalje.
 
 ---
 
-# **Call sister Lorie - speak slowly or English**
+# **Prednost za gotovinsku kupnju**
 
-# **Her WhatsApp: +1-204-620-4491**`,
-        bookViewing: "🚨 CALL NOW: 099 343 3344",
-        openGallery: "📸 See Photos", 
-        calculateROI: "💰 Calculate Profit"
+Sav postupak kroz javnog bilježnika s ugovorima.
+
+---
+
+## **Vaša ponuda za dio najljepšeg kvarta u Zagrebu**
+
+---
+
+# **Kontakt: Lorie — govorite polako ili engleski**
+
+# **WhatsApp: +1-204-620-4491**`,
+        bookViewing: "Pozovite: 099 343 3344",
+        openGallery: "Pregledajte fotografije", 
+        calculateROI: "Izračunajte povrat"
       },
       whyHere: {
-        title: "🏆 WHY THIS IS A STEAL",
+        title: "Zašto je ovaj stan poseban",
         points: [
-          "💎 High ceilings you can't buy in new builds - RARE!",
-          "🪵 Original hardwood floors - AUTHENTIC CHARACTER",
-          "😴 Absolute quiet—ground floor, courtyard facing, can't hear tram - PEACEFUL",
-          "🏠 Two rooms + kitchen + bath - ground floor behind hair salon - PERFECT LAYOUT",
-          "🔧 All utilities work: gas, water, sink & shower, heating - READY TO MOVE IN",
-          "📋 Clean title (1/1), no encumbrances - READY TO BUY"
+          "Visoki stropovi rijetko dostupni u novogradnji",
+          "Originalni drveni podovi s autentičnim karakterom",
+          "Mirna lokacija — prizemlje s pogledom na dvorište, potpuna tišina",
+          "Dvije sobe + kuhinja + kupaonica — praktičan i funkcionalan raspored",
+          "Sve instalacije su funkcionalne — spreman za useljenje",
+          "Čisto vlasništvo (1/1) bez tereta — siguran kupnja"
         ]
       },
       offer: {
-        title: "🚨 URGENT SALE",
-        urgency: "🇨🇦 Seller flying back to Canada! DECISION BY THURSDAY! Cash or fast financing gets this STEAL!",
-        price: "💰 ONLY €159,900 — SAVE €60,000+ vs similar properties!",
-        callNow: "📞 CALL NOW",
-        whatsApp: "💬 WhatsApp"
+        title: "Posebna ponuda",
+        urgency: "Vlasnica živi u Kanadi i želi brzu prodaju. Idealno za one koji traže kvalitetnu nekretninu u centru grada.",
+        price: "Cijena: €159,900 — izvrsna vrijednost za lokaciju",
+        callNow: "Pozovite za razgled",
+        whatsApp: "WhatsApp kontakt"
       },
       priceContext: {
         title: "💎 INCREDIBLE VALUE COMPARISON",
@@ -167,75 +165,73 @@ And naturally, everything through public notary, contracts, etc.
   hr: {
     translation: {
       hero: {
-        title: "🚨 HITNO: Vlaška na Kvaternik preko puta Zagrebačke banke baš se prodaje prekosutra",
-        subtitle: "Sestra leti nazad u Kanadu - Luda cijena zbog brzine prodaje • Prizemlje iza frizerskog salona • Preko puta Zagrebačke banke",
-        mainContent: `# **HITNO**
+        title: "Prefinjen stan na Vlaškoj — Kvaternik — preko puta Zagrebačke banke",
+        subtitle: "Jedinstvena prilika za stjecanje nekretnine u srcu Zagreba • Prizemlje • Preko puta Zagrebačke banke",
+        mainContent: `# **Elegantan stan u srcu Zagreba**
 
-## **Vlaška na Kvaternik preko puta Zagrebačke banke baš se prodaje prekosutra**
-
----
-
-### **Uporabna dozvola OK - Potres nije utjecao na zgradu**
-
-### **100% čisti papiri - naravno, smijete sve provjeriti**
-
-### **Najbolja ponuda dobiva najljepši dio grada s visokim stropovima**
+## **Vlaška ulica, Kvaternik — preko puta Zagrebačke banke**
 
 ---
 
-**Mora se uložiti malo u adaptaciju za vrhunski život**
+### **Zgrada u odličnom stanju — potres nije utjecao na konstrukciju**
 
-**Ili samo živite u njoj kako jest, i popravite malo po malo**
+### **Svi papiri uredni — dobrodošli ste provjeriti sve dokumente**
 
----
-
-# **46,9 kvadrata**
+### **Prilika za stjecanje nekretnine u najljepšem dijelu grada**
 
 ---
 
-**Energetski certifikat će biti gotov prekosutra**
+**Mogućnost lagane adaptacije za luksuzan život**
 
-**Luda cijena jer je sestra došla iz Kanade da preuzme stan**
-
-**Nakon 40 godina izlaska zaštićenog najmoprimca**
-
-Sestra je Hrvatica, ali ne želi biti u Hrvatskoj uopće.
-
-Pa ide doma uskoro.
+**Ili se uselite odmah i renovirajte postupno**
 
 ---
 
-# **JAKO BRZO PRODAJA**
-
-Zbog toga niska cijena (i zbog adaptacije).
-
-Evo, to je to.
-
-Kako sam rekao, papiri su 100% čisti.
-
-Možete sve provjeriti sami, naravno.
+# **46,9 kvadratnih metara**
 
 ---
 
-# **GOTOVINA JE PREFERIRANA**
+**Energetski certifikat u pripremi**
 
-I naravno, sve s javnim bilježnikom, ugovori, itd.
+**Atraktivna cijena zbog brzine prodaje**
+
+**Stan je slobodan nakon dugoročnog najma**
+
+Vlasnica živi u Kanadi i želi završiti prodaju.
+
+Traži pouzdanog kupca za ovaj poseban stan.
 
 ---
 
-## **Stvorite svoju najbolju cijenu za svoj dio najljepšeg kvarta u Zagrebu**
+# **Brza prodaja**
+
+Zbog toga je cijena pristupačna.
+
+Svi dokumenti su pripremljeni.
+
+Možete provjeriti sve detalje.
 
 ---
 
-# **Zovite sestru Lorie - govorite sporo ili engleski**
+# **Prednost za gotovinsku kupnju**
 
-# **Njen WhatsApp: +1-204-620-4491**`,
-        bookViewing: "🚨 ZOVITE ODMAH: 099 343 3344",
-        openGallery: "📸 Pogledajte Slike",
-        calculateROI: "💰 Izračunajte Profit"
+Sav postupak kroz javnog bilježnika s ugovorima.
+
+---
+
+## **Vaša ponuda za dio najljepšeg kvarta u Zagrebu**
+
+---
+
+# **Kontakt: Lorie — govorite polako ili engleski**
+
+# **WhatsApp: +1-204-620-4491**`,
+        bookViewing: "Pozovite: 099 343 3344",
+        openGallery: "Pregledajte fotografije",
+        calculateROI: "Izračunajte povrat"
       },
       whyHere: {
-        title: "Zašto Ova Lokacija",
+        title: "Zašto je ovaj stan poseban",
         points: [
           "Visoki stropovi kakvih nema u novogradnji",
           "Originalni tvrdi drveni parket",
@@ -246,11 +242,11 @@ I naravno, sve s javnim bilježnikom, ugovori, itd.
         ]
       },
       offer: {
-        title: "Ponuda",
-        urgency: "Prodaja hitna. Odluka u četvrtak. Gotovina ili brzo financiranje.",
-        price: "Tražimo 159.900 € — ili najbolju ponudu do četvrtka.",
-        callNow: "Pozovi Sada",
-        whatsApp: "WhatsApp"
+        title: "Posebna ponuda",
+        urgency: "Vlasnica živi u Kanadi i želi brzu prodaju. Idealno za one koji traže kvalitetnu nekretninu u centru grada.",
+        price: "Cijena: €159,900 — izvrsna vrijednost za lokaciju",
+        callNow: "Pozovite za razgled",
+        whatsApp: "WhatsApp kontakt"
       },
       priceContext: {
         title: "Kontekst Cijene",
@@ -332,8 +328,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'en',
-    lng: 'en',
+    fallbackLng: 'hr',
+    lng: 'hr',
     interpolation: {
       escapeValue: false,
     },
