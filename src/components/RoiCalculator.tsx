@@ -236,10 +236,13 @@ export default function RoiCalculator() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <GlassCard className="p-6">
-            <h3 className="mb-6 text-xl font-semibold text-white">
-              📊 Investment Parameters
-            </h3>
+          <GlassCard className="border-2 border-blue-400/30 bg-gradient-to-br from-blue-900/20 to-purple-900/20 p-8 shadow-xl">
+            <motion.h3 
+              className="mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-2xl font-black text-transparent"
+              whileHover={{ scale: 1.02 }}
+            >
+              {t("calculator.investmentParameters")}
+            </motion.h3>
 
             <div className="space-y-4">
               {/* Purchase Price */}
@@ -433,58 +436,77 @@ export default function RoiCalculator() {
           className="space-y-6"
         >
           {/* Results Card */}
-          <GlassCard className="p-6">
-            <h3 className="mb-6 text-xl font-semibold text-white">
-              💰 Investment Results
-            </h3>
+          <GlassCard className="border-2 border-green-400/30 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-8 shadow-xl">
+            <motion.h3 
+              className="mb-8 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-2xl font-black text-transparent"
+              whileHover={{ scale: 1.02 }}
+            >
+              {t("calculator.investmentResults")}
+            </motion.h3>
 
-            <div className="mb-6 grid grid-cols-2 gap-4">
-              <div className="rounded-lg bg-white/5 p-4 text-center">
-                <div className="mb-2 text-2xl font-bold text-white">
+            <div className="mb-8 grid grid-cols-2 gap-6">
+              <motion.div 
+                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-6 text-center backdrop-blur-sm border border-white/10"
+                whileHover={{ scale: 1.03, y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="mb-3 text-3xl font-black text-emerald-400">
                   €{results.totalCost.toLocaleString()}
                 </div>
-                <div className="text-sm text-white/80">
+                <div className="text-sm font-medium text-white/90">
                   {t("calculator.totalCost")}
                 </div>
-              </div>
-              <div className="rounded-lg bg-white/5 p-4 text-center">
-                <div className="mb-2 text-2xl font-bold text-green-400">
+              </motion.div>
+              <motion.div 
+                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-6 text-center backdrop-blur-sm border border-white/10"
+                whileHover={{ scale: 1.03, y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="mb-3 text-3xl font-black text-green-400">
                   {results.grossYield.toFixed(1)}%
                 </div>
-                <div className="text-sm text-white/80">
+                <div className="text-sm font-medium text-white/90">
                   {t("calculator.grossYield")}
                 </div>
-              </div>
-              <div className="rounded-lg bg-white/5 p-4 text-center">
-                <div className="mb-2 text-2xl font-bold text-blue-400">
+              </motion.div>
+              <motion.div 
+                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-6 text-center backdrop-blur-sm border border-white/10"
+                whileHover={{ scale: 1.03, y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="mb-3 text-3xl font-black text-blue-400">
                   {results.netYield.toFixed(1)}%
                 </div>
-                <div className="text-sm text-white/80">
+                <div className="text-sm font-medium text-white/90">
                   {t("calculator.netYield")}
                 </div>
-              </div>
-              <div className="rounded-lg bg-white/5 p-4 text-center">
-                <div className="mb-2 text-2xl font-bold text-yellow-400">
+              </motion.div>
+              <motion.div 
+                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-6 text-center backdrop-blur-sm border border-white/10"
+                whileHover={{ scale: 1.03, y: -2 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className="mb-3 text-3xl font-black text-amber-400">
                   {results.payback.toFixed(1)} yrs
                 </div>
-                <div className="text-sm text-white/80">
+                <div className="text-sm font-medium text-white/90">
                   {t("calculator.payback")}
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             <div className="border-t border-white/20 pt-4">
               <div className="space-y-2 text-sm text-white/80">
                 <div className="flex justify-between">
-                  <span>Monthly Income:</span>
+                  <span>{t("calculator.monthlyIncome")}</span>
                   <span>€{results.monthlyIncome.toFixed(0)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Monthly Expenses:</span>
+                  <span>{t("calculator.monthlyExpenses")}</span>
                   <span>-€{results.monthlyExpenses.toFixed(0)}</span>
                 </div>
                 <div className="flex justify-between border-t border-white/20 pt-2 font-semibold text-white">
-                  <span>Net Monthly:</span>
+                  <span>{t("calculator.netMonthly")}</span>
                   <span>
                     €
                     {(results.monthlyIncome - results.monthlyExpenses).toFixed(
@@ -497,11 +519,14 @@ export default function RoiCalculator() {
           </GlassCard>
 
           {/* Sensitivity Analysis */}
-          <GlassCard className="p-6">
-            <div className="mb-4 flex items-center justify-between">
-              <h4 className="text-lg font-semibold text-white">
-                📈 Sensitivity Analysis
-              </h4>
+          <GlassCard className="border-2 border-amber-400/30 bg-gradient-to-br from-amber-900/20 to-orange-900/20 p-8 shadow-xl">
+            <div className="mb-6 flex items-center justify-between">
+              <motion.h4 
+                className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-xl font-black text-transparent"
+                whileHover={{ scale: 1.02 }}
+              >
+                {t("calculator.sensitivityAnalysis")}
+              </motion.h4>
               <select
                 value={sensitivityRange}
                 onChange={(e) => setSensitivityRange(Number(e.target.value))}
