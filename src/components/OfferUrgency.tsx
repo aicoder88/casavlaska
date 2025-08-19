@@ -25,7 +25,7 @@ export default function OfferUrgency() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <GlassCard className="p-8 md:p-12 bg-gradient-to-br from-red-500/20 via-orange-500/20 to-yellow-500/20 border-4 border-yellow-400/50 center-content">
+          <GlassCard className="p-8 md:p-12 bg-gradient-to-br from-red-500/20 via-orange-500/20 to-yellow-500/20 border-4 border-yellow-400/50">
             <div className="center-content">
               {/* Alert icon */}
               <motion.div

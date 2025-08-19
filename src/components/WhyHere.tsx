@@ -34,8 +34,8 @@ export default function WhyHere() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <GlassCard className="p-6 h-full group center-content">
-                <div className="flex flex-col items-center text-center space-y-4">
+              <GlassCard className="p-6 h-full group">
+                <div className="flex flex-col items-center text-center space-y-4 h-full justify-center">
                   <motion.div
                     className="text-4xl mb-2"
                     whileHover={{ scale: 1.2, rotate: 10 }}
