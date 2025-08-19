@@ -16,8 +16,7 @@ export default function OfferUrgency() {
   };
 
   return (
-    <section className="section-spacing relative">
-      <div className="container mx-auto px-4">
+    <section className="relative w-full max-w-[900px] mx-auto p-8">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}

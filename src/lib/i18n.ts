@@ -92,7 +92,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         whatsApp: "WhatsApp kontakt"
       },
       priceContext: {
-        title: "💎 INCREDIBLE VALUE COMPARISON",
+        title: "INCREDIBLE VALUE COMPARISON",
         cityTrend: "📈 Zagreb Center Price Trend",
         comparison: "🏆 Kvaternik / Vlaška vs City Average", 
         compsTitle: "🔥 THIS LISTING IS €60,000+ BELOW MARKET! GRAB IT NOW!"
@@ -214,7 +214,13 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         nextImage: "Next image",
         closeLightbox: "Close lightbox",
         viewOnGoogleMaps: "View on Google Maps",
-        sendEmail: "Send email"
+        sendEmail: "Send email",
+        faceTime: "FaceTime",
+        videoCallAvailable: "Video call available",
+        primeLocationDescription: "Located in the heart of Zagreb's cultural district, just steps from Kvaternik Square. Walk to cafes, restaurants, and public transport. This is urban living at its finest.",
+        walkingNationalTheatre: "Walking distance to Croatian National Theatre",
+        ilicaStreetNearby: "Ilica Street shopping district nearby",
+        marketsWithinReach: "Green market and Dolac Market within reach"
       }
     }
   },
@@ -429,7 +435,13 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         nextImage: "Sljedeća slika",
         closeLightbox: "Zatvorite lightbox",
         viewOnGoogleMaps: "Pogledajte na Google Maps",
-        sendEmail: "Pošaljite email"
+        sendEmail: "Pošaljite email",
+        faceTime: "FaceTime",
+        videoCallAvailable: "Video poziv dostupan",
+        primeLocationDescription: "Smješten u srcu zagrebačke kulturne četvrti, samo nekoliko koraka od Kvaternikovog trga. Šetnja do kafića, restorana i javnog prijevoza. Ovo je urbanski život u najboljem izdanju.",
+        walkingNationalTheatre: "Pješačka udaljenost do Hrvatskog narodnog kazališta",
+        ilicaStreetNearby: "Ilica - trgovačka četvrt u blizini",
+        marketsWithinReach: "Zelena tržnica i Dolac u dosegu"
       }
     }
   }

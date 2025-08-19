@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <I18nextProvider i18n={i18n}>
-      <main className="min-h-screen w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="min-h-screen w-full flex flex-col items-center justify-center max-w-[900px] mx-auto p-8">
         {/* Language Selection - Sticky Header */}
         <LanguageToggle />
         
@@ -52,7 +52,7 @@ export default function Home() {
         />
 
         {/* Main Sections Container with consistent spacing */}
-        <div className="sections-container">
+        <div className="w-full flex flex-col space-y-16">
           {/* Why Here Section */}
           <WhyHere />
 

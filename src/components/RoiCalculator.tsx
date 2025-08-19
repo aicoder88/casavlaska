@@ -235,8 +235,7 @@ export default function RoiCalculator() {
   };
 
   return (
-    <section className="section-spacing relative">
-      <div className="container mx-auto px-4">
+    <section className="relative w-full max-w-[900px] mx-auto p-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}

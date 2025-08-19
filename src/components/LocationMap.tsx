@@ -135,15 +135,15 @@ export default function LocationMap() {
               <div className="space-y-3 text-white/80 text-sm">
                 <div className="flex items-start space-x-2">
                   <span>🎭</span>
-                  <span>Walking distance to Croatian National Theatre</span>
+                  <span>{t('common.walkingNationalTheatre')}</span>
                 </div>
                 <div className="flex items-start space-x-2">
                   <span>🛍️</span>
-                  <span>Ilica Street shopping district nearby</span>
+                  <span>{t('common.ilicaStreetNearby')}</span>
                 </div>
                 <div className="flex items-start space-x-2">
                   <span>🌳</span>
-                  <span>Green market and Dolac Market within reach</span>
+                  <span>{t('common.marketsWithinReach')}</span>
                 </div>
                 <div className="flex items-start space-x-2">
                   <span>🏛️</span>

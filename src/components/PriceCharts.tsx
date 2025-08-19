@@ -188,8 +188,7 @@ export default function PriceCharts() {
   const listingComparison = compareToMarket(priceData.currentListing.pricePerM2, currentMarketPrice);
 
   return (
-    <section className="section-spacing relative">
-      <div className="container mx-auto px-4">
+    <section className="relative w-full max-w-[900px] mx-auto p-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -249,7 +248,7 @@ export default function PriceCharts() {
           <GlassCard className="p-8 bg-gradient-to-r from-green-500/10 to-emerald-500/10 border-green-400/30">
             <div className="text-center">
               <h3 className="text-2xl font-bold text-white mb-4">
-                💎 Excellent Value Proposition
+                Excellent Value Proposition
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="text-center">

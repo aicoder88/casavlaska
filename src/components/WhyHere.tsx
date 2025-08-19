@@ -11,8 +11,7 @@ export default function WhyHere() {
   const points = t('whyHere.points', { returnObjects: true }) as string[];
 
   return (
-    <section className="section-spacing relative">
-      <div className="container mx-auto px-4">
+    <section className="relative w-full max-w-[900px] mx-auto p-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -68,13 +67,12 @@ export default function WhyHere() {
             >
               <span className="text-3xl">⭐</span>
               <h3 className="text-2xl font-black trust-text">
-                💎 PRIME ZAGREB LOCATION 💎
+                PRIME ZAGREB LOCATION
               </h3>
               <span className="text-3xl">⭐</span>
             </motion.div>
             <p className="high-contrast-text leading-relaxed text-lg font-bold">
-              Located in the heart of Zagreb&apos;s cultural district, just steps from Kvaternik Square. 
-              Walk to cafes, restaurants, and public transport. This is urban living at its finest.
+              {t('common.primeLocationDescription')}
             </p>
           </GlassCard>
         </motion.div>

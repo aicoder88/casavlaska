@@ -109,10 +109,10 @@ export default function Footer() {
                     className="flex items-center space-x-3 hover:bg-white/10 p-2 rounded-lg transition-colors w-full"
                     whileHover={{ x: 5 }}
                   >
-                    <span className="text-purple-400">✉️</span>
+                    <span className="text-purple-400">📹</span>
                     <div className="text-left">
-                      <div className="text-white">+1 204 620-4491</div>
-                      <div className="text-white/70 text-sm">{t('common.emailInquiry')}</div>
+                      <div className="text-white">{t('common.faceTime')}</div>
+                      <div className="text-white/70 text-sm">{t('common.videoCallAvailable')}</div>
                     </div>
                   </motion.button>
                 </div>

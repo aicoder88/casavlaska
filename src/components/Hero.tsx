@@ -20,7 +20,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen w-full max-w-[900px] mx-auto flex items-center justify-center overflow-hidden p-8">
       {/* Animated gradient background */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800"></div>
       
@@ -130,7 +130,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
               >
                 <div className="text-center relative z-10">
                   <div className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 drop-shadow-2xl">
-                    💎 €159,900 💎
+                    €159,900
                   </div>
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold text-amber-200 drop-shadow-lg">
                     ✨ SAVE €60,000+ vs MARKET PRICE! ✨

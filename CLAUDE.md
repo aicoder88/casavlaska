@@ -105,9 +105,22 @@ Use the `--turbopack` flag when running the dev server for optimal performance w
 ## Language Management
 
 All user-facing content is managed through the i18n system with fallback to English. When adding new text:
-1. Add translation keys to both `en` and `hr` sections in `src/lib/i18n.ts`
-2. Use `useTranslation()` hook in components to access translations
-3. Language detection uses browser preferences with localStorage persistence
+
+### CRITICAL TRANSLATION RULES:
+1. **NEVER hardcode English text directly in components** - Always use translation keys
+2. **ALL user-visible text must be translatable** - No exceptions for labels, descriptions, or UI text
+3. Add translation keys to BOTH `en` and `hr` sections in `src/lib/i18n.ts` simultaneously
+4. Use `useTranslation()` hook in components: `{t('common.keyName')}`
+5. Test both language versions after any text changes
+6. Translation keys should be descriptive: `common.videoCallAvailable` not `common.text1`
+
+### Process for adding new text:
+1. Add key to English section: `newKey: "English text"`
+2. Add key to Croatian section: `newKey: "Croatian translation"`  
+3. Use in component: `{t('common.newKey')}`
+4. Never use hardcoded strings like "FaceTime" or "Video call available"
+
+Language detection uses browser preferences with localStorage persistence
 
 ## Analytics Integration
 
