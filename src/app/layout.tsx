@@ -2,21 +2,24 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ 
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-inter'
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://casavlaska.com'),
+  metadataBase: new URL("https://casavlaska.com"),
   title: "CasaVlaška — Vlaška 117 | Premium Zagreb Apartment for Sale",
-  description: "46 m² apartment in Zagreb's center. High ceilings, courtyard quiet, 3 min to Kvaternik. €159,900. First serious buyer wins. Call +385 99 343 3344",
-  keywords: "Zagreb apartment, real estate Croatia, Vlaška 117, apartment for sale, Zagreb center, investment property",
+  description:
+    "46 m² apartment in Zagreb's center. High ceilings, courtyard quiet, 3 min to Kvaternik. €159,900. First serious buyer wins. Call +385 99 343 3344",
+  keywords:
+    "Zagreb apartment, real estate Croatia, Vlaška 117, apartment for sale, Zagreb center, investment property",
   authors: [{ name: "CasaVlaška" }],
   openGraph: {
     title: "CasaVlaška — Vlaška 117 | Premium Zagreb Apartment",
-    description: "46 m² apartment in Zagreb's center. High ceilings, courtyard quiet. €159,900 or best offer.",
+    description:
+      "46 m² apartment in Zagreb's center. High ceilings, courtyard quiet. €159,900 or best offer.",
     url: "https://casavlaska.com",
     siteName: "CasaVlaška",
     images: [
@@ -24,17 +27,18 @@ export const metadata: Metadata = {
         url: "/og-image.svg",
         width: 1200,
         height: 630,
-        alt: "CasaVlaška - Vlaška 117 Zagreb Apartment"
-      }
+        alt: "CasaVlaška - Vlaška 117 Zagreb Apartment",
+      },
     ],
     locale: "en_US",
-    type: "website"
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "CasaVlaška — Vlaška 117 | Premium Zagreb Apartment",
-    description: "46 m² apartment in Zagreb's center. €159,900 or best offer. Call +385 99 343 3344",
-    images: ["/og-image.svg"]
+    description:
+      "46 m² apartment in Zagreb's center. €159,900 or best offer. Call +385 99 343 3344",
+    images: ["/og-image.svg"],
   },
   robots: {
     index: true,
@@ -42,9 +46,9 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
@@ -52,34 +56,35 @@ export const metadata: Metadata = {
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "RealEstateListing",
-  "name": "CasaVlaška — Vlaška 117",
-  "description": "46 m² apartment in Zagreb's historic center with high ceilings and courtyard views",
-  "url": "https://casavlaska.com",
-  "address": {
+  name: "CasaVlaška — Vlaška 117",
+  description:
+    "46 m² apartment in Zagreb's historic center with high ceilings and courtyard views",
+  url: "https://casavlaska.com",
+  address: {
     "@type": "PostalAddress",
-    "streetAddress": "Vlaška 117",
-    "addressLocality": "Zagreb",
-    "addressCountry": "Croatia",
-    "postalCode": "10000"
+    streetAddress: "Vlaška 117",
+    addressLocality: "Zagreb",
+    addressCountry: "Croatia",
+    postalCode: "10000",
   },
-  "geo": {
+  geo: {
     "@type": "GeoCoordinates",
-    "latitude": "45.8150",
-    "longitude": "15.9819"
+    latitude: "45.8150",
+    longitude: "15.9819",
   },
-  "floorSize": {
+  floorSize: {
     "@type": "QuantitativeValue",
-    "value": 46,
-    "unitCode": "MTK"
+    value: 46,
+    unitCode: "MTK",
   },
-  "numberOfRooms": 3,
-  "price": {
+  numberOfRooms: 3,
+  price: {
     "@type": "PriceSpecification",
-    "price": 159900,
-    "priceCurrency": "EUR"
+    price: 159900,
+    priceCurrency: "EUR",
   },
-  "datePosted": "2024-01-15",
-  "availabilityStarts": "2024-01-15"
+  datePosted: "2024-01-15",
+  availabilityStarts: "2024-01-15",
 };
 
 export default function RootLayout({
@@ -99,8 +104,10 @@ export default function RootLayout({
         <meta name="theme-color" content="#0f172a" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.variable} antialiased`}>
-        {children}
+      <body className={`${inter.variable} bg-gray-50 antialiased`}>
+        <main className="container mx-auto max-w-3xl px-4 md:px-6">
+          {children}
+        </main>
       </body>
     </html>
   );

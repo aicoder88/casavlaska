@@ -13,40 +13,40 @@ const config: Config = {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'sans-serif'],
+        sans: ["var(--font-inter)", "sans-serif"],
       },
       backdropBlur: {
-        'xs': '2px',
-        'glass': '16px',
+        xs: "2px",
+        glass: "16px",
       },
       animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'glow': 'glow 2s ease-in-out infinite alternate',
+        float: "float 6s ease-in-out infinite",
+        glow: "glow 2s ease-in-out infinite alternate",
       },
       keyframes: {
         float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' },
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-20px)" },
         },
         glow: {
-          '0%': { boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
-          '100%': { boxShadow: '0 0 30px rgba(59, 130, 246, 0.8)' },
+          "0%": { boxShadow: "0 0 20px rgba(59, 130, 246, 0.5)" },
+          "100%": { boxShadow: "0 0 30px rgba(59, 130, 246, 0.8)" },
         },
       },
       container: {
         center: true,
         padding: {
-          DEFAULT: '1rem',
-          sm: '2rem',
-          lg: '4rem',
-          xl: '5rem',
-          '2xl': '6rem',
+          DEFAULT: "1rem",
+          sm: "2rem",
+          lg: "4rem",
+          xl: "5rem",
+          "2xl": "6rem",
         },
       },
     },
   },
   plugins: [],
-  darkMode: 'media',
+  darkMode: "media",
 };
 
 export default config;

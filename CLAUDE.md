@@ -45,14 +45,16 @@ All content is managed through `src/lib/i18n.ts` with extensive English and Croa
 ### Data Management
 
 Price and comparison data is stored in `public/data/prices.json` including:
+
 - City average price trends
-- Kvaternik/Vlaška neighborhood trends  
+- Kvaternik/Vlaška neighborhood trends
 - Comparable property data
 - Current listing details
 
 ### Styling System
 
 Custom glassmorphism implemented in `src/app/globals.css` with CSS variables:
+
 - Glass backgrounds with backdrop blur
 - Custom animations (float, glow)
 - TailwindCSS extensions for glass utilities
@@ -73,6 +75,7 @@ The site uses urgent, direct sales copy with emotional triggers and social proof
 ## Development Workflow
 
 When making changes:
+
 1. Components use TypeScript interfaces for props
 2. All text content should go through i18n translation keys
 3. Price/property data changes go in `public/data/prices.json`
@@ -89,6 +92,7 @@ When making changes:
 ## Deployment
 
 Configured for Vercel deployment with automatic builds on git push. The site includes:
+
 - robots.txt and sitemap.xml
 - OpenGraph and Twitter cards
 - Structured data for real estate listings
@@ -97,6 +101,7 @@ Configured for Vercel deployment with automatic builds on git push. The site inc
 ## Development Environment
 
 Use the `--turbopack` flag when running the dev server for optimal performance with Next.js 15. The codebase is configured for:
+
 - TypeScript strict mode with proper type checking
 - ESLint with Next.js configuration for code quality
 - TailwindCSS 4 with custom glassmorphism utilities and animations
@@ -107,6 +112,7 @@ Use the `--turbopack` flag when running the dev server for optimal performance w
 All user-facing content is managed through the i18n system with fallback to English. When adding new text:
 
 ### CRITICAL TRANSLATION RULES:
+
 1. **NEVER hardcode English text directly in components** - Always use translation keys
 2. **ALL user-visible text must be translatable** - No exceptions for labels, descriptions, or UI text
 3. Add translation keys to BOTH `en` and `hr` sections in `src/lib/i18n.ts` simultaneously
@@ -115,8 +121,9 @@ All user-facing content is managed through the i18n system with fallback to Engl
 6. Translation keys should be descriptive: `common.videoCallAvailable` not `common.text1`
 
 ### Process for adding new text:
+
 1. Add key to English section: `newKey: "English text"`
-2. Add key to Croatian section: `newKey: "Croatian translation"`  
+2. Add key to Croatian section: `newKey: "Croatian translation"`
 3. Use in component: `{t('common.newKey')}`
 4. Never use hardcoded strings like "FaceTime" or "Video call available"
 
@@ -129,21 +136,25 @@ The custom analytics system tracks user interactions without external dependenci
 # Claude Code Instructions
 
 ## Editing Behavior
-- Apply all edits directly without asking for confirmation.  
-- Do not prompt before overwriting or deleting files.  
-- Create new files whenever needed without confirmation.  
-- Minimize questions; assume permission is granted to proceed.  
+
+- Apply all edits directly without asking for confirmation.
+- Do not prompt before overwriting or deleting files.
+- Create new files whenever needed without confirmation.
+- Minimize questions; assume permission is granted to proceed.
 
 ## Commit Behavior
-- Stage and commit changes automatically after edits.  
-- Use clear, conventional commit messages (e.g., `feat:`, `fix:`, `chore:`).  
-- Commit frequently to keep changes small and reversible.  
+
+- Stage and commit changes automatically after edits.
+- Use clear, conventional commit messages (e.g., `feat:`, `fix:`, `chore:`).
+- Commit frequently to keep changes small and reversible.
 
 ## Execution Behavior
-- When running code, tests, or commands, proceed without asking first.  
-- If an action fails, retry with a reasonable fix before surfacing a question.  
+
+- When running code, tests, or commands, proceed without asking first.
+- If an action fails, retry with a reasonable fix before surfacing a question.
 
 ## General Policy
-- Prioritize speed of implementation over asking for approval.  
-- Only stop for input if continuing would cause permanent data loss outside the repo.  
-- Treat this repository as safe to edit freely.  
+
+- Prioritize speed of implementation over asking for approval.
+- Only stop for input if continuing would cause permanent data loss outside the repo.
+- Treat this repository as safe to edit freely.

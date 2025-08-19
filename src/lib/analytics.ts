@@ -13,9 +13,9 @@ class Analytics {
   private isEnabled: boolean = true;
 
   constructor() {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       // Check if user has opted out of tracking
-      this.isEnabled = !localStorage.getItem('analytics-disabled');
+      this.isEnabled = !localStorage.getItem("analytics-disabled");
     }
   }
 
@@ -29,8 +29,8 @@ class Analytics {
     });
 
     // Log for development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('📊 Analytics Event:', event);
+    if (process.env.NODE_ENV === "development") {
+      console.log("📊 Analytics Event:", event);
     }
 
     // In production, send to your analytics service
@@ -47,65 +47,64 @@ class Analytics {
   // Convenience methods for common events
   trackPageView(page: string) {
     this.track({
-      action: 'page_view',
-      category: 'navigation',
+      action: "page_view",
+      category: "navigation",
       label: page,
     });
   }
 
   trackCTAClick(cta: string) {
     this.track({
-      action: 'cta_click',
-      category: 'engagement',
+      action: "cta_click",
+      category: "engagement",
       label: cta,
     });
   }
 
   trackPhoneCall() {
     this.track({
-      action: 'phone_call',
-      category: 'contact',
-      label: 'phone_button_click',
+      action: "phone_call",
+      category: "contact",
+      label: "phone_button_click",
     });
   }
 
   trackWhatsAppClick() {
     this.track({
-      action: 'whatsapp_click',
-      category: 'contact',
-      label: 'whatsapp_button_click',
+      action: "whatsapp_click",
+      category: "contact",
+      label: "whatsapp_button_click",
     });
   }
 
   trackCalculatorUsage(strategy: string) {
     this.track({
-      action: 'calculator_used',
-      category: 'tools',
+      action: "calculator_used",
+      category: "tools",
       label: strategy,
     });
   }
 
   trackGalleryOpen() {
     this.track({
-      action: 'gallery_opened',
-      category: 'engagement',
-      label: 'hero_gallery_button',
+      action: "gallery_opened",
+      category: "engagement",
+      label: "hero_gallery_button",
     });
   }
 
-
   trackSectionView(section: string) {
     this.track({
-      action: 'section_viewed',
-      category: 'engagement',
+      action: "section_viewed",
+      category: "engagement",
       label: section,
     });
   }
 
   trackLanguageSwitch(language: string) {
     this.track({
-      action: 'language_switch',
-      category: 'localization',
+      action: "language_switch",
+      category: "localization",
       label: language,
     });
   }
@@ -123,16 +122,16 @@ class Analytics {
   // Disable tracking
   disable() {
     this.isEnabled = false;
-    if (typeof window !== 'undefined') {
-      localStorage.setItem('analytics-disabled', 'true');
+    if (typeof window !== "undefined") {
+      localStorage.setItem("analytics-disabled", "true");
     }
   }
 
   // Enable tracking
   enable() {
     this.isEnabled = true;
-    if (typeof window !== 'undefined') {
-      localStorage.removeItem('analytics-disabled');
+    if (typeof window !== "undefined") {
+      localStorage.removeItem("analytics-disabled");
     }
   }
 }
@@ -141,7 +140,7 @@ class Analytics {
 export const analytics = new Analytics();
 
 // React hook for analytics
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
 export function useAnalytics() {
   useEffect(() => {
@@ -153,8 +152,8 @@ export function useAnalytics() {
 
 // Higher-order component to track section views
 export function withSectionTracking<T extends Record<string, unknown>>(
-  WrappedComponent: React.ComponentType<T>, 
-  sectionName: string
+  WrappedComponent: React.ComponentType<T>,
+  sectionName: string,
 ) {
   return function TrackedComponent(props: T) {
     useEffect(() => {
@@ -166,7 +165,7 @@ export function withSectionTracking<T extends Record<string, unknown>>(
             }
           });
         },
-        { threshold: 0.5 }
+        { threshold: 0.5 },
       );
 
       const element = document.getElementById(sectionName);

@@ -1,13 +1,15 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
 const resources = {
   en: {
     translation: {
       hero: {
-        title: "Prefinjen stan na Vlaškoj — Kvaternik — preko puta Zagrebačke banke",
-        subtitle: "Jedinstvena prilika za stjecanje nekretnine u srcu Zagreba • Prizemlje • Preko puta Zagrebačke banke",
+        title:
+          "Prefinjen stan na Vlaškoj — Kvaternik — preko puta Zagrebačke banke",
+        subtitle:
+          "Jedinstvena prilika za stjecanje nekretnine u srcu Zagreba • Prizemlje • Preko puta Zagrebačke banke",
         mainContent: `# **Elegantan stan u srcu Zagreba**
 
 ## **Vlaška ulica, Kvaternik — preko puta Zagrebačke banke**
@@ -70,8 +72,8 @@ Sav postupak kroz javnog bilježnika s ugovorima.
 
 `,
         bookViewing: "Pozovite: +1 204 620-4491",
-        openGallery: "Pregledajte fotografije", 
-        calculateROI: "Izračunajte povrat"
+        openGallery: "Pregledajte fotografije",
+        calculateROI: "Izračunajte povrat",
       },
       whyHere: {
         title: "Zašto je ovaj stan poseban",
@@ -81,21 +83,22 @@ Sav postupak kroz javnog bilježnika s ugovorima.
           "Mirna lokacija — prizemlje s pogledom na dvorište, potpuna tišina",
           "Dvije sobe + kuhinja + kupaonica — praktičan i funkcionalan raspored",
           "Sve instalacije su funkcionalne — spreman za useljenje",
-          "Čisto vlasništvo (1/1) bez tereta — siguran kupnja"
-        ]
+          "Čisto vlasništvo (1/1) bez tereta — siguran kupnja",
+        ],
       },
       offer: {
         title: "Posebna ponuda",
-        urgency: "Vlasnica živi u Kanadi i želi brzu prodaju. Idealno za one koji traže kvalitetnu nekretninu u centru grada.",
+        urgency:
+          "Vlasnica živi u Kanadi i želi brzu prodaju. Idealno za one koji traže kvalitetnu nekretninu u centru grada.",
         price: "Cijena: €159,900 — izvrsna vrijednost za lokaciju",
         callNow: "Pozovite za razgled",
-        whatsApp: "WhatsApp kontakt"
+        whatsApp: "WhatsApp kontakt",
       },
       priceContext: {
         title: "INCREDIBLE VALUE COMPARISON",
         cityTrend: "📈 Zagreb Center Price Trend",
-        comparison: "🏆 Kvaternik / Vlaška vs City Average", 
-        compsTitle: "🔥 THIS LISTING IS €60,000+ BELOW MARKET! GRAB IT NOW!"
+        comparison: "🏆 Kvaternik / Vlaška vs City Average",
+        compsTitle: "🔥 THIS LISTING IS €60,000+ BELOW MARKET! GRAB IT NOW!",
       },
       calculator: {
         title: "ROI / Profit Calculator",
@@ -118,7 +121,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         payback: "Payback (years)",
       },
       gallery: {
-        title: "Gallery"
+        title: "Gallery",
       },
       location: {
         title: "Location",
@@ -128,39 +131,43 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         tram: "Tram Stop: 2 min",
         cafes: "Cafes & Restaurants: 1 min",
         university: "University: 15 min",
-        nightlife: "Nightlife: 5 min"
+        nightlife: "Nightlife: 5 min",
       },
       urgencyStrip: {
-        text: "Showings: today through Wednesday. Say: 'I want to see Vlaška 117 today.'"
+        text: "Showings: today through Wednesday. Say: 'I want to see Vlaška 117 today.'",
       },
       faq: {
         title: "Frequently Asked Questions",
         questions: [
           {
             question: "What's included in the sale?",
-            answer: "The apartment comes furnished with original hardwood floors, renovated kitchen and bathroom, and all fixtures. Clean title 1/1 with no encumbrances."
+            answer:
+              "The apartment comes furnished with original hardwood floors, renovated kitchen and bathroom, and all fixtures. Clean title 1/1 with no encumbrances.",
           },
           {
             question: "What renovation work is needed?",
-            answer: "The apartment is move-in ready. Optional cosmetic updates could include fresh paint and modern lighting fixtures."
+            answer:
+              "The apartment is move-in ready. Optional cosmetic updates could include fresh paint and modern lighting fixtures.",
           },
           {
             question: "How quickly can we close?",
-            answer: "With cash or pre-approved financing, we can close within 30 days. All paperwork is ready for immediate transfer."
+            answer:
+              "With cash or pre-approved financing, we can close within 30 days. All paperwork is ready for immediate transfer.",
           },
           {
             question: "What are the monthly costs?",
-            answer: "Monthly maintenance fees are approximately €50. Property taxes are included in the asking price calculation."
-          }
-        ]
+            answer:
+              "Monthly maintenance fees are approximately €50. Property taxes are included in the asking price calculation.",
+          },
+        ],
       },
       footer: {
         contact: "Contact",
         name: "",
-        disclaimer: "Information deemed reliable; buyer to verify."
+        disclaimer: "Information deemed reliable; buyer to verify.",
       },
       liveViewers: {
-        text: "people viewing now"
+        text: "people viewing now",
       },
       common: {
         belowMarketRate: "Below market rate",
@@ -168,7 +175,8 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         readyToClose: "Ready to close",
         decisionDeadline: "Decision Deadline: THURSDAY",
         stillHaveQuestions: "Still Have Questions?",
-        getInstantAnswers: "Get instant answers about CasaVlaška. Call or message us directly.",
+        getInstantAnswers:
+          "Get instant answers about CasaVlaška. Call or message us directly.",
         callNow: "Call Now",
         whatsapp: "WhatsApp",
         whatsappNow: "WhatsApp Now",
@@ -183,7 +191,8 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         available: "Available",
         expandAll: "Expand All",
         collapseAll: "Collapse All",
-        premiumRealEstate: "Premium real estate in Zagreb's historic center. Your gateway to owning a piece of Croatian heritage.",
+        premiumRealEstate:
+          "Premium real estate in Zagreb's historic center. Your gateway to owning a piece of Croatian heritage.",
         propertyDetails: "Property Details",
         address: "Address:",
         size: "Size:",
@@ -191,7 +200,8 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         price: "Price:",
         status: "Status:",
         zagrebCroatia: "Zagreb, Croatia",
-        builtWith: "Built with ❤️ for quick sales • Powered by Next.js & Glassmorphism",
+        builtWith:
+          "Built with ❤️ for quick sales • Powered by Next.js & Glassmorphism",
         scrollToExplore: "SCROLL TO EXPLORE",
         ifMustUseCroatian: "",
         netYield: "Net Yield (%)",
@@ -199,7 +209,8 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         annualNetIncome: "Annual Net Income",
         netYieldPercent: "Net Yield",
         paybackPeriod: "Payback Period",
-        generatedBy: "Generated by CasaVlaška Calculator. For informational purposes only.",
+        generatedBy:
+          "Generated by CasaVlaška Calculator. For informational purposes only.",
         zagrebCenterAvg: "Zagreb Center Average",
         zagrebCenterAverage: "Zagreb Center Avg",
         failedToLoadPriceData: "Failed to load price data",
@@ -217,18 +228,21 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         sendEmail: "Send email",
         faceTime: "FaceTime",
         videoCallAvailable: "Video call available",
-        primeLocationDescription: "Located in the heart of Zagreb's cultural district, just steps from Kvaternik Square. Walk to cafes, restaurants, and public transport. This is urban living at its finest.",
+        primeLocationDescription:
+          "Located in the heart of Zagreb's cultural district, just steps from Kvaternik Square. Walk to cafes, restaurants, and public transport. This is urban living at its finest.",
         walkingNationalTheatre: "Walking distance to Croatian National Theatre",
         ilicaStreetNearby: "Ilica Street shopping district nearby",
-        marketsWithinReach: "Green market and Dolac Market within reach"
-      }
-    }
+        marketsWithinReach: "Green market and Dolac Market within reach",
+      },
+    },
   },
   hr: {
     translation: {
       hero: {
-        title: "Prefinjen stan na Vlaškoj — Kvaternik — preko puta Zagrebačke banke",
-        subtitle: "Jedinstvena prilika za stjecanje nekretnine u srcu Zagreba • Prizemlje • Preko puta Zagrebačke banke",
+        title:
+          "Prefinjen stan na Vlaškoj — Kvaternik — preko puta Zagrebačke banke",
+        subtitle:
+          "Jedinstvena prilika za stjecanje nekretnine u srcu Zagreba • Prizemlje • Preko puta Zagrebačke banke",
         mainContent: `# **Elegantan stan u srcu Zagreba**
 
 ## **Vlaška ulica, Kvaternik — preko puta Zagrebačke banke**
@@ -292,7 +306,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
 `,
         bookViewing: "Pozovite: +1 204 620-4491",
         openGallery: "Pregledajte fotografije",
-        calculateROI: "Izračunajte povrat"
+        calculateROI: "Izračunajte povrat",
       },
       whyHere: {
         title: "Zašto je ovaj stan poseban",
@@ -302,21 +316,22 @@ Sav postupak kroz javnog bilježnika s ugovorima.
           "Potpuna tišina — prizemlje, orijentacija na dvorište, ne čuje se tramvaj",
           "Dvije sobe + kuhinja + kupaonica — prizemlje iza frizerskog salona",
           "Sve instalacije rade: plin, voda, sudoper i tuš, grijanje - SPREMAN ZA USELJENJE",
-          "Čisto vlasništvo 1/1, bez tereta"
-        ]
+          "Čisto vlasništvo 1/1, bez tereta",
+        ],
       },
       offer: {
         title: "Posebna ponuda",
-        urgency: "Vlasnica živi u Kanadi i želi brzu prodaju. Idealno za one koji traže kvalitetnu nekretninu u centru grada.",
+        urgency:
+          "Vlasnica živi u Kanadi i želi brzu prodaju. Idealno za one koji traže kvalitetnu nekretninu u centru grada.",
         price: "Cijena: €159,900 — izvrsna vrijednost za lokaciju",
         callNow: "Pozovite za razgled",
-        whatsApp: "WhatsApp kontakt"
+        whatsApp: "WhatsApp kontakt",
       },
       priceContext: {
         title: "Kontekst Cijene",
         cityTrend: "Trend Cijena Zagreb Centar",
         comparison: "Kvaternik / Vlaška vs Prosjek Grada",
-        compsTitle: "Ovaj stan je cijenom postavljen za brzu prodaju."
+        compsTitle: "Ovaj stan je cijenom postavljen za brzu prodaju.",
       },
       calculator: {
         title: "ROI / Kalkulator Profita",
@@ -339,7 +354,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         payback: "Povrat (godine)",
       },
       gallery: {
-        title: "Galerija"
+        title: "Galerija",
       },
       location: {
         title: "Lokacija",
@@ -349,39 +364,43 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         tram: "Tramvajska Stanica: 2 min",
         cafes: "Kafići i Restorani: 1 min",
         university: "Univerzitet: 15 min",
-        nightlife: "Noćni Život: 5 min"
+        nightlife: "Noćni Život: 5 min",
       },
       urgencyStrip: {
-        text: "Razgledavanja: odmah do srijede. Recite: 'Želim vidjeti Vlašku 117 danas.'"
+        text: "Razgledavanja: odmah do srijede. Recite: 'Želim vidjeti Vlašku 117 danas.'",
       },
       faq: {
         title: "Često Postavljana Pitanja",
         questions: [
           {
             question: "Što je uključeno u prodaju?",
-            answer: "Stan dolazi namješten s originalnim drvenim podovima, renoviranom kuhinjom i kupaonicom, te svim uređajima. Čisto vlasništvo 1/1 bez tereta."
+            answer:
+              "Stan dolazi namješten s originalnim drvenim podovima, renoviranom kuhinjom i kupaonicom, te svim uređajima. Čisto vlasništvo 1/1 bez tereta.",
           },
           {
             question: "Koji renovacijski radovi su potrebni?",
-            answer: "Stan je spreman za useljenje. Opcionalna kozmetička poboljšanja mogu uključivati novo bojanje i moderne svjetiljke."
+            answer:
+              "Stan je spreman za useljenje. Opcionalna kozmetička poboljšanja mogu uključivati novo bojanje i moderne svjetiljke.",
           },
           {
             question: "Koliko brzo možemo zatvoriti prodaju?",
-            answer: "S gotovinom ili odobrenim financiranjem, možemo zatvoriti u roku od 30 dana. Sva dokumentacija je spremna za trenutni transfer."
+            answer:
+              "S gotovinom ili odobrenim financiranjem, možemo zatvoriti u roku od 30 dana. Sva dokumentacija je spremna za trenutni transfer.",
           },
           {
             question: "Koji su mjesečni troškovi?",
-            answer: "Mjesečne troškove održavanja su otprilike 50 €. Porezi na nekretnine su uključeni u kalkulaciju tražene cijene."
-          }
-        ]
+            answer:
+              "Mjesečne troškove održavanja su otprilike 50 €. Porezi na nekretnine su uključeni u kalkulaciju tražene cijene.",
+          },
+        ],
       },
       footer: {
         contact: "Kontakt",
         name: "",
-        disclaimer: "Informacije smatrane pouzdanima; kupac treba provjeriti."
+        disclaimer: "Informacije smatrane pouzdanima; kupac treba provjeriti.",
       },
       liveViewers: {
-        text: "ljudi trenutno gleda"
+        text: "ljudi trenutno gleda",
       },
       common: {
         belowMarketRate: "Ispod tržišne cijene",
@@ -389,7 +408,8 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         readyToClose: "Spreman za zatvaranje",
         decisionDeadline: "Rok za odluku: ČETVRTAK",
         stillHaveQuestions: "Još uvijek imate pitanja?",
-        getInstantAnswers: "Dobijte brze odgovore o CasaVlaška. Pozovite ili pošaljite poruku direktno.",
+        getInstantAnswers:
+          "Dobijte brze odgovore o CasaVlaška. Pozovite ili pošaljite poruku direktno.",
         callNow: "Pozovite sada",
         whatsapp: "WhatsApp",
         whatsappNow: "WhatsApp odmah",
@@ -404,7 +424,8 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         available: "Dostupno",
         expandAll: "Proširi sve",
         collapseAll: "Smanji sve",
-        premiumRealEstate: "Premium nekretnine u povijesnom centru Zagreba. Vaš pristup vlasništvu dijela hrvatske baštine.",
+        premiumRealEstate:
+          "Premium nekretnine u povijesnom centru Zagreba. Vaš pristup vlasništvu dijela hrvatske baštine.",
         propertyDetails: "Detalji nekretnine",
         address: "Adresa:",
         size: "Veličina:",
@@ -412,7 +433,8 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         price: "Cijena:",
         status: "Status:",
         zagrebCroatia: "Zagreb, Hrvatska",
-        builtWith: "Napravljeno s ❤️ za brzu prodaju • Pokretano Next.js & Glassmorphism",
+        builtWith:
+          "Napravljeno s ❤️ za brzu prodaju • Pokretano Next.js & Glassmorphism",
         scrollToExplore: "SKROLAJTE ZA ISTRAŽIVANJE",
         ifMustUseCroatian: "",
         netYield: "Neto prinos (%)",
@@ -420,7 +442,8 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         annualNetIncome: "Godišnji neto prihod",
         netYieldPercent: "Neto prinos",
         paybackPeriod: "Povratno razdoblje",
-        generatedBy: "Generirano od CasaVlaška Kalkulatora. Samo u informativne svrhe.",
+        generatedBy:
+          "Generirano od CasaVlaška Kalkulatora. Samo u informativne svrhe.",
         zagrebCenterAvg: "Zagreb centar prosjek",
         zagrebCenterAverage: "Zagreb centar prosj.",
         failedToLoadPriceData: "Neuspješno učitavanje podataka o cijenama",
@@ -438,13 +461,15 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         sendEmail: "Pošaljite email",
         faceTime: "FaceTime",
         videoCallAvailable: "Video poziv dostupan",
-        primeLocationDescription: "Smješten u srcu zagrebačke kulturne četvrti, samo nekoliko koraka od Kvaternikovog trga. Šetnja do kafića, restorana i javnog prijevoza. Ovo je urbanski život u najboljem izdanju.",
-        walkingNationalTheatre: "Pješačka udaljenost do Hrvatskog narodnog kazališta",
+        primeLocationDescription:
+          "Smješten u srcu zagrebačke kulturne četvrti, samo nekoliko koraka od Kvaternikovog trga. Šetnja do kafića, restorana i javnog prijevoza. Ovo je urbanski život u najboljem izdanju.",
+        walkingNationalTheatre:
+          "Pješačka udaljenost do Hrvatskog narodnog kazališta",
         ilicaStreetNearby: "Ilica - trgovačka četvrt u blizini",
-        marketsWithinReach: "Zelena tržnica i Dolac u dosegu"
-      }
-    }
-  }
+        marketsWithinReach: "Zelena tržnica i Dolac u dosegu",
+      },
+    },
+  },
 };
 
 i18n
@@ -452,14 +477,14 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    fallbackLng: 'hr',
-    lng: 'hr',
+    fallbackLng: "hr",
+    lng: "hr",
     interpolation: {
       escapeValue: false,
     },
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
-      caches: ['localStorage'],
+      order: ["localStorage", "navigator", "htmlTag"],
+      caches: ["localStorage"],
     },
   });
 

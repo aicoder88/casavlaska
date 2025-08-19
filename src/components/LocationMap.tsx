@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import GlassCard from './GlassCard';
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import GlassCard from "./GlassCard";
 
 const walkingTimes = [
-  { name: 'zagrebackaBanka', icon: '🏦', time: '15 sec' },
-  { name: 'kvaternik', icon: '🏛️', time: '3 min' },
-  { name: 'tram', icon: '🚋', time: '2 min' },
-  { name: 'cafes', icon: '☕', time: '1 min' },
-  { name: 'university', icon: '🎓', time: '15 min' },
-  { name: 'nightlife', icon: '🌃', time: '5 min' },
+  { name: "zagrebackaBanka", icon: "🏦", time: "15 sec" },
+  { name: "kvaternik", icon: "🏛️", time: "3 min" },
+  { name: "tram", icon: "🚋", time: "2 min" },
+  { name: "cafes", icon: "☕", time: "1 min" },
+  { name: "university", icon: "🎓", time: "15 min" },
+  { name: "nightlife", icon: "🌃", time: "5 min" },
 ];
 
 export default function LocationMap() {
@@ -26,12 +26,12 @@ export default function LocationMap() {
           viewport={{ once: true }}
           className="center-content mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            {t('location.title')}
+          <h2 className="gradient-text mb-6 text-4xl font-bold md:text-5xl">
+            {t("location.title")}
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Map */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -39,9 +39,9 @@ export default function LocationMap() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <GlassCard className="p-2 h-96">
+            <GlassCard className="h-96 p-2">
               {/* Google Maps Street View Embed */}
-              <div className="relative w-full h-full rounded-lg overflow-hidden">
+              <div className="relative h-full w-full overflow-hidden rounded-lg">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!4v1692891567284!6m8!1m7!1sCAoSLEFGMVFpcE5fWmpjVEc5a3FRRWQ2TGZZOExvY1d4bmVEX0YyTWVNM2x6SGhu!2m2!1d45.8140573!2d15.9828851!3f239.79!4f5.15!5f0.7820865974627469"
                   width="100%"
@@ -53,13 +53,13 @@ export default function LocationMap() {
                   className="rounded-lg"
                   title="Vlaška 117 Street View - Zagreb Bank across the street"
                 ></iframe>
-                
+
                 {/* Overlay indicators */}
-                <div className="absolute top-4 left-4 bg-black/80 text-white px-3 py-2 rounded-lg text-xs backdrop-blur-sm">
+                <div className="absolute top-4 left-4 rounded-lg bg-black/80 px-3 py-2 text-xs text-white backdrop-blur-sm">
                   📍 Vlaška 117 • 🏦 Zagreb Bank Across
                 </div>
-                
-                <div className="absolute bottom-4 right-4 bg-black/80 text-white px-3 py-2 rounded-lg text-xs backdrop-blur-sm">
+
+                <div className="absolute right-4 bottom-4 rounded-lg bg-black/80 px-3 py-2 text-xs text-white backdrop-blur-sm">
                   🗺️ Street View
                 </div>
               </div>
@@ -75,10 +75,10 @@ export default function LocationMap() {
             className="space-y-6"
           >
             <GlassCard className="p-6">
-              <h3 className="text-xl font-semibold text-white mb-6">
-                🚶‍♂️ {t('location.walkingTimes')}
+              <h3 className="mb-6 text-xl font-semibold text-white">
+                🚶‍♂️ {t("location.walkingTimes")}
               </h3>
-              
+
               <div className="space-y-4">
                 {walkingTimes.map((item, index) => (
                   <motion.div
@@ -87,7 +87,7 @@ export default function LocationMap() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="flex items-center justify-between p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors"
+                    className="flex items-center justify-between rounded-lg bg-white/5 p-4 transition-colors hover:bg-white/10"
                   >
                     <div className="flex items-center space-x-3">
                       <span className="text-2xl">{item.icon}</span>
@@ -95,7 +95,7 @@ export default function LocationMap() {
                         {t(`location.${item.name}`)}
                       </span>
                     </div>
-                    <span className="text-blue-400 font-semibold">
+                    <span className="font-semibold text-blue-400">
                       {item.time}
                     </span>
                   </motion.div>
@@ -104,22 +104,22 @@ export default function LocationMap() {
             </GlassCard>
 
             {/* Neighborhood highlights */}
-            <GlassCard className="p-6 bg-gradient-to-r from-purple-500/10 to-pink-500/10">
-              <h4 className="text-lg font-semibold text-white mb-4">
+            <GlassCard className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-6">
+              <h4 className="mb-4 text-lg font-semibold text-white">
                 ✨ Neighborhood Highlights
               </h4>
-              <div className="space-y-3 text-white/80 text-sm">
+              <div className="space-y-3 text-sm text-white/80">
                 <div className="flex items-start space-x-2">
                   <span>🎭</span>
-                  <span>{t('common.walkingNationalTheatre')}</span>
+                  <span>{t("common.walkingNationalTheatre")}</span>
                 </div>
                 <div className="flex items-start space-x-2">
                   <span>🛍️</span>
-                  <span>{t('common.ilicaStreetNearby')}</span>
+                  <span>{t("common.ilicaStreetNearby")}</span>
                 </div>
                 <div className="flex items-start space-x-2">
                   <span>🌳</span>
-                  <span>{t('common.marketsWithinReach')}</span>
+                  <span>{t("common.marketsWithinReach")}</span>
                 </div>
                 <div className="flex items-start space-x-2">
                   <span>🏛️</span>
@@ -130,17 +130,17 @@ export default function LocationMap() {
 
             {/* Transport links */}
             <GlassCard className="p-6">
-              <h4 className="text-lg font-semibold text-white mb-4">
+              <h4 className="mb-4 text-lg font-semibold text-white">
                 🚌 Public Transport
               </h4>
               <div className="grid grid-cols-2 gap-4 text-sm">
-                <div className="text-center p-3 bg-white/5 rounded-lg">
-                  <div className="text-xl mb-2">🚋</div>
+                <div className="rounded-lg bg-white/5 p-3 text-center">
+                  <div className="mb-2 text-xl">🚋</div>
                   <div className="text-white/90">Tram Lines</div>
                   <div className="text-blue-400">4, 8, 14</div>
                 </div>
-                <div className="text-center p-3 bg-white/5 rounded-lg">
-                  <div className="text-xl mb-2">🚌</div>
+                <div className="rounded-lg bg-white/5 p-3 text-center">
+                  <div className="mb-2 text-xl">🚌</div>
                   <div className="text-white/90">Bus Lines</div>
                   <div className="text-blue-400">Multiple</div>
                 </div>
@@ -161,7 +161,7 @@ export default function LocationMap() {
             href="https://maps.app.goo.gl/52VUxcdC19k8BFZPA"
             target="_blank"
             rel="noopener noreferrer"
-            className="glass-button text-white font-semibold px-8 py-4 inline-flex items-center space-x-2 hover:scale-105 transition-transform"
+            className="glass-button inline-flex items-center space-x-2 px-8 py-4 font-semibold text-white transition-transform hover:scale-105"
           >
             <span>🗺️</span>
             <span>Open in Google Maps</span>

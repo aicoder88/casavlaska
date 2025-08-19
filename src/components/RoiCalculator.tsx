@@ -1,23 +1,35 @@
-'use client';
+"use client";
 
-import { useState, useCallback } from 'react';
-import { motion } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
-import { z } from 'zod';
-import { Bar } from 'react-chartjs-2';
-import GlassCard from './GlassCard';
+import { useState, useCallback } from "react";
+import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
+import { z } from "zod";
+import { Bar } from "react-chartjs-2";
+import GlassCard from "./GlassCard";
 
 const calculatorSchema = z.object({
-  purchasePrice: z.number().min(1000, 'Purchase price must be at least €1,000'),
-  renovationBudget: z.number().min(0, 'Renovation budget cannot be negative'),
-  holdingCosts: z.number().min(0, 'Holding costs cannot be negative').max(100, 'Holding costs cannot exceed 100%'),
-  strategy: z.enum(['airbnb', 'longTerm']),
-  nightlyRate: z.number().min(0, 'Nightly rate cannot be negative'),
-  occupancy: z.number().min(0, 'Occupancy cannot be negative').max(100, 'Occupancy cannot exceed 100%'),
-  cleaningCost: z.number().min(0, 'Cleaning cost cannot be negative'),
-  platformFee: z.number().min(0, 'Platform fee cannot be negative').max(100, 'Platform fee cannot exceed 100%'),
-  monthlyRent: z.number().min(0, 'Monthly rent cannot be negative'),
-  vacancy: z.number().min(0, 'Vacancy cannot be negative').max(100, 'Vacancy cannot exceed 100%'),
+  purchasePrice: z.number().min(1000, "Purchase price must be at least €1,000"),
+  renovationBudget: z.number().min(0, "Renovation budget cannot be negative"),
+  holdingCosts: z
+    .number()
+    .min(0, "Holding costs cannot be negative")
+    .max(100, "Holding costs cannot exceed 100%"),
+  strategy: z.enum(["airbnb", "longTerm"]),
+  nightlyRate: z.number().min(0, "Nightly rate cannot be negative"),
+  occupancy: z
+    .number()
+    .min(0, "Occupancy cannot be negative")
+    .max(100, "Occupancy cannot exceed 100%"),
+  cleaningCost: z.number().min(0, "Cleaning cost cannot be negative"),
+  platformFee: z
+    .number()
+    .min(0, "Platform fee cannot be negative")
+    .max(100, "Platform fee cannot exceed 100%"),
+  monthlyRent: z.number().min(0, "Monthly rent cannot be negative"),
+  vacancy: z
+    .number()
+    .min(0, "Vacancy cannot be negative")
+    .max(100, "Vacancy cannot exceed 100%"),
 });
 
 type CalculatorInputs = z.infer<typeof calculatorSchema>;
@@ -35,12 +47,12 @@ interface CalculationResults {
 
 export default function RoiCalculator() {
   const { t } = useTranslation();
-  
+
   const [inputs, setInputs] = useState<CalculatorInputs>({
     purchasePrice: 159900,
     renovationBudget: 15000,
     holdingCosts: 5,
-    strategy: 'airbnb',
+    strategy: "airbnb",
     nightlyRate: 65,
     occupancy: 70,
     cleaningCost: 25,
@@ -71,25 +83,31 @@ export default function RoiCalculator() {
     }
   }, []);
 
-  const updateInput = useCallback((key: keyof CalculatorInputs, value: number | string) => {
-    const newInputs = { ...inputs, [key]: value };
-    setInputs(newInputs);
-    validateInputs(newInputs);
-  }, [inputs, validateInputs]);
+  const updateInput = useCallback(
+    (key: keyof CalculatorInputs, value: number | string) => {
+      const newInputs = { ...inputs, [key]: value };
+      setInputs(newInputs);
+      validateInputs(newInputs);
+    },
+    [inputs, validateInputs],
+  );
 
   const calculateResults = useCallback((): CalculationResults => {
-    const totalCost = inputs.purchasePrice + inputs.renovationBudget + (inputs.purchasePrice * inputs.holdingCosts / 100);
-    
+    const totalCost =
+      inputs.purchasePrice +
+      inputs.renovationBudget +
+      (inputs.purchasePrice * inputs.holdingCosts) / 100;
+
     let monthlyIncome = 0;
     let monthlyExpenses = 0;
 
-    if (inputs.strategy === 'airbnb') {
+    if (inputs.strategy === "airbnb") {
       const daysPerMonth = 30;
       const occupiedDays = (daysPerMonth * inputs.occupancy) / 100;
       const grossMonthlyIncome = occupiedDays * inputs.nightlyRate;
       const cleaningIncome = occupiedDays * inputs.cleaningCost * 0.5; // Assume 50% of cleaning goes to host
       const platformCosts = grossMonthlyIncome * (inputs.platformFee / 100);
-      
+
       monthlyIncome = grossMonthlyIncome + cleaningIncome - platformCosts;
       monthlyExpenses = 150; // Estimated monthly expenses for Airbnb
     } else {
@@ -100,9 +118,9 @@ export default function RoiCalculator() {
 
     const netMonthlyIncome = monthlyIncome - monthlyExpenses;
     const annualNetIncome = netMonthlyIncome * 12;
-    
+
     const grossYield = (annualNetIncome / totalCost) * 100;
-    const netYield = ((annualNetIncome - (totalCost * 0.02)) / totalCost) * 100; // Subtract 2% for taxes/maintenance
+    const netYield = ((annualNetIncome - totalCost * 0.02) / totalCost) * 100; // Subtract 2% for taxes/maintenance
     const cashOnCash = (annualNetIncome / totalCost) * 100;
     const payback = totalCost / annualNetIncome;
 
@@ -121,37 +139,53 @@ export default function RoiCalculator() {
   const results = calculateResults();
 
   const generateSensitivityData = () => {
-    const variations = [-sensitivityRange, -sensitivityRange/2, 0, sensitivityRange/2, sensitivityRange];
-    const labels = variations.map(v => `${v > 0 ? '+' : ''}${v}%`);
-    
-    const sensitivityData = variations.map(variation => {
+    const variations = [
+      -sensitivityRange,
+      -sensitivityRange / 2,
+      0,
+      sensitivityRange / 2,
+      sensitivityRange,
+    ];
+    const labels = variations.map((v) => `${v > 0 ? "+" : ""}${v}%`);
+
+    const sensitivityData = variations.map((variation) => {
       const adjustedInputs = {
         ...inputs,
-        nightlyRate: inputs.strategy === 'airbnb' ? inputs.nightlyRate * (1 + variation/100) : inputs.nightlyRate,
-        occupancy: inputs.strategy === 'airbnb' ? Math.min(100, inputs.occupancy * (1 + variation/100)) : inputs.occupancy,
-        monthlyRent: inputs.strategy === 'longTerm' ? inputs.monthlyRent * (1 + variation/100) : inputs.monthlyRent,
+        nightlyRate:
+          inputs.strategy === "airbnb"
+            ? inputs.nightlyRate * (1 + variation / 100)
+            : inputs.nightlyRate,
+        occupancy:
+          inputs.strategy === "airbnb"
+            ? Math.min(100, inputs.occupancy * (1 + variation / 100))
+            : inputs.occupancy,
+        monthlyRent:
+          inputs.strategy === "longTerm"
+            ? inputs.monthlyRent * (1 + variation / 100)
+            : inputs.monthlyRent,
       };
-      
+
       const tempInputs = inputs;
       Object.assign(inputs, adjustedInputs);
       const tempResults = calculateResults();
       Object.assign(inputs, tempInputs);
-      
+
       return tempResults.netYield;
     });
 
     return {
       labels,
-      datasets: [{
-        label: t('common.netYield'),
-        data: sensitivityData,
-        backgroundColor: 'rgba(59, 130, 246, 0.7)',
-        borderColor: 'rgb(59, 130, 246)',
-        borderWidth: 2,
-      }]
+      datasets: [
+        {
+          label: t("common.netYield"),
+          data: sensitivityData,
+          backgroundColor: "rgba(59, 130, 246, 0.7)",
+          borderColor: "rgb(59, 130, 246)",
+          borderWidth: 2,
+        },
+      ],
     };
   };
-
 
   const chartOptions = {
     responsive: true,
@@ -163,291 +197,327 @@ export default function RoiCalculator() {
     },
     scales: {
       x: {
-        grid: { color: 'rgba(255, 255, 255, 0.1)' },
-        ticks: { color: 'rgba(255, 255, 255, 0.7)' },
+        grid: { color: "rgba(255, 255, 255, 0.1)" },
+        ticks: { color: "rgba(255, 255, 255, 0.7)" },
       },
       y: {
-        grid: { color: 'rgba(255, 255, 255, 0.1)' },
-        ticks: { 
-          color: 'rgba(255, 255, 255, 0.7)',
-          callback: function(value: string | number) {
-            const numValue = typeof value === 'string' ? parseFloat(value) : value;
+        grid: { color: "rgba(255, 255, 255, 0.1)" },
+        ticks: {
+          color: "rgba(255, 255, 255, 0.7)",
+          callback: function (value: string | number) {
+            const numValue =
+              typeof value === "string" ? parseFloat(value) : value;
             return `${numValue.toFixed(1)}%`;
-          }
+          },
         },
       },
     },
   };
 
   return (
-    <section className="relative w-full max-w-[900px] mx-auto p-8">
+    <section className="relative mx-auto w-full max-w-[900px] p-8">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="center-content mb-16"
+      >
+        <h2 className="gradient-text mb-6 text-4xl font-bold md:text-5xl">
+          {t("calculator.title")}
+        </h2>
+      </motion.div>
+
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        {/* Input Panel */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="center-content mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 gradient-text">
-            {t('calculator.title')}
-          </h2>
-        </motion.div>
+          <GlassCard className="p-6">
+            <h3 className="mb-6 text-xl font-semibold text-white">
+              📊 Investment Parameters
+            </h3>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Input Panel */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <GlassCard className="p-6">
-              <h3 className="text-xl font-semibold text-white mb-6">
-                📊 Investment Parameters
-              </h3>
-              
-              <div className="space-y-4">
-                {/* Purchase Price */}
-                <div>
-                  <label className="block text-white/80 text-sm mb-2">
-                    {t('calculator.purchasePrice')}
-                  </label>
-                  <input
-                    type="number"
-                    value={inputs.purchasePrice}
-                    onChange={(e) => updateInput('purchasePrice', Number(e.target.value))}
-                    className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-blue-400"
-                  />
-                  {errors.purchasePrice && (
-                    <p className="text-red-400 text-xs mt-1">{errors.purchasePrice}</p>
-                  )}
+            <div className="space-y-4">
+              {/* Purchase Price */}
+              <div>
+                <label className="mb-2 block text-sm text-white/80">
+                  {t("calculator.purchasePrice")}
+                </label>
+                <input
+                  type="number"
+                  value={inputs.purchasePrice}
+                  onChange={(e) =>
+                    updateInput("purchasePrice", Number(e.target.value))
+                  }
+                  className="w-full rounded-lg border border-white/20 bg-white/10 p-3 text-white placeholder-white/50 focus:border-blue-400 focus:outline-none"
+                />
+                {errors.purchasePrice && (
+                  <p className="mt-1 text-xs text-red-400">
+                    {errors.purchasePrice}
+                  </p>
+                )}
+              </div>
+
+              {/* Renovation Budget */}
+              <div>
+                <label className="mb-2 block text-sm text-white/80">
+                  {t("calculator.renovationBudget")}
+                </label>
+                <input
+                  type="number"
+                  value={inputs.renovationBudget}
+                  onChange={(e) =>
+                    updateInput("renovationBudget", Number(e.target.value))
+                  }
+                  className="w-full rounded-lg border border-white/20 bg-white/10 p-3 text-white placeholder-white/50 focus:border-blue-400 focus:outline-none"
+                />
+              </div>
+
+              {/* Holding Costs */}
+              <div>
+                <label className="mb-2 block text-sm text-white/80">
+                  {t("calculator.holdingCosts")}
+                </label>
+                <input
+                  type="number"
+                  value={inputs.holdingCosts}
+                  onChange={(e) =>
+                    updateInput("holdingCosts", Number(e.target.value))
+                  }
+                  className="w-full rounded-lg border border-white/20 bg-white/10 p-3 text-white placeholder-white/50 focus:border-blue-400 focus:outline-none"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                />
+              </div>
+
+              {/* Strategy */}
+              <div>
+                <label className="mb-2 block text-sm text-white/80">
+                  {t("calculator.strategy")}
+                </label>
+                <div className="flex space-x-4">
+                  <button
+                    onClick={() => updateInput("strategy", "airbnb")}
+                    className={`flex-1 rounded-lg border p-3 transition-all ${
+                      inputs.strategy === "airbnb"
+                        ? "border-blue-400 bg-blue-500/30 text-white"
+                        : "border-white/20 bg-white/10 text-white/70 hover:bg-white/20"
+                    }`}
+                  >
+                    🏨 {t("calculator.airbnb")}
+                  </button>
+                  <button
+                    onClick={() => updateInput("strategy", "longTerm")}
+                    className={`flex-1 rounded-lg border p-3 transition-all ${
+                      inputs.strategy === "longTerm"
+                        ? "border-blue-400 bg-blue-500/30 text-white"
+                        : "border-white/20 bg-white/10 text-white/70 hover:bg-white/20"
+                    }`}
+                  >
+                    🏠 {t("calculator.longTerm")}
+                  </button>
                 </div>
+              </div>
 
-                {/* Renovation Budget */}
-                <div>
-                  <label className="block text-white/80 text-sm mb-2">
-                    {t('calculator.renovationBudget')}
-                  </label>
-                  <input
-                    type="number"
-                    value={inputs.renovationBudget}
-                    onChange={(e) => updateInput('renovationBudget', Number(e.target.value))}
-                    className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-blue-400"
-                  />
-                </div>
-
-                {/* Holding Costs */}
-                <div>
-                  <label className="block text-white/80 text-sm mb-2">
-                    {t('calculator.holdingCosts')}
-                  </label>
-                  <input
-                    type="number"
-                    value={inputs.holdingCosts}
-                    onChange={(e) => updateInput('holdingCosts', Number(e.target.value))}
-                    className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-blue-400"
-                    min="0"
-                    max="100"
-                    step="0.1"
-                  />
-                </div>
-
-                {/* Strategy */}
-                <div>
-                  <label className="block text-white/80 text-sm mb-2">
-                    {t('calculator.strategy')}
-                  </label>
-                  <div className="flex space-x-4">
-                    <button
-                      onClick={() => updateInput('strategy', 'airbnb')}
-                      className={`flex-1 p-3 rounded-lg border transition-all ${
-                        inputs.strategy === 'airbnb'
-                          ? 'bg-blue-500/30 border-blue-400 text-white'
-                          : 'bg-white/10 border-white/20 text-white/70 hover:bg-white/20'
-                      }`}
-                    >
-                      🏨 {t('calculator.airbnb')}
-                    </button>
-                    <button
-                      onClick={() => updateInput('strategy', 'longTerm')}
-                      className={`flex-1 p-3 rounded-lg border transition-all ${
-                        inputs.strategy === 'longTerm'
-                          ? 'bg-blue-500/30 border-blue-400 text-white'
-                          : 'bg-white/10 border-white/20 text-white/70 hover:bg-white/20'
-                      }`}
-                    >
-                      🏠 {t('calculator.longTerm')}
-                    </button>
-                  </div>
-                </div>
-
-                {/* Strategy-specific inputs */}
-                {inputs.strategy === 'airbnb' ? (
-                  <>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-white/80 text-sm mb-2">
-                          {t('calculator.nightlyRate')}
-                        </label>
-                        <input
-                          type="number"
-                          value={inputs.nightlyRate}
-                          onChange={(e) => updateInput('nightlyRate', Number(e.target.value))}
-                          className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-blue-400"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-white/80 text-sm mb-2">
-                          {t('calculator.occupancy')}
-                        </label>
-                        <input
-                          type="number"
-                          value={inputs.occupancy}
-                          onChange={(e) => updateInput('occupancy', Number(e.target.value))}
-                          className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-blue-400"
-                          min="0"
-                          max="100"
-                        />
-                      </div>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-white/80 text-sm mb-2">
-                          {t('calculator.cleaningCost')}
-                        </label>
-                        <input
-                          type="number"
-                          value={inputs.cleaningCost}
-                          onChange={(e) => updateInput('cleaningCost', Number(e.target.value))}
-                          className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-blue-400"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-white/80 text-sm mb-2">
-                          {t('calculator.platformFee')}
-                        </label>
-                        <input
-                          type="number"
-                          value={inputs.platformFee}
-                          onChange={(e) => updateInput('platformFee', Number(e.target.value))}
-                          className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-blue-400"
-                          min="0"
-                          max="100"
-                        />
-                      </div>
-                    </div>
-                  </>
-                ) : (
+              {/* Strategy-specific inputs */}
+              {inputs.strategy === "airbnb" ? (
+                <>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-white/80 text-sm mb-2">
-                        {t('calculator.monthlyRent')}
+                      <label className="mb-2 block text-sm text-white/80">
+                        {t("calculator.nightlyRate")}
                       </label>
                       <input
                         type="number"
-                        value={inputs.monthlyRent}
-                        onChange={(e) => updateInput('monthlyRent', Number(e.target.value))}
-                        className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-blue-400"
+                        value={inputs.nightlyRate}
+                        onChange={(e) =>
+                          updateInput("nightlyRate", Number(e.target.value))
+                        }
+                        className="w-full rounded-lg border border-white/20 bg-white/10 p-3 text-white placeholder-white/50 focus:border-blue-400 focus:outline-none"
                       />
                     </div>
                     <div>
-                      <label className="block text-white/80 text-sm mb-2">
-                        {t('calculator.vacancy')}
+                      <label className="mb-2 block text-sm text-white/80">
+                        {t("calculator.occupancy")}
                       </label>
                       <input
                         type="number"
-                        value={inputs.vacancy}
-                        onChange={(e) => updateInput('vacancy', Number(e.target.value))}
-                        className="w-full p-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-blue-400"
+                        value={inputs.occupancy}
+                        onChange={(e) =>
+                          updateInput("occupancy", Number(e.target.value))
+                        }
+                        className="w-full rounded-lg border border-white/20 bg-white/10 p-3 text-white placeholder-white/50 focus:border-blue-400 focus:outline-none"
                         min="0"
                         max="100"
                       />
                     </div>
                   </div>
-                )}
-              </div>
-            </GlassCard>
-          </motion.div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="mb-2 block text-sm text-white/80">
+                        {t("calculator.cleaningCost")}
+                      </label>
+                      <input
+                        type="number"
+                        value={inputs.cleaningCost}
+                        onChange={(e) =>
+                          updateInput("cleaningCost", Number(e.target.value))
+                        }
+                        className="w-full rounded-lg border border-white/20 bg-white/10 p-3 text-white placeholder-white/50 focus:border-blue-400 focus:outline-none"
+                      />
+                    </div>
+                    <div>
+                      <label className="mb-2 block text-sm text-white/80">
+                        {t("calculator.platformFee")}
+                      </label>
+                      <input
+                        type="number"
+                        value={inputs.platformFee}
+                        onChange={(e) =>
+                          updateInput("platformFee", Number(e.target.value))
+                        }
+                        className="w-full rounded-lg border border-white/20 bg-white/10 p-3 text-white placeholder-white/50 focus:border-blue-400 focus:outline-none"
+                        min="0"
+                        max="100"
+                      />
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="mb-2 block text-sm text-white/80">
+                      {t("calculator.monthlyRent")}
+                    </label>
+                    <input
+                      type="number"
+                      value={inputs.monthlyRent}
+                      onChange={(e) =>
+                        updateInput("monthlyRent", Number(e.target.value))
+                      }
+                      className="w-full rounded-lg border border-white/20 bg-white/10 p-3 text-white placeholder-white/50 focus:border-blue-400 focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-2 block text-sm text-white/80">
+                      {t("calculator.vacancy")}
+                    </label>
+                    <input
+                      type="number"
+                      value={inputs.vacancy}
+                      onChange={(e) =>
+                        updateInput("vacancy", Number(e.target.value))
+                      }
+                      className="w-full rounded-lg border border-white/20 bg-white/10 p-3 text-white placeholder-white/50 focus:border-blue-400 focus:outline-none"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                </div>
+              )}
+            </div>
+          </GlassCard>
+        </motion.div>
 
-          {/* Results Panel */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="space-y-6"
-          >
-            {/* Results Card */}
-            <GlassCard className="p-6">
-              <h3 className="text-xl font-semibold text-white mb-6">
-                💰 Investment Results
-              </h3>
-              
-              <div className="grid grid-cols-2 gap-4 mb-6">
-                <div className="text-center p-4 bg-white/5 rounded-lg">
-                  <div className="text-2xl font-bold text-white mb-2">
-                    €{results.totalCost.toLocaleString()}
-                  </div>
-                  <div className="text-white/80 text-sm">{t('calculator.totalCost')}</div>
-                </div>
-                <div className="text-center p-4 bg-white/5 rounded-lg">
-                  <div className="text-2xl font-bold text-green-400 mb-2">
-                    {results.grossYield.toFixed(1)}%
-                  </div>
-                  <div className="text-white/80 text-sm">{t('calculator.grossYield')}</div>
-                </div>
-                <div className="text-center p-4 bg-white/5 rounded-lg">
-                  <div className="text-2xl font-bold text-blue-400 mb-2">
-                    {results.netYield.toFixed(1)}%
-                  </div>
-                  <div className="text-white/80 text-sm">{t('calculator.netYield')}</div>
-                </div>
-                <div className="text-center p-4 bg-white/5 rounded-lg">
-                  <div className="text-2xl font-bold text-yellow-400 mb-2">
-                    {results.payback.toFixed(1)} yrs
-                  </div>
-                  <div className="text-white/80 text-sm">{t('calculator.payback')}</div>
-                </div>
-              </div>
+        {/* Results Panel */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="space-y-6"
+        >
+          {/* Results Card */}
+          <GlassCard className="p-6">
+            <h3 className="mb-6 text-xl font-semibold text-white">
+              💰 Investment Results
+            </h3>
 
-              <div className="border-t border-white/20 pt-4">
-                <div className="text-sm text-white/80 space-y-2">
-                  <div className="flex justify-between">
-                    <span>Monthly Income:</span>
-                    <span>€{results.monthlyIncome.toFixed(0)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Monthly Expenses:</span>
-                    <span>-€{results.monthlyExpenses.toFixed(0)}</span>
-                  </div>
-                  <div className="flex justify-between font-semibold text-white border-t border-white/20 pt-2">
-                    <span>Net Monthly:</span>
-                    <span>€{(results.monthlyIncome - results.monthlyExpenses).toFixed(0)}</span>
-                  </div>
+            <div className="mb-6 grid grid-cols-2 gap-4">
+              <div className="rounded-lg bg-white/5 p-4 text-center">
+                <div className="mb-2 text-2xl font-bold text-white">
+                  €{results.totalCost.toLocaleString()}
+                </div>
+                <div className="text-sm text-white/80">
+                  {t("calculator.totalCost")}
                 </div>
               </div>
-            </GlassCard>
+              <div className="rounded-lg bg-white/5 p-4 text-center">
+                <div className="mb-2 text-2xl font-bold text-green-400">
+                  {results.grossYield.toFixed(1)}%
+                </div>
+                <div className="text-sm text-white/80">
+                  {t("calculator.grossYield")}
+                </div>
+              </div>
+              <div className="rounded-lg bg-white/5 p-4 text-center">
+                <div className="mb-2 text-2xl font-bold text-blue-400">
+                  {results.netYield.toFixed(1)}%
+                </div>
+                <div className="text-sm text-white/80">
+                  {t("calculator.netYield")}
+                </div>
+              </div>
+              <div className="rounded-lg bg-white/5 p-4 text-center">
+                <div className="mb-2 text-2xl font-bold text-yellow-400">
+                  {results.payback.toFixed(1)} yrs
+                </div>
+                <div className="text-sm text-white/80">
+                  {t("calculator.payback")}
+                </div>
+              </div>
+            </div>
 
-            {/* Sensitivity Analysis */}
-            <GlassCard className="p-6">
-              <div className="flex justify-between items-center mb-4">
-                <h4 className="text-lg font-semibold text-white">📈 Sensitivity Analysis</h4>
-                <select
-                  value={sensitivityRange}
-                  onChange={(e) => setSensitivityRange(Number(e.target.value))}
-                  className="p-2 rounded bg-white/10 border border-white/20 text-white text-sm"
-                >
-                  <option value={10}>±10%</option>
-                  <option value={20}>±20%</option>
-                  <option value={30}>±30%</option>
-                </select>
+            <div className="border-t border-white/20 pt-4">
+              <div className="space-y-2 text-sm text-white/80">
+                <div className="flex justify-between">
+                  <span>Monthly Income:</span>
+                  <span>€{results.monthlyIncome.toFixed(0)}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Monthly Expenses:</span>
+                  <span>-€{results.monthlyExpenses.toFixed(0)}</span>
+                </div>
+                <div className="flex justify-between border-t border-white/20 pt-2 font-semibold text-white">
+                  <span>Net Monthly:</span>
+                  <span>
+                    €
+                    {(results.monthlyIncome - results.monthlyExpenses).toFixed(
+                      0,
+                    )}
+                  </span>
+                </div>
               </div>
-              <div className="h-48">
-                <Bar data={generateSensitivityData()} options={chartOptions} />
-              </div>
-            </GlassCard>
-          </motion.div>
-        </div>
+            </div>
+          </GlassCard>
+
+          {/* Sensitivity Analysis */}
+          <GlassCard className="p-6">
+            <div className="mb-4 flex items-center justify-between">
+              <h4 className="text-lg font-semibold text-white">
+                📈 Sensitivity Analysis
+              </h4>
+              <select
+                value={sensitivityRange}
+                onChange={(e) => setSensitivityRange(Number(e.target.value))}
+                className="rounded border border-white/20 bg-white/10 p-2 text-sm text-white"
+              >
+                <option value={10}>±10%</option>
+                <option value={20}>±20%</option>
+                <option value={30}>±30%</option>
+              </select>
+            </div>
+            <div className="h-48">
+              <Bar data={generateSensitivityData()} options={chartOptions} />
+            </div>
+          </GlassCard>
+        </motion.div>
+      </div>
     </section>
   );
 }
