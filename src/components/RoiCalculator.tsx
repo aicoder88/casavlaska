@@ -1,11 +1,9 @@
 'use client';
 
-import { useState, useCallback, useRef } from 'react';
+import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { z } from 'zod';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
 import { Bar } from 'react-chartjs-2';
 import GlassCard from './GlassCard';
 
@@ -37,7 +35,6 @@ interface CalculationResults {
 
 export default function RoiCalculator() {
   const { t } = useTranslation();
-  const pdfRef = useRef<HTMLDivElement>(null);
   
   const [inputs, setInputs] = useState<CalculatorInputs>({
     purchasePrice: 159900,
@@ -155,58 +152,6 @@ export default function RoiCalculator() {
     };
   };
 
-  const generatePDF = async () => {
-    if (!pdfRef.current) return;
-
-    try {
-      const canvas = await html2canvas(pdfRef.current, {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: '#0f172a',
-      });
-      
-      const imgData = canvas.toDataURL('image/png');
-      const pdf = new jsPDF();
-      
-      // Add title
-      pdf.setFontSize(20);
-      pdf.text('CasaVlaška ROI Analysis', 20, 20);
-      
-      // Add subtitle
-      pdf.setFontSize(12);
-      pdf.text('Vlaška 117, Zagreb - Investment Analysis', 20, 30);
-      
-      // Add image
-      const imgWidth = 170;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      pdf.addImage(imgData, 'PNG', 20, 40, imgWidth, Math.min(imgHeight, 200));
-      
-      // Add summary
-      let yPos = Math.min(imgHeight, 200) + 50;
-      pdf.setFontSize(14);
-      pdf.text('Investment Summary:', 20, yPos);
-      
-      yPos += 10;
-      pdf.setFontSize(10);
-      pdf.text(`${t('common.totalInvestment')}: €${results.totalCost.toLocaleString()}`, 20, yPos);
-      yPos += 7;
-      pdf.text(`${t('common.annualNetIncome')}: €${results.annualNetIncome.toLocaleString()}`, 20, yPos);
-      yPos += 7;
-      pdf.text(`${t('common.netYieldPercent')}: ${results.netYield.toFixed(1)}%`, 20, yPos);
-      yPos += 7;
-      pdf.text(`${t('common.paybackPeriod')}: ${results.payback.toFixed(1)} years`, 20, yPos);
-      
-      // Add disclaimer
-      yPos += 20;
-      pdf.setFontSize(8);
-      pdf.text(t('common.generatedBy'), 20, yPos);
-      pdf.text('Contact: +1 204 620-4491 (Lorie)', 20, yPos + 5);
-      
-      pdf.save('casavlaska-roi-analysis.pdf');
-    } catch (error) {
-      console.error('Error generating PDF:', error);
-    }
-  };
 
   const chartOptions = {
     responsive: true,
@@ -433,7 +378,7 @@ export default function RoiCalculator() {
             className="space-y-6"
           >
             {/* Results Card */}
-            <GlassCard className="p-6" ref={pdfRef}>
+            <GlassCard className="p-6">
               <h3 className="text-xl font-semibold text-white mb-6">
                 💰 Investment Results
               </h3>
@@ -501,19 +446,8 @@ export default function RoiCalculator() {
                 <Bar data={generateSensitivityData()} options={chartOptions} />
               </div>
             </GlassCard>
-
-            {/* PDF Export */}
-            <motion.button
-              onClick={generatePDF}
-              className="w-full glass-button text-white font-semibold py-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              📄 {t('calculator.getRoiPdf')}
-            </motion.button>
           </motion.div>
         </div>
-      </div>
     </section>
   );
 }

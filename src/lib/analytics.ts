@@ -93,13 +93,6 @@ class Analytics {
     });
   }
 
-  trackPDFDownload() {
-    this.track({
-      action: 'pdf_download',
-      category: 'lead_generation',
-      label: 'roi_pdf_export',
-    });
-  }
 
   trackSectionView(section: string) {
     this.track({

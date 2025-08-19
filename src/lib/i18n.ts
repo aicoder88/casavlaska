@@ -116,7 +116,6 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         netYield: "Net Yield (%)",
         cashOnCash: "Cash-on-Cash (%)",
         payback: "Payback (years)",
-        getRoiPdf: "Get ROI PDF"
       },
       gallery: {
         title: "Gallery"
@@ -124,6 +123,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
       location: {
         title: "Location",
         walkingTimes: "Walking Times",
+        zagrebackaBanka: "Zagrebačka banka: 15 sec",
         kvaternik: "Kvaternik Square: 3 min",
         tram: "Tram Stop: 2 min",
         cafes: "Cafes & Restaurants: 1 min",
@@ -337,7 +337,6 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         netYield: "Neto Prinos (%)",
         cashOnCash: "Gotovina na Gotovinу (%)",
         payback: "Povrat (godine)",
-        getRoiPdf: "Preuzmi ROI PDF"
       },
       gallery: {
         title: "Galerija"
@@ -345,6 +344,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
       location: {
         title: "Lokacija",
         walkingTimes: "Vremena Hodanja",
+        zagrebackaBanka: "Zagrebačka banka: 15 sek",
         kvaternik: "Kvaternikov Trg: 3 min",
         tram: "Tramvajska Stanica: 2 min",
         cafes: "Kafići i Restorani: 1 min",
