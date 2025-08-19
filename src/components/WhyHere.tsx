@@ -73,13 +73,17 @@ export default function WhyHere() {
             className="group"
           >
             <GlassCard className="overflow-hidden p-0">
-              <div className="relative h-64">
+              <div className="relative h-64 min-h-[16rem] bg-slate-800">
                 <Image
                   src="/IMG_2345.JPG"
                   alt="Interior apartment view"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="eager"
+                  onError={(e) => {
+                    console.error('Failed to load image:', e.currentTarget.src);
+                  }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
@@ -99,13 +103,14 @@ export default function WhyHere() {
             className="group"
           >
             <GlassCard className="overflow-hidden p-0">
-              <div className="relative h-64">
+              <div className="relative h-64 min-h-[16rem] bg-slate-800">
                 <Image
                   src="/IMG_2441.JPG"
                   alt="Well-lit living area"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
@@ -125,13 +130,14 @@ export default function WhyHere() {
             className="group md:col-span-2 lg:col-span-1"
           >
             <GlassCard className="overflow-hidden p-0">
-              <div className="relative h-64">
+              <div className="relative h-64 min-h-[16rem] bg-slate-800">
                 <Image
                   src="/IMG_2443.JPG"
                   alt="Complete apartment overview"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="eager"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">

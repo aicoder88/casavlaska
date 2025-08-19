@@ -29,14 +29,14 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/front door.JPG"
+            src="/front%20door.JPG"
             alt="Front entrance of Vlaška 117 apartment building"
             fill
             className="object-cover"
             priority
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 80vw"
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/85 via-purple-900/80 to-slate-800/85 backdrop-blur-sm"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/40 via-purple-900/30 to-slate-800/40"></div>
         </div>
         <div className="relative z-10">
           <motion.div

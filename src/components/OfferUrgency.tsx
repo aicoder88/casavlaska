@@ -70,13 +70,14 @@ export default function OfferUrgency() {
                 className="my-8"
               >
                 <GlassCard className="overflow-hidden p-0">
-                  <div className="relative h-64 md:h-80">
+                  <div className="relative h-64 md:h-80 min-h-[16rem] bg-slate-800">
                     <Image
                       src="/IMG_2397.JPG"
                       alt="Interior apartment details"
                       fill
                       className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+                      loading="eager"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30" />
                     <div className="absolute bottom-4 left-4 right-4 text-center">

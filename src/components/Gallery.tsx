@@ -17,7 +17,7 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   {
-    src: "/front door.JPG",
+    src: "/front%20door.JPG",
     caption: {
       en: "Front Entrance - Historic building entrance on Vlaška Street",
       hr: "Glavni ulaz - Povijesni ulaz zgrade na Vlaškoj ulici",
@@ -97,7 +97,7 @@ const galleryImages: GalleryImage[] = [
     alt: "Complete apartment overview",
   },
   {
-    src: "/IMG_2445 2.JPG",
+    src: "/IMG_2445%202.JPG",
     caption: {
       en: "Detailed View - Quality construction and materials",
       hr: "Detaljan pogled - Kvalitetna konstrukcija i materijali",
