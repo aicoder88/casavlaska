@@ -156,7 +156,7 @@ export default function Faq() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="tel:+385993433344"
+                href="tel:+12046204491"
                 className="glass-button text-white font-semibold px-6 py-3 bg-green-500/20 hover:bg-green-500/30 inline-flex items-center justify-center space-x-2"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -165,7 +165,7 @@ export default function Faq() {
                 <span>Call Now</span>
               </motion.a>
               <motion.a
-                href="https://wa.me/385993433344?text=I%20have%20questions%20about%20Vlaška%20117"
+                href="https://wa.me/12046204491?text=I%20have%20questions%20about%20Vlaška%20117"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="glass-button text-white font-semibold px-6 py-3 bg-blue-500/20 hover:bg-blue-500/30 inline-flex items-center justify-center space-x-2"

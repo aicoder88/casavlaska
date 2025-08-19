@@ -66,8 +66,10 @@ Sav postupak kroz javnog bilježnika s ugovorima.
 
 # **Kontakt: Lorie — govorite polako ili engleski**
 
-# **WhatsApp: +1-204-620-4491**`,
-        bookViewing: "Pozovite: 099 343 3344",
+# **WhatsApp: +1 204 620-4491**
+
+*Ako MORATE koristiti hrvatski telefon i nemate WhatsApp, pozovite njenog brata Draga na 099 343 3344*`,
+        bookViewing: "Pozovite: +1 204 620-4491",
         openGallery: "Pregledajte fotografije", 
         calculateROI: "Izračunajte povrat"
       },
@@ -225,8 +227,10 @@ Sav postupak kroz javnog bilježnika s ugovorima.
 
 # **Kontakt: Lorie — govorite polako ili engleski**
 
-# **WhatsApp: +1-204-620-4491**`,
-        bookViewing: "Pozovite: 099 343 3344",
+# **WhatsApp: +1 204 620-4491**
+
+*Ako MORATE koristiti hrvatski telefon i nemate WhatsApp, pozovite njenog brata Draga na 099 343 3344*`,
+        bookViewing: "Pozovite: +1 204 620-4491",
         openGallery: "Pregledajte fotografije",
         calculateROI: "Izračunajte povrat"
       },

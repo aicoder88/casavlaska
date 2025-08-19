@@ -12,11 +12,11 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
   const { t } = useTranslation();
 
   const handleCall = () => {
-    window.location.href = 'tel:+385993433344';
+    window.location.href = 'tel:+12046204491';
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/385993433344?text=Želim%20vidjeti%20stan%20na%20Vlaškoj%20117', '_blank');
+    window.open('https://wa.me/12046204491?text=I%20want%20to%20see%20Vlaška%20117%20today', '_blank');
   };
 
   return (
@@ -192,11 +192,11 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
                 <div className="hidden sm:block w-1 h-8 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
                 
                 <motion.a 
-                  href="tel:+385993433344"
+                  href="tel:+12046204491"
                   className="hero-phone-link"
                   whileHover={{ scale: 1.05, x: 5 }}
                 >
-                  📱 +385 99 343 3344
+                  📱 +1 204 620-4491
                 </motion.a>
               </motion.div>
             </motion.div>

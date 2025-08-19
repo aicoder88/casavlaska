@@ -8,11 +8,11 @@ export default function OfferUrgency() {
   const { t } = useTranslation();
 
   const handleCall = () => {
-    window.location.href = 'tel:+385993433344';
+    window.location.href = 'tel:+12046204491';
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/385993433344?text=Želim%20vidjeti%20stan%20na%20Vlaškoj%20117', '_blank');
+    window.open('https://wa.me/12046204491?text=I%20want%20to%20see%20Vlaška%20117%20today', '_blank');
   };
 
   return (

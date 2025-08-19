@@ -8,11 +8,11 @@ export default function UrgencyStrip() {
   const { t } = useTranslation();
 
   const handleCall = () => {
-    window.location.href = 'tel:+385993433344';
+    window.location.href = 'tel:+12046204491';
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/385993433344?text=Želim%20vidjeti%20stan%20na%20Vlaškoj%20117%20danas', '_blank');
+    window.open('https://wa.me/12046204491?text=I%20want%20to%20see%20apartment%20at%20Vlaška%20117%20today', '_blank');
   };
 
   return (
@@ -80,7 +80,7 @@ export default function UrgencyStrip() {
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  📞 Call +385 99 343 3344
+                  📞 Call +1 204 620-4491
                 </motion.button>
 
                 <motion.button
@@ -106,8 +106,8 @@ export default function UrgencyStrip() {
                     D
                   </div>
                   <div className="text-left">
-                    <div className="text-white font-medium">Drago</div>
-                    <div className="text-white/70 text-sm">Property Contact</div>
+                    <div className="text-white font-medium">Lorie</div>
+                    <div className="text-white/70 text-sm">Primary Contact (Canada)</div>
                   </div>
                 </div>
               </motion.div>

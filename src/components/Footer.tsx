@@ -8,11 +8,11 @@ export default function Footer() {
   const { t } = useTranslation();
 
   const handleCall = () => {
-    window.location.href = 'tel:+385993433344';
+    window.location.href = 'tel:+12046204491';
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/385993433344?text=Pozdrav%20u%20vezi%20stana%20na%20Vlaškoj%20117', '_blank');
+    window.open('https://wa.me/12046204491?text=Hello%20about%20apartment%20at%20Vlaška%20117', '_blank');
   };
 
   const handleEmail = () => {
@@ -86,7 +86,8 @@ export default function Footer() {
                   >
                     <span className="text-green-400">📞</span>
                     <div className="text-left">
-                      <div className="text-white">+385 99 343 3344</div>
+                      <div className="text-white">+1 204 620-4491 (Lorie)</div>
+                      <div className="text-white/60 text-xs">If you MUST use Croatian phone: 099 343 3344 (Drago)</div>
                       <div className="text-white/70 text-sm">Call anytime</div>
                     </div>
                   </motion.button>
