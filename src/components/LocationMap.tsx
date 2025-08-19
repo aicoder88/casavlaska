@@ -31,7 +31,7 @@ export default function LocationMap() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
           {/* Map */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -39,7 +39,7 @@ export default function LocationMap() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <GlassCard className="h-96 p-2">
+            <GlassCard className="h-64 p-2 sm:h-80 md:h-96">
               {/* Google Maps Location Embed */}
               <div className="relative h-full w-full overflow-hidden rounded-lg">
                 <iframe
@@ -133,7 +133,7 @@ export default function LocationMap() {
               <h4 className="mb-4 text-lg font-semibold text-white">
                 🚌 {t("publicTransport")}
               </h4>
-              <div className="grid grid-cols-2 gap-4 text-sm">
+              <div className="grid grid-cols-1 gap-4 text-sm sm:grid-cols-2">
                 <div className="rounded-lg bg-white/5 p-3 text-center">
                   <div className="mb-2 text-xl">🚋</div>
                   <div className="text-white/90">{t("tramLines")}</div>

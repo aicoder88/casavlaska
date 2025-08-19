@@ -216,7 +216,7 @@ export default function Gallery({ isOpen, onClose }: GalleryProps) {
         onClick={selectedImage === null ? onClose : closeLightbox}
       >
         <div className="h-full overflow-y-auto">
-          <div className="container mx-auto px-4 py-8">
+          <div className="container mx-auto px-4 py-4 sm:py-8">
             {/* Header */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -240,7 +240,7 @@ export default function Gallery({ isOpen, onClose }: GalleryProps) {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+                className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 lg:grid-cols-3"
                 onClick={(e) => e.stopPropagation()}
               >
                 {galleryImages.map((image, index) => (
@@ -296,14 +296,14 @@ export default function Gallery({ isOpen, onClose }: GalleryProps) {
                 {/* Navigation buttons */}
                 <button
                   onClick={() => navigateImage("prev")}
-                  className="glass-button absolute top-1/2 left-4 z-10 -translate-y-1/2 transform p-3 text-white"
+                  className="glass-button absolute top-1/2 left-2 z-10 -translate-y-1/2 transform p-2 text-white sm:left-4 sm:p-3"
                   aria-label={t("common.previousImage")}
                 >
                   ❮
                 </button>
                 <button
                   onClick={() => navigateImage("next")}
-                  className="glass-button absolute top-1/2 right-4 z-10 -translate-y-1/2 transform p-3 text-white"
+                  className="glass-button absolute top-1/2 right-2 z-10 -translate-y-1/2 transform p-2 text-white sm:right-4 sm:p-3"
                   aria-label={t("common.nextImage")}
                 >
                   ❯
@@ -312,27 +312,27 @@ export default function Gallery({ isOpen, onClose }: GalleryProps) {
                 {/* Close button */}
                 <button
                   onClick={closeLightbox}
-                  className="glass-button absolute top-4 right-4 z-10 p-3 text-white"
+                  className="glass-button absolute top-2 right-2 z-10 p-2 text-white sm:top-4 sm:right-4 sm:p-3"
                   aria-label={t("common.closeLightbox")}
                 >
                   ✕
                 </button>
 
                 {/* Image container */}
-                <div className="flex h-full max-h-full w-full max-w-5xl flex-col">
+                <div className="flex h-full max-h-full w-full max-w-5xl flex-col px-2 sm:px-0">
                   <div className="flex flex-1 items-center justify-center">
                     <Image
                       src={galleryImages[selectedImage].src}
                       alt={galleryImages[selectedImage].alt}
                       width={800}
                       height={600}
-                      className="max-h-full max-w-full rounded-lg object-contain shadow-2xl"
+                      className="max-h-[70vh] max-w-full rounded-lg object-contain shadow-2xl sm:max-h-full"
                       priority
                     />
                   </div>
 
                   {/* Caption */}
-                  <GlassCard className="mt-4 p-4">
+                  <GlassCard className="mt-2 p-3 sm:mt-4 sm:p-4">
                     <p className="text-center text-white">
                       {i18n.language === "hr"
                         ? galleryImages[selectedImage].caption.hr

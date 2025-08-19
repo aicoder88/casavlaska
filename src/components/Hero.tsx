@@ -24,8 +24,8 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
   };
 
   return (
-    <section className="w-full space-y-6 md:space-y-8">
-      <div className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-2xl border p-6 md:p-8 lg:p-10">
+    <section className="w-full space-y-4 px-4 sm:space-y-6 md:space-y-8 sm:px-6">
+      <div className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-xl border p-4 sm:rounded-2xl sm:p-6 md:p-8 lg:p-10">
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -57,7 +57,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
               </span>
             </motion.div>
 
-            <h1 className="hero-gradient-text text-center text-4xl leading-tight font-black drop-shadow-2xl md:text-6xl lg:text-7xl">
+            <h1 className="hero-gradient-text text-center text-3xl leading-tight font-black drop-shadow-2xl sm:text-4xl md:text-6xl lg:text-7xl">
               {t("hero.title")}
             </h1>
 
@@ -74,7 +74,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
             </motion.div>
 
             <motion.p
-              className="hero-subtitle-text max-w-5xl text-center text-2xl leading-relaxed font-bold md:text-3xl lg:text-4xl"
+              className="hero-subtitle-text max-w-5xl text-center text-xl leading-relaxed font-bold sm:text-2xl md:text-3xl lg:text-4xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -183,14 +183,14 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
             </motion.div>
 
             <motion.div
-              className="mt-12 flex flex-col items-center justify-center gap-8 md:mt-16 lg:flex-row"
+              className="mt-8 flex flex-col items-center justify-center gap-4 sm:gap-6 md:mt-12 lg:mt-16 lg:flex-row lg:gap-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
               <motion.button
                 onClick={handleCall}
-                className="hero-cta-primary w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[280px]"
+                className="hero-cta-primary w-full max-w-[400px] px-6 py-4 text-lg font-bold sm:px-8 sm:py-5 sm:text-xl lg:min-w-[280px] lg:px-10"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -201,7 +201,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
 
               <motion.button
                 onClick={onOpenGallery}
-                className="hero-cta-secondary w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[280px]"
+                className="hero-cta-secondary w-full max-w-[400px] px-6 py-4 text-lg font-bold sm:px-8 sm:py-5 sm:text-xl lg:min-w-[280px] lg:px-10"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -212,7 +212,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
 
               <motion.button
                 onClick={onOpenCalculator}
-                className="hero-cta-tertiary w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[280px]"
+                className="hero-cta-tertiary w-full max-w-[400px] px-6 py-4 text-lg font-bold sm:px-8 sm:py-5 sm:text-xl lg:min-w-[280px] lg:px-10"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
               >

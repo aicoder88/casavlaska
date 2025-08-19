@@ -12,20 +12,20 @@ export default function WhyHere() {
   const points = t("whyHere.points", { returnObjects: true }) as string[];
 
   return (
-    <section className="relative mx-auto w-full max-w-7xl px-4 py-8 md:px-8 lg:px-12">
+    <section className="relative mx-auto w-full max-w-7xl px-4 py-6 sm:py-8 md:px-8 lg:px-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="center-content mb-16"
+        className="center-content mb-8 sm:mb-16"
       >
-        <h2 className="gradient-text mb-6 text-4xl font-black md:text-5xl">
+        <h2 className="gradient-text mb-4 text-3xl font-black sm:mb-6 sm:text-4xl md:text-5xl">
           {t("whyHere.title")}
         </h2>
       </motion.div>
 
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
         {points.map((point, index) => (
           <motion.div
             key={index}

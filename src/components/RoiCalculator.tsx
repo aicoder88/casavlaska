@@ -228,7 +228,7 @@ export default function RoiCalculator() {
         </h2>
       </motion.div>
 
-      <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <div className="grid grid-cols-1 gap-6 xl:grid-cols-2 xl:gap-8">
         {/* Input Panel */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -236,7 +236,7 @@ export default function RoiCalculator() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <GlassCard className="border-2 border-blue-400/30 bg-gradient-to-br from-blue-900/20 to-purple-900/20 p-8 shadow-xl">
+          <GlassCard className="border-2 border-blue-400/30 bg-gradient-to-br from-blue-900/20 to-purple-900/20 p-4 shadow-xl sm:p-6 lg:p-8">
             <motion.h3 
               className="mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-2xl font-black text-transparent"
               whileHover={{ scale: 1.02 }}
@@ -330,7 +330,7 @@ export default function RoiCalculator() {
               {/* Strategy-specific inputs */}
               {inputs.strategy === "airbnb" ? (
                 <>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
                       <label className="mb-2 block text-sm text-white/80">
                         {t("calculator.nightlyRate")}
@@ -360,7 +360,7 @@ export default function RoiCalculator() {
                       />
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                     <div>
                       <label className="mb-2 block text-sm text-white/80">
                         {t("calculator.cleaningCost")}
@@ -392,7 +392,7 @@ export default function RoiCalculator() {
                   </div>
                 </>
               ) : (
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div>
                     <label className="mb-2 block text-sm text-white/80">
                       {t("calculator.monthlyRent")}
@@ -436,7 +436,7 @@ export default function RoiCalculator() {
           className="space-y-6"
         >
           {/* Results Card */}
-          <GlassCard className="border-2 border-green-400/30 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-8 shadow-xl">
+          <GlassCard className="border-2 border-green-400/30 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-4 shadow-xl sm:p-6 lg:p-8">
             <motion.h3 
               className="mb-8 bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-2xl font-black text-transparent"
               whileHover={{ scale: 1.02 }}
@@ -444,9 +444,9 @@ export default function RoiCalculator() {
               {t("calculator.investmentResults")}
             </motion.h3>
 
-            <div className="mb-8 grid grid-cols-2 gap-6">
+            <div className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
               <motion.div 
-                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-6 text-center backdrop-blur-sm border border-white/10"
+                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-4 text-center backdrop-blur-sm border border-white/10 sm:p-6"
                 whileHover={{ scale: 1.03, y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -458,7 +458,7 @@ export default function RoiCalculator() {
                 </div>
               </motion.div>
               <motion.div 
-                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-6 text-center backdrop-blur-sm border border-white/10"
+                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-4 text-center backdrop-blur-sm border border-white/10 sm:p-6"
                 whileHover={{ scale: 1.03, y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -470,7 +470,7 @@ export default function RoiCalculator() {
                 </div>
               </motion.div>
               <motion.div 
-                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-6 text-center backdrop-blur-sm border border-white/10"
+                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-4 text-center backdrop-blur-sm border border-white/10 sm:p-6"
                 whileHover={{ scale: 1.03, y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -482,7 +482,7 @@ export default function RoiCalculator() {
                 </div>
               </motion.div>
               <motion.div 
-                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-6 text-center backdrop-blur-sm border border-white/10"
+                className="rounded-xl bg-gradient-to-br from-white/10 to-white/5 p-4 text-center backdrop-blur-sm border border-white/10 sm:p-6"
                 whileHover={{ scale: 1.03, y: -2 }}
                 transition={{ duration: 0.2 }}
               >
@@ -519,7 +519,7 @@ export default function RoiCalculator() {
           </GlassCard>
 
           {/* Sensitivity Analysis */}
-          <GlassCard className="border-2 border-amber-400/30 bg-gradient-to-br from-amber-900/20 to-orange-900/20 p-8 shadow-xl">
+          <GlassCard className="border-2 border-amber-400/30 bg-gradient-to-br from-amber-900/20 to-orange-900/20 p-4 shadow-xl sm:p-6 lg:p-8">
             <div className="mb-6 flex items-center justify-between">
               <motion.h4 
                 className="bg-gradient-to-r from-amber-400 to-orange-400 bg-clip-text text-xl font-black text-transparent"

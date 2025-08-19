@@ -217,7 +217,7 @@ export default function PriceCharts() {
         </h2>
       </motion.div>
 
-      <div className="mb-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <div className="mb-8 grid grid-cols-1 gap-6 lg:mb-12 lg:grid-cols-2 lg:gap-8">
         {/* Price Trend Chart */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
@@ -266,7 +266,7 @@ export default function PriceCharts() {
             <h3 className="mb-4 text-2xl font-bold text-white">
               {t("priceContext.excellentValue")}
             </h3>
-            <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 sm:gap-6">
               <div className="text-center">
                 <div className="mb-2 text-3xl font-bold text-green-400">
                   {formatPricePerM2(priceData.currentListing.pricePerM2)}
