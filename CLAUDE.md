@@ -8,6 +8,16 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run build` - Build production version
 - `npm run start` - Start production server
 - `npm run lint` - Run ESLint checks
+- `npx prettier . --write` - Format code using Prettier with Tailwind plugin
+
+### Testing
+
+No formal testing framework is currently configured. Manual testing should focus on:
+
+- Both language versions (English/Croatian)
+- All interactive components (ROI calculator, gallery, maps)
+- Mobile responsiveness and glass effects
+- Form submissions and PDF generation
 
 ## Architecture Overview
 
@@ -15,14 +25,16 @@ CasaVlaška is a Next.js 15 real estate landing page built with the App Router p
 
 ### Key Technologies
 
-- **Next.js 15** with App Router
+- **Next.js 15** with App Router and Turbopack
+- **React 19** with latest concurrent features
 - **TypeScript** with strict configuration
-- **TailwindCSS 4** with custom glassmorphic utilities
+- **TailwindCSS 4** with custom glassmorphic utilities and Prettier plugin
 - **Framer Motion** for animations
 - **i18next** for internationalization (English/Croatian)
 - **Chart.js** for price visualization
 - **Leaflet** for location mapping
 - **jsPDF + html2canvas** for ROI report generation
+- **Zod** for schema validation
 
 ### Component Architecture
 
@@ -102,10 +114,12 @@ Configured for Vercel deployment with automatic builds on git push. The site inc
 
 Use the `--turbopack` flag when running the dev server for optimal performance with Next.js 15. The codebase is configured for:
 
-- TypeScript strict mode with proper type checking
+- TypeScript strict mode with proper type checking and path aliases (`@/*` → `./src/*`)
 - ESLint with Next.js configuration for code quality
+- Prettier with Tailwind CSS plugin for consistent code formatting
 - TailwindCSS 4 with custom glassmorphism utilities and animations
 - Optimized package imports for framer-motion and chart.js
+- SVG image support with security policies in Next.js config
 
 ## Language Management
 
