@@ -164,13 +164,15 @@ Sav postupak kroz javnog bilježnika s ugovorima.
       footer: {
         contact: "Contact",
         name: "",
-        disclaimer: "Information deemed reliable; buyer to verify.",
+        disclaimer: "",
       },
       liveViewers: {
         text: "people viewing now",
       },
       common: {
         belowMarketRate: "Below market rate",
+        saveVsMarketPrice: "✨ SAVE €60,000+ vs MARKET PRICE! ✨",
+        primeZagrebLocation: "PRIME ZAGREB LOCATION",
         cleanTitle: "Clean title",
         readyToClose: "Ready to close",
         decisionDeadline: "Decision Deadline: THURSDAY",
@@ -184,7 +186,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         chat: "Chat",
         call: "Call",
         primaryContact: "Primary Contact (Canada)",
-        propertySpecialist: "Property Specialist",
+        propertySpecialist: "",
         callAnytime: "Call anytime",
         instantMessaging: "Instant messaging",
         emailInquiry: "Email inquiry",
@@ -397,13 +399,15 @@ Sav postupak kroz javnog bilježnika s ugovorima.
       footer: {
         contact: "Kontakt",
         name: "",
-        disclaimer: "Informacije smatrane pouzdanima; kupac treba provjeriti.",
+        disclaimer: "",
       },
       liveViewers: {
         text: "ljudi trenutno gleda",
       },
       common: {
         belowMarketRate: "Ispod tržišne cijene",
+        saveVsMarketPrice: "✨ UŠTEDITE €60,000+ U ODNOSU NA TRŽIŠNU CIJENU! ✨",
+        primeZagrebLocation: "VRHUNSKA LOKACIJA U ZAGREBU",
         cleanTitle: "Čisto vlasništvo",
         readyToClose: "Spreman za zatvaranje",
         decisionDeadline: "Rok za odluku: ČETVRTAK",
@@ -417,7 +421,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         chat: "Chat",
         call: "Pozovi",
         primaryContact: "Glavni kontakt (Kanada)",
-        propertySpecialist: "Specijalist nekretnina",
+        propertySpecialist: "",
         callAnytime: "Pozovite bilo kada",
         instantMessaging: "Instant poruke",
         emailInquiry: "Email upit",

@@ -141,7 +141,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
                   €159,900
                 </div>
                 <div className="text-xl font-bold text-amber-200 drop-shadow-lg md:text-2xl lg:text-3xl">
-                  ✨ SAVE €60,000+ vs MARKET PRICE! ✨
+                  {t("common.saveVsMarketPrice")}
                 </div>
               </div>
             </motion.div>

@@ -67,7 +67,7 @@ export default function WhyHere() {
           >
             <span className="text-3xl">⭐</span>
             <h3 className="trust-text text-2xl font-black">
-              PRIME ZAGREB LOCATION
+              {t("common.primeZagrebLocation")}
             </h3>
             <span className="text-3xl">⭐</span>
           </motion.div>
