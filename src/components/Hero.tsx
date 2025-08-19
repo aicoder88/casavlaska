@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
-import GlassCard from './GlassCard';
 
 interface HeroProps {
   onOpenGallery: () => void;
@@ -21,37 +20,46 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Floating background blobs */}
-      <div className="floating-blob"></div>
-      <div className="floating-blob"></div>
-      <div className="floating-blob"></div>
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden">
+      {/* Animated gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-800"></div>
       
-      {/* Background image overlay */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-        style={{
-          backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.4"%3E%3Ccircle cx="30" cy="30" r="4"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")'
-        }}
-      ></div>
+      {/* Enhanced floating background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="hero-floating-orb hero-orb-1"></div>
+        <div className="hero-floating-orb hero-orb-2"></div>
+        <div className="hero-floating-orb hero-orb-3"></div>
+        <div className="hero-floating-orb hero-orb-4"></div>
+      </div>
+      
+      {/* Geometric pattern overlay */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0" style={{
+          backgroundImage: `
+            radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 75% 25%, rgba(16, 185, 129, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 25% 75%, rgba(245, 158, 11, 0.3) 0%, transparent 50%),
+            radial-gradient(circle at 75% 75%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)
+          `
+        }}></div>
+      </div>
 
-
-      {/* Main content */}
-      <div className="container mx-auto px-4 z-10">
-        <div className="max-w-6xl mx-auto">
-          <GlassCard className="center-content backdrop-blur-2xl">
+      {/* Main content - edge to edge */}
+      <div className="w-full z-10 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="hero-glass-container">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="center-content"
             >
-              <h1 className="text-3xl md:text-5xl font-black mb-6 gradient-text leading-tight text-center">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-black mb-8 hero-gradient-text leading-tight text-center drop-shadow-2xl">
                 {t('hero.title')}
               </h1>
               
               <motion.p 
-                className="text-xl md:text-2xl high-contrast-text mb-8 leading-relaxed text-center max-w-4xl font-bold"
+                className="text-2xl md:text-3xl lg:text-4xl hero-subtitle-text mb-12 leading-relaxed text-center max-w-5xl font-bold"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -70,147 +78,153 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
                   // Handle different markdown styles
                   if (paragraph.startsWith('# **') && paragraph.endsWith('**')) {
                     return (
-                      <h1 key={index} className="text-4xl md:text-5xl font-black text-center mb-6 text-red-500">
+                      <h1 key={index} className="text-4xl md:text-5xl font-black text-center mb-6 text-red-400">
                         {paragraph.replace(/# \*\*(.*)\*\*/, '$1')}
                       </h1>
                     );
                   }
                   if (paragraph.startsWith('## **') && paragraph.endsWith('**')) {
                     return (
-                      <h2 key={index} className="text-2xl md:text-3xl font-bold text-center mb-4 text-orange-500">
+                      <h2 key={index} className="text-2xl md:text-3xl font-bold text-center mb-4 text-orange-400">
                         {paragraph.replace(/## \*\*(.*)\*\*/, '$1')}
                       </h2>
                     );
                   }
                   if (paragraph.startsWith('### **') && paragraph.endsWith('**')) {
                     return (
-                      <h3 key={index} className="text-xl md:text-2xl font-bold text-center mb-3 text-yellow-600">
+                      <h3 key={index} className="text-xl md:text-2xl font-bold text-center mb-3 text-yellow-400">
                         {paragraph.replace(/### \*\*(.*)\*\*/, '$1')}
                       </h3>
                     );
                   }
                   if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
                     return (
-                      <p key={index} className="text-lg font-bold mb-3 text-center">
+                      <p key={index} className="text-lg font-bold mb-3 text-center text-amber-200">
                         {paragraph.replace(/\*\*(.*)\*\*/, '$1')}
                       </p>
                     );
                   }
                   if (paragraph === '---') {
                     return (
-                      <div key={index} className="w-full h-px bg-gradient-to-r from-transparent via-white to-transparent my-6"></div>
+                      <div key={index} className="w-full h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent my-6"></div>
                     );
                   }
                   if (paragraph.trim() === '') {
                     return <div key={index} className="mb-2"></div>;
                   }
                   return (
-                    <p key={index} className="mb-3 text-center text-lg leading-relaxed">
+                    <p key={index} className="mb-3 text-center text-lg leading-relaxed text-slate-200">
                       {paragraph}
                     </p>
                   );
                 })}
               </motion.div>
 
-              {/* Price highlight banner */}
+              {/* Enhanced price highlight banner */}
               <motion.div
-                className="bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 p-6 rounded-2xl mb-8 border-4 border-yellow-300"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+                className="hero-price-banner mb-12"
+                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                animate={{ opacity: 1, scale: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                whileHover={{ scale: 1.02, y: -5 }}
               >
-                <div className="text-center">
-                  <div className="text-4xl md:text-5xl font-black text-white mb-2">
-                    💰 ONLY €159,900 💰
+                <div className="text-center relative z-10">
+                  <div className="text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 drop-shadow-2xl">
+                    💎 €159,900 💎
                   </div>
-                  <div className="text-lg md:text-xl font-bold text-white">
-                    🔥 SAVE €60,000+ vs MARKET PRICE! 🔥
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-amber-200 drop-shadow-lg">
+                    ✨ SAVE €60,000+ vs MARKET PRICE! ✨
                   </div>
                 </div>
+                <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-orange-500/20 rounded-3xl blur-xl"></div>
               </motion.div>
 
               <motion.div 
-                className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-8"
+                className="flex flex-col lg:flex-row gap-8 justify-center items-center mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
               >
                 <motion.button
                   onClick={handleCall}
-                  className="urgency-button glass-button px-10 py-5 text-xl font-black min-w-[280px]"
-                  whileHover={{ scale: 1.1, y: -3 }}
+                  className="hero-cta-primary min-w-[320px] lg:min-w-[280px]"
+                  whileHover={{ scale: 1.05, y: -5 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {t('hero.bookViewing')}
+                  <span className="relative z-10">📞 {t('hero.bookViewing')}</span>
                 </motion.button>
 
                 <motion.button
                   onClick={onOpenGallery}
-                  className="trust-button glass-button px-10 py-5 text-xl font-black min-w-[280px]"
-                  whileHover={{ scale: 1.1, y: -3 }}
+                  className="hero-cta-secondary min-w-[320px] lg:min-w-[280px]"
+                  whileHover={{ scale: 1.05, y: -5 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {t('hero.openGallery')}
+                  <span className="relative z-10">🖼️ {t('hero.openGallery')}</span>
                 </motion.button>
 
                 <motion.button
                   onClick={onOpenCalculator}
-                  className="value-button glass-button px-10 py-5 text-xl font-black min-w-[280px]"
-                  whileHover={{ scale: 1.1, y: -3 }}
+                  className="hero-cta-tertiary min-w-[320px] lg:min-w-[280px]"
+                  whileHover={{ scale: 1.05, y: -5 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {t('hero.calculateROI')}
+                  <span className="relative z-10">📊 {t('hero.calculateROI')}</span>
                 </motion.button>
               </motion.div>
 
-              {/* Quick actions */}
+              {/* Enhanced quick actions */}
               <motion.div 
-                className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center center-content"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
+                className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
               >
                 <motion.button
                   onClick={handleWhatsApp}
-                  className="trust-button glass-button px-8 py-3 text-lg font-bold"
-                  whileHover={{ scale: 1.05 }}
+                  className="hero-quick-action"
+                  whileHover={{ scale: 1.1, rotateY: 5 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   💬 WhatsApp Now
                 </motion.button>
                 
-                <span className="high-contrast-text text-lg font-bold">|</span>
+                <div className="hidden sm:block w-1 h-8 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
                 
-                <a 
+                <motion.a 
                   href="tel:+385993433344"
-                  className="high-contrast-text hover:text-yellow-300 transition-colors text-lg font-bold"
+                  className="hero-phone-link"
+                  whileHover={{ scale: 1.05, x: 5 }}
                 >
                   📱 +385 99 343 3344
-                </a>
+                </motion.a>
               </motion.div>
             </motion.div>
-          </GlassCard>
+          </div>
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Enhanced scroll indicator */}
       <motion.div 
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1 }}
+        transition={{ duration: 0.8, delay: 1.2 }}
       >
         <motion.div
-          className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+          className="hero-scroll-indicator"
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
           <motion.div
-            className="w-1 h-3 bg-white/50 rounded-full mt-2"
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
+            className="w-2 h-4 bg-gradient-to-b from-amber-400 to-orange-500 rounded-full mt-2"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           />
         </motion.div>
+        <div className="text-center mt-3">
+          <span className="text-white/70 text-sm font-medium tracking-wider">SCROLL TO EXPLORE</span>
+        </div>
       </motion.div>
     </section>
   );
