@@ -40,10 +40,10 @@ export default function LocationMap() {
             viewport={{ once: true }}
           >
             <GlassCard className="h-96 p-2">
-              {/* Google Maps Street View Embed */}
+              {/* Google Maps Location Embed */}
               <div className="relative h-full w-full overflow-hidden rounded-lg">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!4v1692891567284!6m8!1m7!1sCAoSLEFGMVFpcE5fWmpjVEc5a3FRRWQ2TGZZOExvY1d4bmVEX0YyTWVNM2x6SGhu!2m2!1d45.8140573!2d15.9828851!3f239.79!4f5.15!5f0.7820865974627469"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2781.419087825838!2d15.9919367!3d45.814401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765d7acf58c9825%3A0xf3eaee29d6f8bc2e!2sVla%C5%A1ka%20ul.%20117%2C%2010000%2C%20Zagreb%2C%20Croatia!5e0!3m2!1sen!2sus!4v1692891567284!5m2!1sen!2sus"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -51,7 +51,7 @@ export default function LocationMap() {
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   className="rounded-lg"
-                  title="Vlaška 117 Street View - Zagreb Bank across the street"
+                  title="Vlaška 117, Zagreb - Location Map"
                 ></iframe>
 
                 {/* Overlay indicators */}
@@ -60,7 +60,7 @@ export default function LocationMap() {
                 </div>
 
                 <div className="absolute right-4 bottom-4 rounded-lg bg-black/80 px-3 py-2 text-xs text-white backdrop-blur-sm">
-                  🗺️ Street View
+                  🗺️ Location Map
                 </div>
               </div>
             </GlassCard>
@@ -158,7 +158,7 @@ export default function LocationMap() {
           className="center-content mt-12"
         >
           <a
-            href="https://maps.app.goo.gl/52VUxcdC19k8BFZPA"
+            href="https://www.google.com/maps/place/Vla%C5%A1ka+ul.+117,+10000,+Zagreb/@45.814401,15.9919367,17z/data=!3m1!4b1!4m6!3m5!1s0x4765d7acf58c9825:0xf3eaee29d6f8bc2e!8m2!3d45.814401!4d15.994517!16s%2Fg%2F11j8z5qwg5?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="glass-button inline-flex items-center space-x-2 px-8 py-4 font-semibold text-white transition-transform hover:scale-105"
