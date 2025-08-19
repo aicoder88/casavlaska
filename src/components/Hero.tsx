@@ -61,16 +61,55 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
 
               {/* Main sales content */}
               <motion.div 
-                className="high-contrast-text mb-10 leading-relaxed text-left max-w-5xl text-lg"
+                className="high-contrast-text mb-10 leading-relaxed text-left max-w-5xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                {t('hero.mainContent').split('\n').map((paragraph, index) => (
-                  <p key={index} className="mb-4">
-                    {paragraph}
-                  </p>
-                ))}
+                {t('hero.mainContent').split('\n').map((paragraph, index) => {
+                  // Handle different markdown styles
+                  if (paragraph.startsWith('# **') && paragraph.endsWith('**')) {
+                    return (
+                      <h1 key={index} className="text-4xl md:text-5xl font-black text-center mb-6 text-red-500">
+                        {paragraph.replace(/# \*\*(.*)\*\*/, '$1')}
+                      </h1>
+                    );
+                  }
+                  if (paragraph.startsWith('## **') && paragraph.endsWith('**')) {
+                    return (
+                      <h2 key={index} className="text-2xl md:text-3xl font-bold text-center mb-4 text-orange-500">
+                        {paragraph.replace(/## \*\*(.*)\*\*/, '$1')}
+                      </h2>
+                    );
+                  }
+                  if (paragraph.startsWith('### **') && paragraph.endsWith('**')) {
+                    return (
+                      <h3 key={index} className="text-xl md:text-2xl font-bold text-center mb-3 text-yellow-600">
+                        {paragraph.replace(/### \*\*(.*)\*\*/, '$1')}
+                      </h3>
+                    );
+                  }
+                  if (paragraph.startsWith('**') && paragraph.endsWith('**')) {
+                    return (
+                      <p key={index} className="text-lg font-bold mb-3 text-center">
+                        {paragraph.replace(/\*\*(.*)\*\*/, '$1')}
+                      </p>
+                    );
+                  }
+                  if (paragraph === '---') {
+                    return (
+                      <div key={index} className="w-full h-px bg-gradient-to-r from-transparent via-white to-transparent my-6"></div>
+                    );
+                  }
+                  if (paragraph.trim() === '') {
+                    return <div key={index} className="mb-2"></div>;
+                  }
+                  return (
+                    <p key={index} className="mb-3 text-center text-lg leading-relaxed">
+                      {paragraph}
+                    </p>
+                  );
+                })}
               </motion.div>
 
               {/* Price highlight banner */}

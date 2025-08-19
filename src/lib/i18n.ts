@@ -6,83 +6,69 @@ const resources = {
   en: {
     translation: {
       hero: {
-        title: "🚨 URGENT: Prime Zagreb Apartment Must Sell THIS WEEK",
-        subtitle: "Owner Flying Back to Canada - First Reasonable Cash Offer Takes It",
-        mainContent: `Listen, I'll be straight with you...
-My sister just inherited this apartment after 30 years of waiting. The protected tenant finally moved out, and she needs to liquidate NOW and get back to Canada.
+        title: "🚨 URGENT: Vlaška Apartment at Kvaternik Across from Zagreb Bank Selling Day After Tomorrow",
+        subtitle: "Sister Flying Back to Canada - Crazy Low Price Due to Rush Sale",
+        mainContent: `# **URGENT**
 
-This is NOT a drill. She's on a plane Thursday.
+## **Vlaška apartment at Kvaternik across from Zagreb Bank selling day after tomorrow**
 
-Here's What You're Getting:
+---
 
-46.16m² in the HEART of Zagreb - Vlaška 117, literally 3 minutes from Kvaternikov Square
-This isn't some forgotten corner of the city. This is WHERE YOU WANT TO BE.
+### **Building permit OK - Earthquake didn't affect the building**
 
-The Truth? It needs work.
+### **100% clean papers - of course, you're welcome to verify everything**
 
-The back room needs plastering (being fixed tomorrow). The bathroom wants updating.
+### **Best offer gets the most beautiful part of the city with high ceilings**
 
-But here's what smart money sees:
+---
 
-✓ HIGH CEILINGS that you can't get in new builds
-✓ Original hardwood parquet under your feet
-✓ DEAD QUIET - faces the courtyard, insulated by businesses
-✓ Two separate rooms plus kitchen and bath
-✓ Clear title, NO DEBT, NO PROBLEMS
+**Small investment needed for adaptation for premium living**
 
-Let Me Paint You a Picture...
-While everyone else is fighting over overpriced "luxury" boxes in Novi Zagreb...
-You're sitting in YOUR apartment in the absolute CENTER of the action.
-Trams at your doorstep. Cafes around the corner. Universities, shopping, nightlife - it's all HERE.
-Investors: You know what Airbnb pays for center locations? This pays for itself in 2 years.
-Young Professionals: Stop throwing money at rent. This is YOUR chance.
+**Or just live in it as is, and fix little by little**
 
-The Uncomfortable Truth Nobody Wants to Tell You:
+---
 
-Apartments like this - in THIS location - don't come up.
-They're passed down through families for generations. Or bought by developers who flip them for 200,000€+.
-We're asking 159,900€
+# **46.9 square meters**
 
-But my sister told me: "Just get me a reasonable offer by Thursday. I need to go HOME."
-Translation? The first serious buyer with cash or fast financing WINS.
+---
 
-Here's What Happens Next:
-Option 1: You hesitate. You "think about it." You miss this. Six months from now you're still looking, kicking yourself when you see what center apartments REALLY cost.
-Option 2: You call RIGHT NOW. You see it tomorrow. You make an offer that makes sense.
-By Friday, you own prime Zagreb real estate at 20-30% below market.
-Which story do you want to tell?
+**Energy certificate will be ready day after tomorrow**
 
-The Clock Is Ticking
+**Crazy price because sister came from Canada to claim the apartment**
 
-She decides THURSDAY.
+**After 40 years of protected tenant exit**
 
-That's 4 days from now.
+Sister is Croatian, but doesn't want to be in Croatia at all.
 
-No games. No chains. No complications.
+Going home soon.
 
-Just a Canadian woman who needs to sell her inherited apartment and go home.
+---
 
-Your competition? Almost nobody - the city is empty in August.
+# **VERY FAST SALE**
 
-But it only takes ONE other smart buyer to steal this from under you.
+That's why low price (and because of adaptation needed).
 
-Make Your Move -
-📞 Call NOW: 099 343 3344 (I'm her brother, Drago - her Croatian isn't 100%, but she is a Croatian citizen)
+Look, that's it.
 
-Or message through the platform for immediate response.
+Like I said, papers are 100% clean.
 
-Viewings happening NOW through Wednesday only.
+You can verify everything yourself, naturally.
 
-Say this: "I want to see the Vlaška apartment TODAY."
+---
 
-Bring your checkbook or proof of funds.
+# **CASH PREFERRED**
 
-This isn't a negotiation that drags on for weeks. This is a THIS WEEK decision.
+And naturally, everything through public notary, contracts, etc.
 
-P.S. - I'm updating photos tomorrow after the plasterer finishes. But if you wait for pretty pictures, you've already lost. The smart money moves on information, not Instagram posts.
+---
 
-P.P.S. - Cash talks. But we'll work with you if you have financing ready to go. Just BE READY. Thursday is Thursday.
-Final Warning: When this is gone, it's GONE. And you'll see it listed again in 6 months for 200,000€+ after someone smart does the renovation. Don't let that someone else get YOUR apartment.`,
+## **Make your best offer for your piece of Zagreb's most beautiful neighborhood**
+
+---
+
+# **Call sister Lorie - speak slowly or English**
+
+# **Her WhatsApp: +1-204-620-4491**`,
         bookViewing: "🚨 CALL NOW: 099 343 3344",
         openGallery: "📸 See Photos", 
         calculateROI: "💰 Calculate Profit"
@@ -177,37 +163,69 @@ Final Warning: When this is gone, it's GONE. And you'll see it listed again in 6
   hr: {
     translation: {
       hero: {
-        title: "🚨 HITNO: Vrhunski stan u Zagrebu mora se prodati OVAJ TJEDAN",
-        subtitle: "Vlasnica leti nazad u Kanadu - Prvi razuman gotovinski ugovor dobiva stan",
-        mainContent: `Slušajte, bit ću iskren s vama... Moja sestra je naslijedila ovaj stan nakon 50 godina čekanja. Zaštićeni najmodavac se konačno iselio, a ona mora ODMAH prodati i vratiti se u Kanadu. Prodaje se hitno. Sljedeći četvrtak je u avionu.
+        title: "🚨 HITNO: Vlaška na Kvaternik preko puta Zagrebačke banke baš se prodaje prekosutra",
+        subtitle: "Sestra leti nazad u Kanadu - Luda cijena zbog brzine prodaje",
+        mainContent: `# **HITNO**
 
-Evo što se nudi za ovu cijenu: 46m² u SRCU Zagreba - Vlaška 117, doslovno 3 minute šetnje od Kvaternikova trga. Radi se o top lokaciji u Zagrebu. LOKACIJA NA KOJOJ ŽELITE IMATI STAN.
+## **Vlaška na Kvaternik preko puta Zagrebačke banke baš se prodaje prekosutra**
 
-Istina? Treba uložiti u renovaciju. Stražnja soba treba žbukanje (popravlja se sutra), kupaonica traži obnovu, ali evo što dobijete za svoj novac:
+---
 
-✓ VISOKI STROPOVI koje ne možete dobiti u novogradnji
-✓ Originalni tvrdi drveni parket pod nogama
-✓ POTPUNA TIŠINA - stan okrenut prema dvorištu, izoliran poslovnim prostorima
-✓ Dvije odvojene sobe plus kuhinja i kupaonica
-✓ Čista dokumentacija, vlasništvo 1/1, BEZ TERETA na nekretninu, BEZ NEPOTREBNIH PROBLEMA
+### **Uporabna dozvola OK - Potres nije utjecao na zgradu**
 
-Dopustite da vam predočim što dobijete za ovu nekretninu. Dok se svi ostali bore za preskupe "luksuzne" limenke u Novom Zagrebu... Sjedite u SVOM stanu u apsolutnom CENTRU grada. Tramvaji pred vratima. Kafići su iza ugla. Sveučilišta, trgovine, noćni život - sve je OVDJE. Investitori: Znate li što Airbnb plaća za centralne lokacije? Ova nekretnina se isplaćuje već unutar 2 godine. Mladi profesionalci: Prestanite bacati novac na stanarine. Ovo je VAŠA prilika.
+### **100% čisti papiri - naravno, smijete sve provjeriti**
 
-Surova istina koju vam nitko neće reći: Stanovi poput ovog - na OVOJ lokaciji - se više ne pojavljuju. Prenose se kroz obitelji generacijama. Ili ih kupuju developeri koji ih prodaju za 300.000€+. Tražimo 159.900€ Ali moja sestra mi je rekla: "Samo mi nađi razumnu ponudu do četvrtka. Moram ići KUĆI." Prijevod? Prvi ozbiljan kupac s gotovinom ili brzim financiranjem postaje vlasnik.
+### **Najbolja ponuda dobiva najljepši dio grada s visokim stropovima**
 
-Evo što se dalje događa: Opcija 1: Oklijevate. "Razmišljate o tome." Propuštate ovo. Za šest mjeseci još uvijek tražite, grizete se kada vidite koliko stanovi u centru STVARNO koštaju. Opcija 2: Zovete ODMAH. Vidite ga sutra. Dajete ponudu koja ima smisla. Do petka posjedujete vrhunsku zagrebačku nekretninu 20-30% ispod tržišne cijene. Koji ishod želite?
+---
 
-Vrijeme ističe Odluka u četvrtak. To je za 4 dana. Bez igara. Bez suvišnih komplikacija. Samo kanađanka koja treba prodati naslijeđeni stan i ići kući. Vaša konkurencija? Gotovo nitko - grad je prazan u kolovozu. Ali dovoljno je JEDAN pametan kupac da vam ovo ukrade ispred nosa.
+**Mora se uložiti malo u adaptaciju za vrhunski život**
 
-Potez: 📞 Zovite ODMAH: 099 343 3344 (Ja sam brat, Drago - njezin hrvatski nije 100%, ali je hrvatica) Ili pošaljite poruku whatsapp, ili kroz platformu za trenutni odgovor.
+**Ili samo živite u njoj kako jest, i popravite malo po malo**
 
-Razgledavanje se odvija ODMAH do srijede. Recite ovo: "Želim vidjeti stan na Vlaškoj DANAS." Ovo nije pregovaranje koje se vuče tjednima. Ovo je odluka za OVAJ TJEDAN.
+---
 
-P.S. - Ažuriram fotografije sutra nakon što zidar završi. Ali ako čekate lijepe slike, već ste izgubili. Pametni novac se ulaže na provjerene informacije, ne na Instagram objave.
+# **46,9 kvadrata**
 
-P.P.S. - Gotovina govori. Ali ćemo Vam rado prodati ako imate mogućnost drugog oblika financiranja. Samo BUDITE SPREMNI. Četvrtak je četvrtak.
+---
 
-Završno upozorenje: Kad ovo nestane, NESTAJE ZAUVIJEK. I vidjeti ćete to ponovno na listi za 6 mjeseci za 300.000€+ nakon što netko pametan obavi renovaciju. Nemojte dopustiti da netko drugi kupi VAŠ stan.`,
+**Energetski certifikat će biti gotov prekosutra**
+
+**Luda cijena jer je sestra došla iz Kanade da preuzme stan**
+
+**Nakon 40 godina izlaska zaštićenog najmoprimca**
+
+Sestra je Hrvatica, ali ne želi biti u Hrvatskoj uopće.
+
+Pa ide doma uskoro.
+
+---
+
+# **JAKO BRZO PRODAJA**
+
+Zbog toga niska cijena (i zbog adaptacije).
+
+Evo, to je to.
+
+Kako sam rekao, papiri su 100% čisti.
+
+Možete sve provjeriti sami, naravno.
+
+---
+
+# **GOTOVINA JE PREFERIRANA**
+
+I naravno, sve s javnim bilježnikom, ugovori, itd.
+
+---
+
+## **Stvorite svoju najbolju cijenu za svoj dio najljepšeg kvarta u Zagrebu**
+
+---
+
+# **Zovite sestru Lorie - govorite sporo ili engleski**
+
+# **Njen WhatsApp: +1-204-620-4491**`,
         bookViewing: "🚨 ZOVITE ODMAH: 099 343 3344",
         openGallery: "📸 Pogledajte Slike",
         calculateROI: "💰 Izračunajte Profit"
