@@ -1,39 +1,20 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f8fafc;
-  --foreground: #334155;
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(148, 163, 184, 0.3);
-  --glass-shadow: rgba(0, 0, 0, 0.1);
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --glass-bg: rgba(15, 23, 42, 0.9);
+  --glass-border: rgba(148, 163, 184, 0.4);
+  --glass-shadow: rgba(0, 0, 0, 0.5);
   
-  /* Elegant colors for sophisticated audience */
-  --elegant-blue: #3b82f6;
-  --elegant-green: #10b981;
-  --elegant-gold: #f59e0b;
-  --elegant-purple: #8b5cf6;
-  --elegant-slate: #475569;
-  --warm-text: #1e293b;
-  --shadow-text: rgba(0, 0, 0, 0.3);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0f172a;
-    --foreground: #f1f5f9;
-    --glass-bg: rgba(15, 23, 42, 0.9);
-    --glass-border: rgba(148, 163, 184, 0.4);
-    --glass-shadow: rgba(0, 0, 0, 0.5);
-    
-    /* High contrast colors for dark mode */
-    --elegant-blue: #60a5fa;
-    --elegant-green: #34d399;
-    --elegant-gold: #fbbf24;
-    --elegant-purple: #a78bfa;
-    --elegant-slate: #e2e8f0;
-    --warm-text: #f8fafc;
-    --shadow-text: rgba(255, 255, 255, 0.3);
-  }
+  /* High contrast colors for dark mode */
+  --elegant-blue: #60a5fa;
+  --elegant-green: #34d399;
+  --elegant-gold: #fbbf24;
+  --elegant-purple: #a78bfa;
+  --elegant-slate: #e2e8f0;
+  --warm-text: #f8fafc;
+  --shadow-text: rgba(255, 255, 255, 0.3);
 }
 
 * {
