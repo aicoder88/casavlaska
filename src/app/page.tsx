@@ -78,6 +78,7 @@ export default function Home() {
 
           {/* Footer */}
           <Footer />
+        </div>
 
         {/* Gallery Modal */}
         <Gallery isOpen={galleryOpen} onClose={closeGallery} />
