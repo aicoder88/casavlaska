@@ -105,7 +105,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className={`${inter.variable} antialiased`}>
-        <main className="mx-auto w-full max-w-5xl px-4 py-6 md:px-8 lg:px-12">
+        <main className="min-h-screen w-full">
           {children}
         </main>
       </body>

@@ -42,7 +42,8 @@ export default function Home() {
 
   return (
     <I18nextProvider i18n={i18n}>
-      <div className="mx-auto flex w-full max-w-5xl flex-col items-center space-y-10 md:space-y-14">
+      <div className="container mx-auto max-w-7xl px-4 py-6 md:px-8 lg:px-12">
+        <div className="flex w-full flex-col items-center space-y-10 md:space-y-14">
         {/* Language Selection */}
         <LanguageToggle />
 
@@ -76,6 +77,7 @@ export default function Home() {
 
         {/* Live Viewers Counter */}
         <LiveViewers />
+        </div>
       </div>
     </I18nextProvider>
   );

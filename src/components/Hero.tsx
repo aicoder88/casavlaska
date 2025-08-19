@@ -24,7 +24,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
 
   return (
     <section className="w-full space-y-6 md:space-y-8">
-      <div className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-2xl border p-6 md:p-8">
+      <div className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-2xl border p-6 md:p-8 lg:p-10">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/80 to-slate-800/80 backdrop-blur-md"></div>
         <div className="relative z-10">
           <motion.div

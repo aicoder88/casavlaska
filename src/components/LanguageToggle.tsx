@@ -12,7 +12,7 @@ export default function LanguageToggle() {
 
   return (
     <div className="sticky top-0 z-50 w-full border-b border-slate-200 bg-gradient-to-r from-slate-50 to-blue-50 px-4 py-4 shadow-sm">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-7xl">
         {/* Language buttons */}
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <motion.button

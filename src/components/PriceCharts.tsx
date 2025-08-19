@@ -204,7 +204,7 @@ export default function PriceCharts() {
   );
 
   return (
-    <section className="relative mx-auto w-full max-w-[900px] p-8">
+    <section className="relative mx-auto w-full max-w-7xl px-4 py-8 md:px-8 lg:px-12">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -300,13 +300,13 @@ export default function PriceCharts() {
         <GlassCard className="p-6">
           <div className="mb-6 flex items-center justify-between">
             <h3 className="text-xl font-semibold text-white">
-              🏘️ Comparable Properties
+              🏘️ {t("comparableProperties")}
             </h3>
             <button
               onClick={() => setShowComparisons(!showComparisons)}
               className="glass-button px-4 py-2 text-sm"
             >
-              {showComparisons ? "Hide" : "Show"} Details
+              {showComparisons ? t("hide") : t("show")} Details
             </button>
           </div>
 
@@ -320,12 +320,12 @@ export default function PriceCharts() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-white/20">
-                    <th className="py-3 text-left text-white/80">Address</th>
-                    <th className="py-3 text-right text-white/80">Size</th>
-                    <th className="py-3 text-right text-white/80">Price</th>
-                    <th className="py-3 text-right text-white/80">€/m²</th>
+                    <th className="py-3 text-left text-white/80">{t("tableAddress")}</th>
+                    <th className="py-3 text-right text-white/80">{t("tableSize")}</th>
+                    <th className="py-3 text-right text-white/80">{t("tablePrice")}</th>
+                    <th className="py-3 text-right text-white/80">{t("tablePricePerM2")}</th>
                     <th className="py-3 text-center text-white/80">
-                      Renovated
+                      {t("tableRenovated")}
                     </th>
                   </tr>
                 </thead>

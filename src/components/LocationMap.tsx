@@ -106,7 +106,7 @@ export default function LocationMap() {
             {/* Neighborhood highlights */}
             <GlassCard className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-6">
               <h4 className="mb-4 text-lg font-semibold text-white">
-                ✨ Neighborhood Highlights
+                ✨ {t("neighborhoodHighlights")}
               </h4>
               <div className="space-y-3 text-sm text-white/80">
                 <div className="flex items-start space-x-2">
@@ -123,7 +123,7 @@ export default function LocationMap() {
                 </div>
                 <div className="flex items-start space-x-2">
                   <span>🏛️</span>
-                  <span>Historic Upper Town (Gornji Grad) 10-minute walk</span>
+                  <span>{t("historicUpperTown")}</span>
                 </div>
               </div>
             </GlassCard>
@@ -131,17 +131,17 @@ export default function LocationMap() {
             {/* Transport links */}
             <GlassCard className="p-6">
               <h4 className="mb-4 text-lg font-semibold text-white">
-                🚌 Public Transport
+                🚌 {t("publicTransport")}
               </h4>
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div className="rounded-lg bg-white/5 p-3 text-center">
                   <div className="mb-2 text-xl">🚋</div>
-                  <div className="text-white/90">Tram Lines</div>
+                  <div className="text-white/90">{t("tramLines")}</div>
                   <div className="text-blue-400">4, 8, 14</div>
                 </div>
                 <div className="rounded-lg bg-white/5 p-3 text-center">
                   <div className="mb-2 text-xl">🚌</div>
-                  <div className="text-white/90">Bus Lines</div>
+                  <div className="text-white/90">{t("busLines")}</div>
                   <div className="text-blue-400">Multiple</div>
                 </div>
               </div>

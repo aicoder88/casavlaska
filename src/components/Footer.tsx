@@ -199,7 +199,7 @@ export default function Footer() {
                 <div className="flex items-center space-x-4 text-sm text-white/60">
                   <span>🇭🇷 {t("common.zagrebCroatia")}</span>
                   <span>•</span>
-                  <span>© 2024 CasaVlaška</span>
+                  <span>© August 2025 CasaVlaška</span>
                 </div>
               </div>
 
