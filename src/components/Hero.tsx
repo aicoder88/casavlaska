@@ -23,8 +23,8 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
   };
 
   return (
-    <section className="space-y-6 md:space-y-8">
-      <div className="relative overflow-hidden rounded-2xl border p-6 md:p-8">
+    <section className="w-full space-y-6 md:space-y-8">
+      <div className="relative mx-auto w-full max-w-6xl overflow-hidden rounded-2xl border p-6 md:p-8">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/80 to-slate-800/80 backdrop-blur-md"></div>
         <div className="relative z-10">
           <motion.div
@@ -33,9 +33,33 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
             transition={{ duration: 0.8 }}
             className="center-content space-y-6 md:space-y-8"
           >
+            {/* Direct from owner banner */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              className="mb-4 rounded-full bg-gradient-to-r from-red-600 to-orange-500 px-4 py-2 text-center sm:px-6 sm:py-3"
+            >
+              <span className="text-sm font-black text-white drop-shadow-lg sm:text-lg md:text-xl">
+                {t("common.directFromOwner")}
+              </span>
+            </motion.div>
+
             <h1 className="hero-gradient-text text-center text-4xl leading-tight font-black drop-shadow-2xl md:text-6xl lg:text-7xl">
               {t("hero.title")}
             </h1>
+
+            {/* Clean ownership highlight */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mb-2 rounded-lg bg-gradient-to-r from-green-600 to-emerald-500 px-3 py-1.5 text-center sm:px-4 sm:py-2"
+            >
+              <span className="text-sm font-bold text-white drop-shadow-md sm:text-base md:text-lg">
+                🏆 {t("common.cleanOwnership")}
+              </span>
+            </motion.div>
 
             <motion.p
               className="hero-subtitle-text max-w-5xl text-center text-2xl leading-relaxed font-bold md:text-3xl lg:text-4xl"
@@ -154,7 +178,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
             >
               <motion.button
                 onClick={handleCall}
-                className="hero-cta-primary min-w-[320px] lg:min-w-[280px]"
+                className="hero-cta-primary w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[280px]"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -165,7 +189,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
 
               <motion.button
                 onClick={onOpenGallery}
-                className="hero-cta-secondary min-w-[320px] lg:min-w-[280px]"
+                className="hero-cta-secondary w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[280px]"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -176,7 +200,7 @@ export default function Hero({ onOpenGallery, onOpenCalculator }: HeroProps) {
 
               <motion.button
                 onClick={onOpenCalculator}
-                className="hero-cta-tertiary min-w-[320px] lg:min-w-[280px]"
+                className="hero-cta-tertiary w-full min-w-[280px] sm:min-w-[320px] lg:min-w-[280px]"
                 whileHover={{ scale: 1.05, y: -5 }}
                 whileTap={{ scale: 0.95 }}
               >

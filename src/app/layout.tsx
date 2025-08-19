@@ -104,8 +104,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#0f172a" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className={`${inter.variable} bg-gray-50 antialiased`}>
-        <main className="container mx-auto max-w-3xl px-4 md:px-6">
+      <body className={`${inter.variable} antialiased`}>
+        <main className="mx-auto w-full max-w-5xl px-4 py-6 md:px-8 lg:px-12">
           {children}
         </main>
       </body>

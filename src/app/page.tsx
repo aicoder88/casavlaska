@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <I18nextProvider i18n={i18n}>
-      <div className="flex flex-col space-y-10 md:space-y-14">
+      <div className="mx-auto flex w-full max-w-5xl flex-col items-center space-y-10 md:space-y-14">
         {/* Language Selection */}
         <LanguageToggle />
 
