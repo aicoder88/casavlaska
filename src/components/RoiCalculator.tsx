@@ -200,7 +200,7 @@ export default function RoiCalculator() {
       yPos += 20;
       pdf.setFontSize(8);
       pdf.text(t('common.generatedBy'), 20, yPos);
-      pdf.text('Contact: +1 204 620-4491 (Lorie) | drago@casavlaska.com', 20, yPos + 5);
+      pdf.text('Contact: +1 204 620-4491 (Lorie)', 20, yPos + 5);
       
       pdf.save('casavlaska-roi-analysis.pdf');
     } catch (error) {

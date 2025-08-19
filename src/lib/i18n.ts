@@ -68,7 +68,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
 
 # **WhatsApp: +1 204 620-4491**
 
-*Ako MORATE koristiti hrvatski telefon i nemate WhatsApp, pozovite njenog brata Draga na 099 343 3344*`,
+`,
         bookViewing: "Pozovite: +1 204 620-4491",
         openGallery: "Pregledajte fotografije", 
         calculateROI: "Izračunajte povrat"
@@ -156,7 +156,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
       },
       footer: {
         contact: "Contact",
-        name: "Drago",
+        name: "",
         disclaimer: "Information deemed reliable; buyer to verify."
       },
       liveViewers: {
@@ -193,7 +193,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         zagrebCroatia: "Zagreb, Croatia",
         builtWith: "Built with ❤️ for quick sales • Powered by Next.js & Glassmorphism",
         scrollToExplore: "SCROLL TO EXPLORE",
-        ifMustUseCroatian: "If you MUST use Croatian phone: 099 343 3344 (Drago)",
+        ifMustUseCroatian: "",
         netYield: "Net Yield (%)",
         totalInvestment: "Total Investment",
         annualNetIncome: "Annual Net Income",
@@ -283,7 +283,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
 
 # **WhatsApp: +1 204 620-4491**
 
-*Ako MORATE koristiti hrvatski telefon i nemate WhatsApp, pozovite njenog brata Draga na 099 343 3344*`,
+`,
         bookViewing: "Pozovite: +1 204 620-4491",
         openGallery: "Pregledajte fotografije",
         calculateROI: "Izračunajte povrat"
@@ -371,7 +371,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
       },
       footer: {
         contact: "Kontakt",
-        name: "Drago",
+        name: "",
         disclaimer: "Informacije smatrane pouzdanima; kupac treba provjeriti."
       },
       liveViewers: {
@@ -408,7 +408,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
         zagrebCroatia: "Zagreb, Hrvatska",
         builtWith: "Napravljeno s ❤️ za brzu prodaju • Pokretano Next.js & Glassmorphism",
         scrollToExplore: "SKROLAJTE ZA ISTRAŽIVANJE",
-        ifMustUseCroatian: "Ako MORATE koristiti hrvatski telefon: 099 343 3344 (Drago)",
+        ifMustUseCroatian: "",
         netYield: "Neto prinos (%)",
         totalInvestment: "Ukupna investicija",
         annualNetIncome: "Godišnji neto prihod",

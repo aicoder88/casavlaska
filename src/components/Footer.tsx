@@ -16,7 +16,7 @@ export default function Footer() {
   };
 
   const handleEmail = () => {
-    window.location.href = 'mailto:drago@casavlaska.com?subject=Inquiry about Vlaška 117';
+    window.location.href = 'tel:+12046204491';
   };
 
   return (
@@ -111,7 +111,7 @@ export default function Footer() {
                   >
                     <span className="text-purple-400">✉️</span>
                     <div className="text-left">
-                      <div className="text-white">drago@casavlaska.com</div>
+                      <div className="text-white">+1 204 620-4491</div>
                       <div className="text-white/70 text-sm">{t('common.emailInquiry')}</div>
                     </div>
                   </motion.button>
