@@ -73,17 +73,18 @@ export default function WhyHere() {
             className="group"
           >
             <GlassCard className="overflow-hidden p-0">
-              <div className="relative h-64 min-h-[16rem] bg-slate-800">
+              <div className="relative h-64 min-h-[16rem] bg-red-500 overflow-hidden">
                 <Image
                   src="/IMG_2345.JPG"
                   alt="Interior apartment view"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  width={400}
+                  height={256}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="eager"
                   onError={(e) => {
                     console.error('Failed to load image:', e.currentTarget.src);
                   }}
+                  onLoad={() => console.log('Image loaded successfully:', '/IMG_2345.JPG')}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
@@ -103,14 +104,18 @@ export default function WhyHere() {
             className="group"
           >
             <GlassCard className="overflow-hidden p-0">
-              <div className="relative h-64 min-h-[16rem] bg-slate-800">
+              <div className="relative h-64 min-h-[16rem] bg-blue-500 overflow-hidden">
                 <Image
                   src="/IMG_2441.JPG"
                   alt="Well-lit living area"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  width={400}
+                  height={256}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="eager"
+                  onError={(e) => {
+                    console.error('Failed to load image:', e.currentTarget.src);
+                  }}
+                  onLoad={() => console.log('Image loaded successfully:', '/IMG_2441.JPG')}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
@@ -130,14 +135,18 @@ export default function WhyHere() {
             className="group md:col-span-2 lg:col-span-1"
           >
             <GlassCard className="overflow-hidden p-0">
-              <div className="relative h-64 min-h-[16rem] bg-slate-800">
+              <div className="relative h-64 min-h-[16rem] bg-green-500 overflow-hidden">
                 <Image
                   src="/IMG_2443.JPG"
                   alt="Complete apartment overview"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  width={400}
+                  height={256}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   loading="eager"
+                  onError={(e) => {
+                    console.error('Failed to load image:', e.currentTarget.src);
+                  }}
+                  onLoad={() => console.log('Image loaded successfully:', '/IMG_2443.JPG')}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
