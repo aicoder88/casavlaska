@@ -7,92 +7,92 @@ const resources = {
     translation: {
       hero: {
         title:
-          "Prefinjen stan na Vlaškoj — Kvaternik — preko puta Zagrebačke banke",
+          "Elegant apartment on Vlaška — Kvaternik — across from Zagreb Bank",
         subtitle:
-          "Jedinstvena prilika za stjecanje nekretnine u srcu Zagreba • Prizemlje • Preko puta Zagrebačke banke",
-        mainContent: `# **Stan u srcu Zagreba**
+          "Unique opportunity to acquire property in the heart of Zagreb • Ground floor • Across from Zagreb Bank",
+        mainContent: `# **Apartment in the heart of Zagreb**
 
-## **Vlaška ulica, Kvaternik — preko puta Zagrebačke banke**
-
----
-
-### **Zgrada u odličnom stanju — potres nije utjecao na konstrukciju**
-
-### **Svi papiri uredni — dobrodošli ste provjeriti sve dokumenti**
-
-### **Prilika za stjecanje nekretnine u najljepšem dijelu grada**
+## **Vlaška street, Kvaternik — across from Zagreb Bank**
 
 ---
 
-**Mogućnost lagane adaptacije za luksuzan život**
+### **Building in excellent condition — earthquake did not affect the structure**
 
-**Ili se uselite odmah i renovirajte postupno**
+### **All paperwork in order — you are welcome to check all documents**
 
----
-
-# **46,9 kvadratnih metara**
+### **Opportunity to acquire property in the most beautiful part of the city**
 
 ---
 
-**Energetski certifikat u pripremi**
+**Possibility of easy adaptation for luxury living**
 
-**Atraktivna cijena zbog brzine prodaje**
-
-**Stan je slobodan nakon dugoročnog najma**
-
-Vlasnica živi u Kanadi i želi završiti prodaju.
-
-Traži pouzdanog kupca za ovaj poseban stan.
+**Or move in immediately and renovate gradually**
 
 ---
 
-# **Brza prodaja**
-
-Zbog toga je cijena pristupačna.
-
-Svi dokumenti su pripremljeni.
-
-Možete provjeriti sve detalje.
+# **46.9 square meters**
 
 ---
 
-# **Prednost za gotovinsku kupnju**
+**Energy certificate in preparation**
 
-Sav postupak kroz javnog bilježnika s ugovorima.
+**Attractive price due to quick sale**
+
+**Apartment is vacant after long-term rental**
+
+Owner lives in Canada and wants to complete the sale.
+
+Looking for a reliable buyer for this special apartment.
 
 ---
 
-## **Vaša ponuda za dio najljepšeg kvarta u Zagrebu**
+# **Quick sale**
+
+That's why the price is accessible.
+
+All documents are prepared.
+
+You can check all details.
 
 ---
 
-# **Kontakt: Lorie — govorite polako ili engleski**
+# **Advantage for cash purchase**
+
+Entire process through public notary with contracts.
+
+---
+
+## **Your offer for part of Zagreb's most beautiful neighborhood**
+
+---
+
+# **Contact: Lorie — speak slowly or in English**
 
 # **WhatsApp: +1 204 620-4491**
 
 `,
-        bookViewing: "Pozovite: +1 204 620-4491",
-        openGallery: "Pregledajte fotografije",
-        calculateROI: "Izračunajte povrat",
+        bookViewing: "Call: +1 204 620-4491",
+        openGallery: "View Photos",
+        calculateROI: "Calculate Return",
       },
       whyHere: {
-        title: "Zašto je ovaj stan poseban",
+        title: "Why this apartment is special",
         points: [
-          "Visoki stropovi rijetko dostupni u novogradnji",
-          "Originalni drveni podovi s autentičnim karakterom",
-          "Mirna lokacija — prizemlje s pogledom na dvorište, potpuna tišina",
-          "Dvije sobe + kuhinja + kupaonica — praktičan i funkcionalan raspored",
-          "Sve instalacije su funkcionalne — spreman za useljenje",
-          "Čisto vlasništvo (1/1) bez tereta — siguran kupnja",
+          "High ceilings rarely available in new construction",
+          "Original wooden floors with authentic character",
+          "Quiet location — ground floor with courtyard view, complete silence",
+          "Two rooms + kitchen + bathroom — practical and functional layout",
+          "All utilities are functional — ready for move-in",
+          "Clean ownership (1/1) without encumbrances — secure purchase",
         ],
       },
       offer: {
-        title: "Posebna ponuda",
+        title: "Special offer",
         urgency:
-          "Vlasnica živi u Kanadi i želi brzu prodaju. Idealno za one koji traže kvalitetnu nekretninu u centru grada.",
-        price: "Cijena: €159,900 — izvrsna vrijednost za lokaciju",
-        callNow: "Pozovite za razgled",
-        whatsApp: "WhatsApp kontakt",
+          "Owner lives in Canada and wants a quick sale. Ideal for those seeking quality real estate in the city center.",
+        price: "Price: €159,900 — excellent value for location",
+        callNow: "Call for viewing",
+        whatsApp: "WhatsApp contact",
       },
       priceContext: {
         title: "INCREDIBLE VALUE COMPARISON",
@@ -136,7 +136,7 @@ Sav postupak kroz javnog bilježnika s ugovorima.
       location: {
         title: "Location",
         walkingTimes: "Walking Times",
-        zagrebackaBanka: "Zagrebačka banka: 15 sec",
+        zagrebackaBanka: "Zagreb Bank: 15 sec",
         kvaternik: "Kvaternik Square: 3 min",
         tram: "Tram Stop: 2 min",
         cafes: "Cafes & Restaurants: 20 sec",
